@@ -1,6 +1,7 @@
 const http = require ('http')
 const fs   = require ('fs')
 
+const exportNsiPagingItem = JSON.parse (fs.readFileSync ('exportNsiPagingItem.json'))
 const exportNsiItem = JSON.parse (fs.readFileSync ('exportNsiItem.json'))
 const exportNsiList = JSON.parse (fs.readFileSync ('exportNsiList.json'))
 
@@ -73,6 +74,18 @@ methods.getState = (rq, rp) => {
 
 }
 
+methods.exportNsiList = (rq, rp) => {
+
+	let [, c] = rq.body.split (':ListGroup>'), [code] = c.split ('<')
+			
+	let guid = exportNsiList [code]
+
+	if (!guid) croak (rp, `Group "${code}" not found`)
+
+	ack (rp, guid)
+
+}
+
 methods.exportNsiItem = (rq, rp) => {
 
 	let [, c] = rq.body.split (':RegistryNumber>'), [code] = c.split ('<')
@@ -95,13 +108,17 @@ methods.exportNsiItem = (rq, rp) => {
 
 }
 
-methods.exportNsiList = (rq, rp) => {
+methods.exportNsiPagingItem = (rq, rp) => {
 
-	let [, c] = rq.body.split (':ListGroup>'), [code] = c.split ('<')
-			
-	let guid = exportNsiList [code]
+	let [, c] = rq.body.split (':RegistryNumber>'), [code] = c.split ('<')
+	if (!/^\d+$/.test (code)) croak (rp, `"${code}" is not a RegistryNumber`)	
 
-	if (!guid) croak (rp, `Group "${code}" not found`)
+	let [, p] = rq.body.split (':Page>'), [page] = p.split ('<')
+	if (!/^\d+$/.test (page)) croak (rp, `"${page}" is not a page number`)	
+	
+	let guid = exportNsiPagingItem [code + '_' + page]
+
+	if (!guid) croak (rp, `NSI ${code}, p. ${page} not found`)
 
 	ack (rp, guid)
 
