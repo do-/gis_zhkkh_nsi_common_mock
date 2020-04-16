@@ -5,6 +5,8 @@ const exportNsiPagingItem = JSON.parse (fs.readFileSync ('exportNsiPagingItem.js
 const exportNsiItem = JSON.parse (fs.readFileSync ('exportNsiItem.json'))
 const exportNsiList = JSON.parse (fs.readFileSync ('exportNsiList.json'))
 
+let paging = {}; for (let k in exportNsiPagingItem) paging [k.split ('_') [0]] = 1
+
 let address = {host: "127.0.0.1", port: 9009}
 
 let darn = x => console.log (x)
@@ -92,7 +94,7 @@ methods.exportNsiItem = (rq, rp) => {
 	
 	if (!/^\d+$/.test (code)) croak (rp, `"${code}" is not a RegistryNumber`)	
 	
-	if (code == 70) {
+	if (paging [code]) {
 	
 		rp.statusCode = 500
 		
