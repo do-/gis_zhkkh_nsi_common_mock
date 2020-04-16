@@ -1,0 +1,122 @@
+<env:Envelope xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#">
+   <env:Header>
+      <ns4:ResultHeader>
+         <ns4:Date>2020-04-16T16:42:09.320+03:00</ns4:Date>
+         <ns4:MessageGUID>aacf1cc7-c54a-4917-bc98-478c381663fa</ns4:MessageGUID>
+      </ns4:ResultHeader>
+   </env:Header>
+   <env:Body>
+      <ns13:getStateResult ns4:version="10.0.1.2" Id="signed-data-container">
+         <ds:Signature Id="xmldsig-33de5527-d83e-45c3-a993-8cbd24035219" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+            <ds:SignedInfo>
+               <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+               <ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/>
+               <ds:Reference URI="#signed-data-container">
+                  <ds:Transforms>
+                     <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                     <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                  </ds:Transforms>
+                  <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+                  <ds:DigestValue>INc1YyW7juhZunk3Uiu7ubRxmmkEgaw4C6yOGF1+7ok=</ds:DigestValue>
+               </ds:Reference>
+               <ds:Reference URI="#xmldsig-33de5527-d83e-45c3-a993-8cbd24035219-signedprops" Type="http://uri.etsi.org/01903#SignedProperties">
+                  <ds:Transforms>
+                     <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                  </ds:Transforms>
+                  <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+                  <ds:DigestValue>zNiIHm5Q2WYNjSnRCVwMJ0+bxN8FxBfi5FMTzsOd/7Y=</ds:DigestValue>
+               </ds:Reference>
+            </ds:SignedInfo>
+            <ds:SignatureValue>aYAHFgWJj2UFfIZHj8466m1bvKgAiQMz3ZSPghaVNaKiu41r9UCGn9iZonmbGiOwq7PfRFV4yzmK
+jVqiaJtn8Q==</ds:SignatureValue>
+            <ds:KeyInfo Id="xmldsig-3ddfca5c-7b26-4340-ba63-889e39c079ea">
+               <ds:X509Data>
+                  <ds:X509Certificate>MIIEOzCCA+igAwIBAgITfAAAXWPqBiAjWX/QNQABAABdYzAKBggqhQMHAQEDAjCCAQoxGDAWBgUq
+hQNkARINMTIzNDU2Nzg5MDEyMzEaMBgGCCqFAwOBAwEBEgwwMDEyMzQ1Njc4OTAxLzAtBgNVBAkM
+JtGD0LsuINCh0YPRidGR0LLRgdC60LjQuSDQstCw0Lsg0LQuIDE4MQswCQYDVQQGEwJSVTEZMBcG
+A1UECAwQ0LMuINCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCwMSUwIwYDVQQKDBzQ
+ntCe0J4gItCa0KDQmNCf0KLQni3Qn9Cg0J4iMTswOQYDVQQDDDLQotC10YHRgtC+0LLRi9C5INCj
+0KYg0J7QntCeICLQmtCg0JjQn9Ci0J4t0J/QoNCeIjAeFw0xOTEwMTcxMjMxMjFaFw0yMDEwMTcx
+MjQxMjFaMBExDzANBgNVBAMMBlRTMTcxMDBmMB8GCCqFAwcBAQEBMBMGByqFAwICJAAGCCqFAwcB
+AQICA0MABEDQkVc06fdEFcl/XDWAycaqj4Xk+zDn3zOfoJIOZBvbmOvUoFSkLbferOdy0s6f+lgQ
+YX6nw0mqa8ikFw8cQjl4o4ICFTCCAhEwDgYDVR0PAQH/BAQDAgTwMBMGA1UdJQQMMAoGCCsGAQUF
+BwMCMB0GA1UdDgQWBBQG5PAnvHRUQRer5h2i2h4Be8PIfTAfBgNVHSMEGDAWgBSbhV77gdxNWQdR
+Y8++39osf8lEPDCBzAYDVR0fBIHEMIHBMIG+oIG7oIG4hoG1aHR0cDovL3Rlc3Rnb3N0MjAxMi5j
+cnlwdG9wcm8ucnUvQ2VydEVucm9sbC8hMDQyMiEwNDM1ITA0NDEhMDQ0MiEwNDNlITA0MzIhMDQ0
+YiEwNDM5JTIwITA0MjMhMDQyNiUyMCEwNDFlITA0MWUhMDQxZSUyMCEwMDIyITA0MWEhMDQyMCEw
+NDE4ITA0MWYhMDQyMiEwNDFlLSEwNDFmITA0MjAhMDQxZSEwMDIyKDEpLmNybDCB2gYIKwYBBQUH
+AQEEgc0wgcowRAYIKwYBBQUHMAKGOGh0dHA6Ly90ZXN0Z29zdDIwMTIuY3J5cHRvcHJvLnJ1L0Nl
+cnRFbnJvbGwvcm9vdDIwMTguY3J0MD8GCCsGAQUFBzABhjNodHRwOi8vdGVzdGdvc3QyMDEyLmNy
+eXB0b3Byby5ydS9vY3NwMjAxMmcvb2NzcC5zcmYwQQYIKwYBBQUHMAGGNWh0dHA6Ly90ZXN0Z29z
+dDIwMTIuY3J5cHRvcHJvLnJ1L29jc3AyMDEyZ3N0L29jc3Auc3JmMAoGCCqFAwcBAQMCA0EA6M2L
+vYAyaoWJh5Wj8Ebix5kax7UZcjkqy1x7XPa2ZKI4VxbooSYGV9Be/Qgpq9pkiXhtk8UGXyOumPNN
+pJJGug==</ds:X509Certificate>
+               </ds:X509Data>
+            </ds:KeyInfo>
+            <ds:Object>
+               <xades:QualifyingProperties Target="#xmldsig-33de5527-d83e-45c3-a993-8cbd24035219" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#">
+                  <xades:SignedProperties Id="xmldsig-33de5527-d83e-45c3-a993-8cbd24035219-signedprops">
+                     <xades:SignedSignatureProperties>
+                        <xades:SigningTime>2020-04-16T16:42:09.361+03:00</xades:SigningTime>
+                        <xades:SigningCertificate>
+                           <xades:Cert>
+                              <xades:CertDigest>
+                                 <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+                                 <ds:DigestValue>qCJqYrCLtzlzoRz7cVKESZZQQLb87hYGjTwVR8+IODQ=</ds:DigestValue>
+                              </xades:CertDigest>
+                              <xades:IssuerSerial>
+                                 <ds:X509IssuerName>cn=Тестовый УЦ ООО \"КРИПТО-ПРО\",o=ООО \"КРИПТО-ПРО\",l=Москва,st=г. Москва,c=RU,street=ул. Сущёвский вал д. 18,1.2.643.3.131.1.1=001234567890,1.2.643.100.1=1234567890123</ds:X509IssuerName>
+                                 <ds:X509SerialNumber>2765292528754784835705038123878126505265487203</ds:X509SerialNumber>
+                              </xades:IssuerSerial>
+                           </xades:Cert>
+                        </xades:SigningCertificate>
+                     </xades:SignedSignatureProperties>
+                  </xades:SignedProperties>
+               </xades:QualifyingProperties>
+            </ds:Object>
+         </ds:Signature>
+         <ns4:RequestState>3</ns4:RequestState>
+         <ns4:MessageGUID>1197e9c2-7fe8-11ea-aa67-005056835680</ns4:MessageGUID>
+         <ns4:ErrorMessage>
+            <ns4:ErrorCode>INT016041</ns4:ErrorCode>
+            <ns4:Description>Для экспорта справочника необходимо использовать метод exportNsiPagingItem</ns4:Description>
+            <ns4:StackTrace>ru.lanit.hcs.integration.common.exception.OperationProcessorException: INT016041
+	at ru.lanit.hcs.integration.nsicommon.spring.processor.ExportNsiItemProcessor.checkCatalog(ExportNsiItemProcessor.java:157)
+	at ru.lanit.hcs.integration.nsicommon.spring.processor.ExportNsiItemProcessor.convertRequest(ExportNsiItemProcessor.java:76)
+	at ru.lanit.hcs.integration.nsicommon.spring.processor.ExportNsiItemProcessor.convertRequest(ExportNsiItemProcessor.java:35)
+	at ru.lanit.hcs.integration.common.li.spring.processor.li.InvokeFacadeOldProcessor.process(InvokeFacadeOldProcessor.java:91)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:117)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.TryProcessor.process(TryProcessor.java:113)
+	at org.apache.camel.processor.TryProcessor.process(TryProcessor.java:84)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)
+	at org.apache.camel.processor.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:186)
+	at org.apache.camel.processor.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:86)
+	at org.apache.camel.impl.ProducerCache$1.doInProducer(ProducerCache.java:541)
+	at org.apache.camel.impl.ProducerCache$1.doInProducer(ProducerCache.java:506)
+	at org.apache.camel.impl.ProducerCache.doInProducer(ProducerCache.java:369)
+	at org.apache.camel.impl.ProducerCache.sendExchange(ProducerCache.java:506)
+	at org.apache.camel.impl.ProducerCache.send(ProducerCache.java:246)
+	at org.apache.camel.impl.DefaultProducerTemplate.send(DefaultProducerTemplate.java:148)
+	at org.apache.camel.impl.DefaultProducerTemplate.sendBody(DefaultProducerTemplate.java:156)
+	at org.apache.camel.impl.DefaultProducerTemplate.sendBody(DefaultProducerTemplate.java:173)
+	at ru.lanit.hcs.integration.common.li.spring.mdp.SoapOperationProcessorInvokerMDP.onMessage(SoapOperationProcessorInvokerMDP.java:27)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:744)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:682)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:649)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:317)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:255)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1166)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1158)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1055)
+	at java.lang.Thread.run(Thread.java:745)</ns4:StackTrace>
+         </ns4:ErrorMessage>
+      </ns13:getStateResult>
+   </env:Body>
+</env:Envelope>

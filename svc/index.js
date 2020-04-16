@@ -79,6 +79,14 @@ methods.exportNsiItem = (rq, rp) => {
 	
 	if (!/^\d+$/.test (code)) croak (rp, `"${code}" is not a RegistryNumber`)	
 	
+	if (code == 70) {
+	
+		rp.statusCode = 500
+		
+		return fs.createReadStream ('use_paging.xml').pipe (rp)
+	
+	}
+
 	let guid = exportNsiItem [code]
 
 	if (!guid) croak (rp, `NSI "${code}" not found`)
@@ -90,7 +98,7 @@ methods.exportNsiItem = (rq, rp) => {
 methods.exportNsiList = (rq, rp) => {
 
 	let [, c] = rq.body.split (':ListGroup>'), [code] = c.split ('<')
-		
+			
 	let guid = exportNsiList [code]
 
 	if (!guid) croak (rp, `Group "${code}" not found`)
