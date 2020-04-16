@@ -1,0 +1,1311 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2020-04-14T09:30:38.167+03:00</ns4:Date>
+            <ns4:MessageGUID>c1353fd5-4a67-46a2-b7fa-a52d37255917</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-61f731a3-5aa5-4ac8-9578-fd9bc0274011"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>GFH1pfcbFBXvdJ8B2lhO2aneSMAa0cPu/lnt/FXWNRw=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-61f731a3-5aa5-4ac8-9578-fd9bc0274011-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>ah8SkniRh2FFAnlEW4+d4kLK5YeGCpSDuXQoD5aQ/yY=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>kgyOmn6UBZ4j3j8IGlSojQXhDV5B+D1QTss9VtnUyFbHAUNxEsDIocqm2El9PmJ4JXyH3uYsYqkT
+vdZw/h0oag==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-848efe60-358d-4f05-bf90-090a2f1b1233"><ds:X509Data><ds:X509Certificate>MIIKzjCCCnmgAwIBAgIQQFAWoEJF0r1jcfg5XZNP/jAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTE5MTAwMTEzMDkxOFoXDTIxMDQwMTEzMDkxOFowggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjEWMBQGA1UECwwN0JPQmNChINCW0JrQpTENMAsGA1UECwwEU2lnbjFSMFAGA1UE
+CwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQuNGPINCx0LjQt9C90LXRgS3Q
+v9GA0LjQu9C+0LbQtdC90LjQuTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQCZpsxlEQayuVjUnBSZKTNxf
+27fR5cC7GdA0rpHu9A/e/w6W/fy6TyDWaymWRTXoNw+bGJA+shcf7XjzU+lxjTyjggcwMIIHLDCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCT0JjQoSDQltCa0KUsIFNpZ24sINCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC3
+0LLQuNGC0LjRjyDQsdC40LfQvdC10YEt0L/RgNC40LvQvtC20LXQvdC40LmCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMD0GBSqFA2RvBDQMMtCh
+0JrQl9CYICLQmtGA0LjQv9GC0L7Qn9GA0L4gQ1NQIiDQstC10YDRgdC40Y8gNC4wMCwGCSsGAQQB
+0AQEAwQfMB0GCSsGAQQB0AQFAwQQR1pSRUVTVThXUFJPWVgxWDArBgNVHRAEJDAigA8yMDE5MTAw
+MTEzMDkxOFqBDzIwMjEwMTAxMTMwOTE2WjAdBgNVHQ4EFgQUouDQozJ4wwXlCmGAW2HoF0ZaG74w
+gfcGCCsGAQUFBwEBBIHqMIHnMG4GCCsGAQUFBzAChmJsZGFwOi8vdmNhLmNhb3R1cy5ydS9jbj1j
+YS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2FvdHVzLGw9Y2Vu
+dHJlLHN0PXBvc3QsYz1ydTB1BggrBgEFBQcwAoZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1L0Rv
+d25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVBOEFF
+OUYwNkMwNjU0M0Q3RDZEOTUuY3J0MIHmBgNVHR8Egd4wgdswaKBmoGSGYmxkYXA6Ly92Y2EuY2Fv
+dHVzLnJ1L2NuPWNhLUNDMEE4MzNGMjgxMTYxREQxMjVBOEFFOUYwNkMwNjU0M0Q3RDZEOTUsbz1j
+YW90dXMsbD1jZW50cmUsc3Q9cG9zdCxjPXJ1MG+gbaBrhmlodHRwOi8vZmMucnVzc2lhbnBvc3Qu
+cnUvRG93bkxvYWQvRm9yX1NpdGUvVXNsdWdpL05vcm1Eb2MvY2EtQ0MwQTgzM0YyODExNjFERDEy
+NUE4QUU5RjA2QzA2NTQzRDdENkQ5NS5jcmwwgc8GBSqFA2RwBIHFMIHCDDDQodCa0JfQmCAi0JLQ
+sNC70LjQtNCw0YLQsCBDU1AiINCy0LXRgNGB0LjRjyA1LjAML9CQ0J/QmiAi0JLQsNC70LjQtNCw
+0YLQsCDQo9CmIiDQstC10YDRgdC40Y8gMy4xDC7ihJYxNDkvMy8yLzItODc0INC+0YIgMTQg0LDQ
+v9GA0LXQu9GPIDIwMTcg0LMuDC3QodCkLzEyOC0zNTk1INC+0YIgMjgg0LTQtdC60LDQsdGA0Y8g
+MjAxOCDQsy4wggFgBgNVHSMEggFXMIIBU4AUzAqDPygRYd0SWorp8GwGVD19bZWhggEspIIBKDCC
+ASQxHjAcBgkqhkiG9w0BCQEWD2RpdEBtaW5zdnlhei5ydTELMAkGA1UEBhMCUlUxGDAWBgNVBAgM
+Dzc3INCc0L7RgdC60LLQsDEZMBcGA1UEBwwQ0LMuINCc0L7RgdC60LLQsDEuMCwGA1UECQwl0YPQ
+u9C40YbQsCDQotCy0LXRgNGB0LrQsNGPLCDQtNC+0LwgNzEsMCoGA1UECgwj0JzQuNC90LrQvtC8
+0YHQstGP0LfRjCDQoNC+0YHRgdC40LgxGDAWBgUqhQNkARINMTA0NzcwMjAyNjcwMTEaMBgGCCqF
+AwOBAwEBEgwwMDc3MTA0NzQzNzUxLDAqBgNVBAMMI9Cc0LjQvdC60L7QvNGB0LLRj9C30Ywg0KDQ
+vtGB0YHQuNC4ggsA61uoKwAAAAAC3DCCAQ0GA1UdEgSCAQQwggEAoCcGA1UECqAgDB7QkNCeICLQ
+n9C+0YfRgtCwINCg0L7RgdGB0LjQuCKBIWNlcnRpZmljYXRpb24uYXV0aG9yaXR5QGNhb3R1cy5y
+daBBBgNVBBqgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1
+INGILiwg0LQuMzegLAYDVQQNoCUMI9Cj0KYg0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC40Lgi
+oEEGA1UEE6A6DDgxMzEwMDAsINCzLtCc0L7RgdC60LLQsCwg0JLQsNGA0YjQsNCy0YHQutC+0LUg
+0YguLCDQtC4zNzAMBggqhQMHAQEDAgUAA0EAgYS3ujV4Sj9w8k7g4TS5g0VHqRBewWWiqTG4mHvX
+27W1ZcdH22vPt4S5sSnWg3/f693s3NXIGitKPQChdy08cQ==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-61f731a3-5aa5-4ac8-9578-fd9bc0274011">
+    <xades:SignedProperties Id="xmldsig-61f731a3-5aa5-4ac8-9578-fd9bc0274011-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2020-04-14T09:30:38.173+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>T+BdxNS5O0nJQ2co+pRt8vgzlmz9Y6qus/WLv4KaRkY=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434388945106415493431283720343550</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>7457457d-7e19-11ea-8b5a-005056b64000</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns6:NsiItemRegistryNumber>128</ns6:NsiItemRegistryNumber>
+                <ns6:Created>2020-04-14T09:30:38.167+03:00</ns6:Created>
+                <ns6:NsiElement>
+                    <ns6:Code>6228</ns6:Code>
+                    <ns6:GUID>2f331932-520a-4db3-abc2-7c907dffc8d6</ns6:GUID>
+                    <ns6:Modified>2019-06-24T11:58:30.969+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Иной</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>5406</ns6:Code>
+                    <ns6:GUID>81acb7a7-1e13-4a02-8032-36258b61632e</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.786+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Нет</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>3748</ns6:Code>
+                    <ns6:GUID>9c4a3ec2-b426-48e0-b476-437702b2724e</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.6.33 Пособие к СНиП II-22-81 по проектированию каменных и армокаменных конструкций</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>стены с наружной системой утепления фасада</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>3</ns6:Code>
+                    <ns6:GUID>09fc79d2-a46a-4efa-b76d-0ca0a4774136</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>195</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>839</ns6:Code>
+                                <ns6:GUID>fb46ee55-80fc-4db5-b253-ebf4e6c96073</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>без отделки</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>2476</ns6:Code>
+                    <ns6:GUID>05004632-e0fe-46ed-b977-b9d126cde151</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.п.4.2.3.12</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>обшивочная доска окрашенная </ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>2454</ns6:Code>
+                    <ns6:GUID>cadbaa54-62e5-450b-b009-82458466b046</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>195</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>591</ns6:Code>
+                                <ns6:GUID>7a45ce74-45f9-401d-a970-d9882bbdc1cb</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>прил.3</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>окраска по штукатурке</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>2453</ns6:Code>
+                    <ns6:GUID>302f0870-6849-46f1-bcb0-59587672d44f</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.п.4.2.3.12</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>обшивочная доска не окрашенная </ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1125</ns6:Code>
+                    <ns6:GUID>29c94bcd-ce65-4892-b982-ea25aff98b0f</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.7.7</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>отделочные полимерные материалы</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1124</ns6:Code>
+                    <ns6:GUID>14c9e248-d442-48d7-a508-d53be1bd144c</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.2.17 Пособие к СНиП II-22-81 по проектированию каменных и армокаменных конструкций</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>облицовка керамической плиткой</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1123</ns6:Code>
+                    <ns6:GUID>fdbf3137-bf3d-4c45-9938-24dcdde1203b</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.3.56</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>облицовка плитами искусственного камня</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1122</ns6:Code>
+                    <ns6:GUID>6d8e6c95-83a9-4832-b2d1-50b2472f6a27</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.6.7</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>окраска</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1121</ns6:Code>
+                    <ns6:GUID>021ca725-1f8a-40de-b7d9-cb647b136b66</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.7.1</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>панель с заводской отделкой</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6196</ns6:Code>
+                    <ns6:GUID>a5a2ec8e-2fff-47fe-ba8f-c0290c54eddc</ns6:GUID>
+                    <ns6:Modified>2018-06-01T13:28:30.876+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Обшивка тёсом</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>4048</ns6:Code>
+                    <ns6:GUID>a400299c-9c09-4f1c-b067-af7df15752f4</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.2.15</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>наружная облицовка кирпичем</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1122</ns6:Code>
+                    <ns6:GUID>beeddd16-e5d4-4d80-b0bb-af3128b5580c</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.6.7</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>окраска</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>5407</ns6:Code>
+                    <ns6:GUID>e5d209a2-c821-4aa6-b6d9-db44ae5185c9</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>2004-08-24+04:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Цветные лицевые блоки</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>5408</ns6:Code>
+                    <ns6:GUID>23a820da-32e4-4fbf-b7af-47500978ae22</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>2017-06-09+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Цветные лицевые блоки</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6053</ns6:Code>
+                    <ns6:GUID>3fae04c0-35c0-4509-a23e-6ee802b2ba99</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Цветные лицевые блоки</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6100</ns6:Code>
+                    <ns6:GUID>f28802c0-73e3-4766-918b-10696e4c0d74</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Штукатурка</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6105</ns6:Code>
+                    <ns6:GUID>2efcd968-de85-4610-92d7-3bd021d0e480</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Сайдинг</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6106</ns6:Code>
+                    <ns6:GUID>b589820a-a00b-412d-9406-79c2fcf1a218</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Керамогранит</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6130</ns6:Code>
+                    <ns6:GUID>ac46b18c-a884-459a-8b9f-4bbf88f591cc</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Обшивка асбестоцементными листами</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6132</ns6:Code>
+                    <ns6:GUID>aea62ef8-fe85-4443-b1cf-f897153c6426</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Рубероид</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6133</ns6:Code>
+                    <ns6:GUID>facc3ef7-3e58-42f0-894e-611bc346f92e</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Дерево</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6134</ns6:Code>
+                    <ns6:GUID>47c8d63a-beff-40cf-89d0-b4e66e5c6204</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Металл</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6135</ns6:Code>
+                    <ns6:GUID>8b420b4b-9e98-4b7f-8905-79b6724a8fe3</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Шпунтовая доска</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6156</ns6:Code>
+                    <ns6:GUID>c8d041af-adb6-4bcf-8504-331f9865e071</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Побелка</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>2453</ns6:Code>
+                    <ns6:GUID>afbeeff1-421c-4ee1-a570-599e3f75b416</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.п.4.2.3.12</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>обшивочная доска не окрашенная </ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>2454</ns6:Code>
+                    <ns6:GUID>c2adb2f2-e61c-4b0a-9733-426d55c540c1</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>195</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>591</ns6:Code>
+                                <ns6:GUID>7a45ce74-45f9-401d-a970-d9882bbdc1cb</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>прил.3</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>окраска по штукатурке</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>2476</ns6:Code>
+                    <ns6:GUID>61a7b75f-8a2d-493c-b11a-99e54cd6be33</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.п.4.2.3.12</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>обшивочная доска окрашенная </ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6053</ns6:Code>
+                    <ns6:GUID>59a7acc2-aacd-4f13-a0c5-3b9f20418d80</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Цветные лицевые блоки</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6100</ns6:Code>
+                    <ns6:GUID>d246d1fb-1d7f-483f-867d-1ef35ce85f48</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Штукатурка</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6105</ns6:Code>
+                    <ns6:GUID>862d2161-343b-4541-83ca-91d65c14e060</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Сайдинг</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6106</ns6:Code>
+                    <ns6:GUID>a12a9dde-03ed-4582-a640-ff9b82e432a2</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Керамогранит</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6130</ns6:Code>
+                    <ns6:GUID>9a06ad21-b751-4c57-b357-3f343fd7062f</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Обшивка асбестоцементными листами</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6132</ns6:Code>
+                    <ns6:GUID>8b6eeef2-bbc5-400d-ad57-09c39a5d2084</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Рубероид</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6133</ns6:Code>
+                    <ns6:GUID>a0e73991-b49d-4f1a-9269-01e23563966c</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Дерево</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6134</ns6:Code>
+                    <ns6:GUID>ab76214b-6538-49c7-9d38-798641572499</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Металл</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6135</ns6:Code>
+                    <ns6:GUID>50946d5b-0fe1-4354-bdc4-9b735fc178eb</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Шпунтовая доска</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6156</ns6:Code>
+                    <ns6:GUID>3c504d55-8ea1-410f-b386-ca9592389c62</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.787+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Побелка</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>5406</ns6:Code>
+                    <ns6:GUID>aaf4bb95-a88e-45ca-b9df-7eed97eaf16e</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Нет</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>3748</ns6:Code>
+                    <ns6:GUID>0d47e09f-8c17-4d79-a39d-be1afffb61a6</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.6.33 Пособие к СНиП II-22-81 по проектированию каменных и армокаменных конструкций</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>стены с наружной системой утепления фасада</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>4048</ns6:Code>
+                    <ns6:GUID>1d5cd7ab-64d6-4a46-9b7f-55f6a2238e7f</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.2.15</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>наружная облицовка кирпичем</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1123</ns6:Code>
+                    <ns6:GUID>3e28b76f-b541-4f4c-aac8-d22a4e00c703</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.3.56</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>облицовка плитами искусственного камня</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1121</ns6:Code>
+                    <ns6:GUID>c6f273a5-da3a-461f-9bb3-bcd35e9e7892</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.7.1</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>панель с заводской отделкой</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>5407</ns6:Code>
+                    <ns6:GUID>4f922740-b6bb-4c91-b774-9147f2e0625f</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>Цветные лицевые блоки</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1125</ns6:Code>
+                    <ns6:GUID>c7a8eee8-7ac7-4854-8007-79f8c34cfe79</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.7.7</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>отделочные полимерные материалы</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1124</ns6:Code>
+                    <ns6:GUID>f638e63f-4b95-47ac-89c3-bc7dadbd77a0</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                        <ns6:Value>п.2.17 Пособие к СНиП II-22-81 по проектированию каменных и армокаменных конструкций</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>облицовка керамической плиткой</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>3</ns6:Code>
+                    <ns6:GUID>56a72259-e6f2-4893-ac8c-42d0888f635a</ns6:GUID>
+                    <ns6:Modified>2018-02-02T14:42:08.756+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>НПА/НТД</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>195</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>839</ns6:Code>
+                                <ns6:GUID>fb46ee55-80fc-4db5-b253-ebf4e6c96073</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата начала действия</ns6:Name>
+                        <ns6:Value>1900-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementDateFieldType">
+                        <ns6:Name>Дата окончания действия</ns6:Name>
+                        <ns6:Value>5000-01-01+03:00</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Примечание</ns6:Name>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Материал отделки фасада</ns6:Name>
+                        <ns6:Value>без отделки</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

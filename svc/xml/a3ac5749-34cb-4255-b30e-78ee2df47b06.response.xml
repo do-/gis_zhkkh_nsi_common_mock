@@ -1,0 +1,1073 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2020-04-14T09:30:14.694+03:00</ns4:Date>
+            <ns4:MessageGUID>a3ac5749-34cb-4255-b30e-78ee2df47b06</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-bbcecc7d-0541-45e0-a224-3a3008645632"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>xXgb8lY6h9g/vEjzt7032l0RxzHNkQSvaTw+Lriyhkk=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-bbcecc7d-0541-45e0-a224-3a3008645632-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>N++uRg0MCPxONV/zZS9SRJoFzZDHWNCVkI95aAG2lXk=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>kkzfIAdzEtJR0EoVAh5D8jNElEL+ziEuLNPEZRqEC0RmRFl3yziuzjthA9rxgEVlLxiRal4TPUaR
+d7fprZ5ZeA==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-91620217-204e-4751-b21c-9db5cf5abd0d"><ds:X509Data><ds:X509Certificate>MIIKzjCCCnmgAwIBAgIQQFAWoEJF0r1jcfg5XZNP/jAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTE5MTAwMTEzMDkxOFoXDTIxMDQwMTEzMDkxOFowggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjEWMBQGA1UECwwN0JPQmNChINCW0JrQpTENMAsGA1UECwwEU2lnbjFSMFAGA1UE
+CwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQuNGPINCx0LjQt9C90LXRgS3Q
+v9GA0LjQu9C+0LbQtdC90LjQuTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQCZpsxlEQayuVjUnBSZKTNxf
+27fR5cC7GdA0rpHu9A/e/w6W/fy6TyDWaymWRTXoNw+bGJA+shcf7XjzU+lxjTyjggcwMIIHLDCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCT0JjQoSDQltCa0KUsIFNpZ24sINCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC3
+0LLQuNGC0LjRjyDQsdC40LfQvdC10YEt0L/RgNC40LvQvtC20LXQvdC40LmCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMD0GBSqFA2RvBDQMMtCh
+0JrQl9CYICLQmtGA0LjQv9GC0L7Qn9GA0L4gQ1NQIiDQstC10YDRgdC40Y8gNC4wMCwGCSsGAQQB
+0AQEAwQfMB0GCSsGAQQB0AQFAwQQR1pSRUVTVThXUFJPWVgxWDArBgNVHRAEJDAigA8yMDE5MTAw
+MTEzMDkxOFqBDzIwMjEwMTAxMTMwOTE2WjAdBgNVHQ4EFgQUouDQozJ4wwXlCmGAW2HoF0ZaG74w
+gfcGCCsGAQUFBwEBBIHqMIHnMG4GCCsGAQUFBzAChmJsZGFwOi8vdmNhLmNhb3R1cy5ydS9jbj1j
+YS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2FvdHVzLGw9Y2Vu
+dHJlLHN0PXBvc3QsYz1ydTB1BggrBgEFBQcwAoZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1L0Rv
+d25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVBOEFF
+OUYwNkMwNjU0M0Q3RDZEOTUuY3J0MIHmBgNVHR8Egd4wgdswaKBmoGSGYmxkYXA6Ly92Y2EuY2Fv
+dHVzLnJ1L2NuPWNhLUNDMEE4MzNGMjgxMTYxREQxMjVBOEFFOUYwNkMwNjU0M0Q3RDZEOTUsbz1j
+YW90dXMsbD1jZW50cmUsc3Q9cG9zdCxjPXJ1MG+gbaBrhmlodHRwOi8vZmMucnVzc2lhbnBvc3Qu
+cnUvRG93bkxvYWQvRm9yX1NpdGUvVXNsdWdpL05vcm1Eb2MvY2EtQ0MwQTgzM0YyODExNjFERDEy
+NUE4QUU5RjA2QzA2NTQzRDdENkQ5NS5jcmwwgc8GBSqFA2RwBIHFMIHCDDDQodCa0JfQmCAi0JLQ
+sNC70LjQtNCw0YLQsCBDU1AiINCy0LXRgNGB0LjRjyA1LjAML9CQ0J/QmiAi0JLQsNC70LjQtNCw
+0YLQsCDQo9CmIiDQstC10YDRgdC40Y8gMy4xDC7ihJYxNDkvMy8yLzItODc0INC+0YIgMTQg0LDQ
+v9GA0LXQu9GPIDIwMTcg0LMuDC3QodCkLzEyOC0zNTk1INC+0YIgMjgg0LTQtdC60LDQsdGA0Y8g
+MjAxOCDQsy4wggFgBgNVHSMEggFXMIIBU4AUzAqDPygRYd0SWorp8GwGVD19bZWhggEspIIBKDCC
+ASQxHjAcBgkqhkiG9w0BCQEWD2RpdEBtaW5zdnlhei5ydTELMAkGA1UEBhMCUlUxGDAWBgNVBAgM
+Dzc3INCc0L7RgdC60LLQsDEZMBcGA1UEBwwQ0LMuINCc0L7RgdC60LLQsDEuMCwGA1UECQwl0YPQ
+u9C40YbQsCDQotCy0LXRgNGB0LrQsNGPLCDQtNC+0LwgNzEsMCoGA1UECgwj0JzQuNC90LrQvtC8
+0YHQstGP0LfRjCDQoNC+0YHRgdC40LgxGDAWBgUqhQNkARINMTA0NzcwMjAyNjcwMTEaMBgGCCqF
+AwOBAwEBEgwwMDc3MTA0NzQzNzUxLDAqBgNVBAMMI9Cc0LjQvdC60L7QvNGB0LLRj9C30Ywg0KDQ
+vtGB0YHQuNC4ggsA61uoKwAAAAAC3DCCAQ0GA1UdEgSCAQQwggEAoCcGA1UECqAgDB7QkNCeICLQ
+n9C+0YfRgtCwINCg0L7RgdGB0LjQuCKBIWNlcnRpZmljYXRpb24uYXV0aG9yaXR5QGNhb3R1cy5y
+daBBBgNVBBqgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1
+INGILiwg0LQuMzegLAYDVQQNoCUMI9Cj0KYg0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC40Lgi
+oEEGA1UEE6A6DDgxMzEwMDAsINCzLtCc0L7RgdC60LLQsCwg0JLQsNGA0YjQsNCy0YHQutC+0LUg
+0YguLCDQtC4zNzAMBggqhQMHAQEDAgUAA0EAgYS3ujV4Sj9w8k7g4TS5g0VHqRBewWWiqTG4mHvX
+27W1ZcdH22vPt4S5sSnWg3/f693s3NXIGitKPQChdy08cQ==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-bbcecc7d-0541-45e0-a224-3a3008645632">
+    <xades:SignedProperties Id="xmldsig-bbcecc7d-0541-45e0-a224-3a3008645632-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2020-04-14T09:30:14.699+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>T+BdxNS5O0nJQ2co+pRt8vgzlmz9Y6qus/WLv4KaRkY=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434388945106415493431283720343550</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>665fae5f-7e19-11ea-bb6e-005056b63f6d</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns6:NsiItemRegistryNumber>79</ns6:NsiItemRegistryNumber>
+                <ns6:Created>2020-04-14T09:30:14.694+03:00</ns6:Created>
+                <ns6:NsiElement>
+                    <ns6:Code>29</ns6:Code>
+                    <ns6:GUID>58164048-d304-4c3d-9cb9-c1f5b1fa76cd</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:21.758+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Нормативный правовой акт органа местного самоуправления, которым утверждена муниципальная программа в сфере жилищно-коммунального хозяйства</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>11</ns6:Code>
+                                <ns6:GUID>828a841e-4aab-4057-ab67-b5b7d0ea92c4</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>true</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>30</ns6:Code>
+                    <ns6:GUID>f9b4dd9c-1a94-4db1-b1d8-fb1a5da2bda6</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:21.758+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Нормативный правовой акт органа местного самоуправления, которым утверждена муниципальная программа в области энергосбережения и повышения энергетической эффективности</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>6</ns6:Code>
+                                <ns6:GUID>467cd9a1-8972-430b-bdf7-07fe54242217</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>true</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>31</ns6:Code>
+                    <ns6:GUID>1fda50ea-d540-44e7-863e-824960096b92</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:21.758+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Перечень мероприятий по энергосбережению и повышению энергетической эффективности</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>12</ns6:Code>
+                                <ns6:GUID>d7c5dd3f-e67f-413d-bc6c-01c34fffd7a1</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>32</ns6:Code>
+                    <ns6:GUID>f50e0067-a75d-487a-82e2-bac3da6392d5</ns6:GUID>
+                    <ns6:Modified>2016-09-03T12:51:34.149+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Нормативный правовой акт органа государственной власти субъекта Российской Федерации об утверждении (изменении) региональной программы в области энергосбережения и повышения энергетической эффективности</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>13</ns6:Code>
+                                <ns6:GUID>3f2e35d1-f0de-4783-b3c0-e93212fe368b</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>33</ns6:Code>
+                    <ns6:GUID>bda12def-266d-418c-8b03-ab2becb1e7c5</ns6:GUID>
+                    <ns6:Modified>2016-09-03T12:51:34.393+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Региональная программа в области обращения с твердыми коммунальными отходами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>14</ns6:Code>
+                                <ns6:GUID>d3ba5ac7-2401-4f06-b20d-ded1aa834b62</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1</ns6:Code>
+                    <ns6:GUID>4889cccc-a94f-4663-b6de-5defa337c039</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Паспорт региональной программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>2</ns6:Code>
+                    <ns6:GUID>63ac2301-ca6b-4914-8f1c-074cb94d1717</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Состав объектов коммунальной инфраструктуры</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>3</ns6:Code>
+                    <ns6:GUID>e115f43c-320d-4ac9-92cf-daded6afa393</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Характеристика существующего состояния системы коммунальной инфраструктуры</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>4</ns6:Code>
+                    <ns6:GUID>bcd639c3-9e78-458f-bd1d-92cc017735f2</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Цели и задачи региональной программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>5</ns6:Code>
+                    <ns6:GUID>ad256b53-b67b-402f-9787-4c329502efcf</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Перечень мероприятий региональной программы </ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6</ns6:Code>
+                    <ns6:GUID>8934fbda-5568-4c66-a7af-66a45afd23fe</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>План мероприятий по переселению до 1 сентября 2017 года граждан из всего аварийного жилищного фонда, расположенного на территории субъекта РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>7</ns6:Code>
+                    <ns6:GUID>79891a5c-0138-4dfe-8c70-0d777d52e7f2</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Целевые показатели реализации региональной программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>8</ns6:Code>
+                    <ns6:GUID>086cd627-ddd7-418e-af5d-c66145b583ba</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Информация об объеме и источниках финансирования региональной программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>9</ns6:Code>
+                    <ns6:GUID>cb282f54-b603-4890-967a-a4e5496d6ee5</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Расчет и обоснование сроков окупаемости реализуемых мероприятий региональной программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>10</ns6:Code>
+                    <ns6:GUID>8d4c054e-0aad-46fb-bfcc-3022b002c7fa</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Экономическое обоснование реализации региональной программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>11</ns6:Code>
+                    <ns6:GUID>b3da95a4-8cc5-4df6-86b4-f39ad05cb259</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Прогноз расходов населения на коммунальные ресурсы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>12</ns6:Code>
+                    <ns6:GUID>346ee526-da86-4452-8edb-91c4615c5334</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Управление программой</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>34</ns6:Code>
+                    <ns6:GUID>c17a6ca6-1d3c-4d2e-8ca2-aeeb90842b79</ns6:GUID>
+                    <ns6:Modified>2016-10-16T02:28:39.037+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Распоряжение</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>60ffd541-3da8-4714-a117-d37ba2334425</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>true</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>13</ns6:Code>
+                    <ns6:GUID>be74e50d-35d4-4cfd-800d-a93cbb90d915</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Сведения об участнике региональной программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>14</ns6:Code>
+                    <ns6:GUID>190184d3-e747-4ce7-83cd-9021ff5b76c3</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Инвестиционная программа участника региональной программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>15</ns6:Code>
+                    <ns6:GUID>9d121df5-c77f-4c22-b50b-513ae0c74951</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Схема (в том числе акта, утверждающего схемы) тепло-, электро-, водоснабжения или водоотведения, перспективная схема обращения с твердыми бытовыми отходами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>true</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>16</ns6:Code>
+                    <ns6:GUID>d38c0964-6d15-40e2-b0c7-dacee0f1f4fd</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Документ территориального планирования (включая программу комплексного развития систем коммунальной инфраструктуры)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>true</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>17</ns6:Code>
+                    <ns6:GUID>120929a6-4008-4277-93e1-e91e66b53c2c</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Финансовая модель реализации региональной программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>18</ns6:Code>
+                    <ns6:GUID>65d1b801-f00c-4f5f-8a0f-c4fb2851d95c</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Нормативный правовой акт органа государственной власти субъекта Российской Федерации.</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>true</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>21</ns6:Code>
+                    <ns6:GUID>5be27b61-b4f4-4235-86d0-fbae417fc244</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Планируемые показатели выполнения региональной адресной программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>22</ns6:Code>
+                    <ns6:GUID>c368d2db-05f5-4c5c-b7b7-4b8daf9618b1</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Перечень муниципальных образований, участвующих в реализации программы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>23</ns6:Code>
+                    <ns6:GUID>fd735059-d066-479d-848b-92d753f57919</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Иное</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>6</ns6:Code>
+                                <ns6:GUID>467cd9a1-8972-430b-bdf7-07fe54242217</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>11</ns6:Code>
+                                <ns6:GUID>828a841e-4aab-4057-ab67-b5b7d0ea92c4</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>12</ns6:Code>
+                                <ns6:GUID>d7c5dd3f-e67f-413d-bc6c-01c34fffd7a1</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>14</ns6:Code>
+                                <ns6:GUID>d3ba5ac7-2401-4f06-b20d-ded1aa834b62</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>13</ns6:Code>
+                                <ns6:GUID>3f2e35d1-f0de-4783-b3c0-e93212fe368b</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>60ffd541-3da8-4714-a117-d37ba2334425</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>5</ns6:Code>
+                                <ns6:GUID>49796ab7-c661-44ce-bb25-94cd3dd3bc7f</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>19</ns6:Code>
+                    <ns6:GUID>12cf75ab-7e28-46dd-9c91-34afc856e59e</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Перечень аварийных многоквартирных домов</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>20</ns6:Code>
+                    <ns6:GUID>d7f28484-f7a5-4b59-a3e6-75d90a67ff44</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.544+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Реестр аварийных многоквартирных домов по способам переселения</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>24</ns6:Code>
+                    <ns6:GUID>e5a2250c-6776-4367-9506-c0a0921c5daf</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:02.945+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Программа по переселению граждан из аварийного жилищного фонда</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>4</ns6:Code>
+                                <ns6:GUID>76810e19-bbc9-4ebf-846e-8662499ad935</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>25</ns6:Code>
+                    <ns6:GUID>b55e80d8-0c36-47bb-821d-4b42437bde87</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:03.286+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Приказ</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>3</ns6:Code>
+                                <ns6:GUID>f17a833c-84f3-4b2e-b26e-b0b5d816a328</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>60ffd541-3da8-4714-a117-d37ba2334425</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>true</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>26</ns6:Code>
+                    <ns6:GUID>fed218e8-4925-4403-8a48-341b74270894</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:03.286+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Постановление</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>3</ns6:Code>
+                                <ns6:GUID>f17a833c-84f3-4b2e-b26e-b0b5d816a328</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>60ffd541-3da8-4714-a117-d37ba2334425</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>true</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>27</ns6:Code>
+                    <ns6:GUID>09b22f93-00ea-4609-b3d7-9dd06190b49a</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:03.286+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Пояснительная записка</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>3</ns6:Code>
+                                <ns6:GUID>f17a833c-84f3-4b2e-b26e-b0b5d816a328</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>60ffd541-3da8-4714-a117-d37ba2334425</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>false</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>28</ns6:Code>
+                    <ns6:GUID>32c58357-2727-4d82-b215-4c4d23da7e6f</ns6:GUID>
+                    <ns6:Modified>2015-07-22T21:59:03.286+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид документа</ns6:Name>
+                        <ns6:Value>Закон</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>3</ns6:Code>
+                                <ns6:GUID>f17a833c-84f3-4b2e-b26e-b0b5d816a328</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид программы</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>80</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>60ffd541-3da8-4714-a117-d37ba2334425</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementBooleanFieldType">
+                        <ns6:Name>Наличие номера и даты документа</ns6:Name>
+                        <ns6:Value>true</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

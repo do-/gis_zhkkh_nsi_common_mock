@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2020-04-14T09:31:53.582+03:00</ns4:Date>
+            <ns4:MessageGUID>a22776ac-b138-4452-9d55-607d74cbc857</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-a7a3b928-25c8-42d2-b2fd-c8397ff2ce8b"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>BOX9BnKKCHJX1/bQDZlvguse6f0p50KPdLsHjV+z5vM=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-a7a3b928-25c8-42d2-b2fd-c8397ff2ce8b-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>iLqoR6VUnbMIQFew/L2hnQLgJoPEd8YvUG4gCkOQfLo=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>tcoHRzpI6bjSCX1dmv3plpjhikUnSVJNpNlWEJCAofBH4jzbklXCOngni7Avm8PXYvcKdCKr3+Y4
+u1s3LMAZoQ==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-678f6748-1327-45a8-b6a1-406a83ec37bf"><ds:X509Data><ds:X509Certificate>MIIKzjCCCnmgAwIBAgIQQFAWoEJF0r1jcfg5XZNP/jAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTE5MTAwMTEzMDkxOFoXDTIxMDQwMTEzMDkxOFowggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjEWMBQGA1UECwwN0JPQmNChINCW0JrQpTENMAsGA1UECwwEU2lnbjFSMFAGA1UE
+CwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQuNGPINCx0LjQt9C90LXRgS3Q
+v9GA0LjQu9C+0LbQtdC90LjQuTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQCZpsxlEQayuVjUnBSZKTNxf
+27fR5cC7GdA0rpHu9A/e/w6W/fy6TyDWaymWRTXoNw+bGJA+shcf7XjzU+lxjTyjggcwMIIHLDCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCT0JjQoSDQltCa0KUsIFNpZ24sINCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC3
+0LLQuNGC0LjRjyDQsdC40LfQvdC10YEt0L/RgNC40LvQvtC20LXQvdC40LmCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMD0GBSqFA2RvBDQMMtCh
+0JrQl9CYICLQmtGA0LjQv9GC0L7Qn9GA0L4gQ1NQIiDQstC10YDRgdC40Y8gNC4wMCwGCSsGAQQB
+0AQEAwQfMB0GCSsGAQQB0AQFAwQQR1pSRUVTVThXUFJPWVgxWDArBgNVHRAEJDAigA8yMDE5MTAw
+MTEzMDkxOFqBDzIwMjEwMTAxMTMwOTE2WjAdBgNVHQ4EFgQUouDQozJ4wwXlCmGAW2HoF0ZaG74w
+gfcGCCsGAQUFBwEBBIHqMIHnMG4GCCsGAQUFBzAChmJsZGFwOi8vdmNhLmNhb3R1cy5ydS9jbj1j
+YS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2FvdHVzLGw9Y2Vu
+dHJlLHN0PXBvc3QsYz1ydTB1BggrBgEFBQcwAoZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1L0Rv
+d25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVBOEFF
+OUYwNkMwNjU0M0Q3RDZEOTUuY3J0MIHmBgNVHR8Egd4wgdswaKBmoGSGYmxkYXA6Ly92Y2EuY2Fv
+dHVzLnJ1L2NuPWNhLUNDMEE4MzNGMjgxMTYxREQxMjVBOEFFOUYwNkMwNjU0M0Q3RDZEOTUsbz1j
+YW90dXMsbD1jZW50cmUsc3Q9cG9zdCxjPXJ1MG+gbaBrhmlodHRwOi8vZmMucnVzc2lhbnBvc3Qu
+cnUvRG93bkxvYWQvRm9yX1NpdGUvVXNsdWdpL05vcm1Eb2MvY2EtQ0MwQTgzM0YyODExNjFERDEy
+NUE4QUU5RjA2QzA2NTQzRDdENkQ5NS5jcmwwgc8GBSqFA2RwBIHFMIHCDDDQodCa0JfQmCAi0JLQ
+sNC70LjQtNCw0YLQsCBDU1AiINCy0LXRgNGB0LjRjyA1LjAML9CQ0J/QmiAi0JLQsNC70LjQtNCw
+0YLQsCDQo9CmIiDQstC10YDRgdC40Y8gMy4xDC7ihJYxNDkvMy8yLzItODc0INC+0YIgMTQg0LDQ
+v9GA0LXQu9GPIDIwMTcg0LMuDC3QodCkLzEyOC0zNTk1INC+0YIgMjgg0LTQtdC60LDQsdGA0Y8g
+MjAxOCDQsy4wggFgBgNVHSMEggFXMIIBU4AUzAqDPygRYd0SWorp8GwGVD19bZWhggEspIIBKDCC
+ASQxHjAcBgkqhkiG9w0BCQEWD2RpdEBtaW5zdnlhei5ydTELMAkGA1UEBhMCUlUxGDAWBgNVBAgM
+Dzc3INCc0L7RgdC60LLQsDEZMBcGA1UEBwwQ0LMuINCc0L7RgdC60LLQsDEuMCwGA1UECQwl0YPQ
+u9C40YbQsCDQotCy0LXRgNGB0LrQsNGPLCDQtNC+0LwgNzEsMCoGA1UECgwj0JzQuNC90LrQvtC8
+0YHQstGP0LfRjCDQoNC+0YHRgdC40LgxGDAWBgUqhQNkARINMTA0NzcwMjAyNjcwMTEaMBgGCCqF
+AwOBAwEBEgwwMDc3MTA0NzQzNzUxLDAqBgNVBAMMI9Cc0LjQvdC60L7QvNGB0LLRj9C30Ywg0KDQ
+vtGB0YHQuNC4ggsA61uoKwAAAAAC3DCCAQ0GA1UdEgSCAQQwggEAoCcGA1UECqAgDB7QkNCeICLQ
+n9C+0YfRgtCwINCg0L7RgdGB0LjQuCKBIWNlcnRpZmljYXRpb24uYXV0aG9yaXR5QGNhb3R1cy5y
+daBBBgNVBBqgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1
+INGILiwg0LQuMzegLAYDVQQNoCUMI9Cj0KYg0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC40Lgi
+oEEGA1UEE6A6DDgxMzEwMDAsINCzLtCc0L7RgdC60LLQsCwg0JLQsNGA0YjQsNCy0YHQutC+0LUg
+0YguLCDQtC4zNzAMBggqhQMHAQEDAgUAA0EAgYS3ujV4Sj9w8k7g4TS5g0VHqRBewWWiqTG4mHvX
+27W1ZcdH22vPt4S5sSnWg3/f693s3NXIGitKPQChdy08cQ==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-a7a3b928-25c8-42d2-b2fd-c8397ff2ce8b">
+    <xades:SignedProperties Id="xmldsig-a7a3b928-25c8-42d2-b2fd-c8397ff2ce8b-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2020-04-14T09:31:53.585+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>T+BdxNS5O0nJQ2co+pRt8vgzlmz9Y6qus/WLv4KaRkY=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434388945106415493431283720343550</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>a15b794b-7e19-11ea-ac30-005056b69264</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns6:NsiItemRegistryNumber>267</ns6:NsiItemRegistryNumber>
+                <ns6:Created>2020-04-14T09:31:53.582+03:00</ns6:Created>
+                <ns6:NsiElement>
+                    <ns6:Code>6</ns6:Code>
+                    <ns6:GUID>d93fc039-f9a7-4412-a7ad-c991d284664f</ns6:GUID>
+                    <ns6:Modified>2019-09-13T22:24:13.843+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Использование для дифференциации</ns6:Name>
+                        <ns6:Value>Единые тарифы на услуги региональных операторов по обращению с твердыми коммунальными отходами</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>5</ns6:Code>
+                    <ns6:GUID>609cbc15-7e7a-43cc-a813-c11e0de5d65e</ns6:GUID>
+                    <ns6:Modified>2016-02-09T20:31:07.883+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Использование для дифференциации</ns6:Name>
+                        <ns6:Value>Нормативы</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>3</ns6:Code>
+                    <ns6:GUID>2bd12ed8-81a4-4ab6-bb10-87171e9fc043</ns6:GUID>
+                    <ns6:Modified>2016-02-09T20:31:07.883+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Использование для дифференциации</ns6:Name>
+                        <ns6:Value>Тарифы минимального размера взноса на КР</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1</ns6:Code>
+                    <ns6:GUID>8fc36ffe-d9b4-459c-8620-28a110df600a</ns6:GUID>
+                    <ns6:Modified>2016-02-09T20:31:07.883+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Использование для дифференциации</ns6:Name>
+                        <ns6:Value>Тарифы на оплату КР</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>2</ns6:Code>
+                    <ns6:GUID>8bad16c3-71d4-487e-b47f-f760f771e3bb</ns6:GUID>
+                    <ns6:Modified>2017-06-09T21:15:47.735+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Использование для дифференциации</ns6:Name>
+                        <ns6:Value>Тарифы платы за содержание и ремонт жилого помещения и платы за пользование жилым помещением</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>4</ns6:Code>
+                    <ns6:GUID>d496281c-9af4-4fd3-97fe-6910926570aa</ns6:GUID>
+                    <ns6:Modified>2016-02-09T20:31:07.883+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Использование для дифференциации</ns6:Name>
+                        <ns6:Value>Тарифы социальной нормы потребления ЭЭ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

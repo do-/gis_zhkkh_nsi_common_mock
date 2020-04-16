@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2020-04-14T09:31:18.603+03:00</ns4:Date>
+            <ns4:MessageGUID>b53f929c-08dd-479e-93b7-2d9cdba53847</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-ee6e1bb4-4548-4e76-95a6-8d1ddd3c04d7"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>D2dJ5nucc+VA5TXWM1+WHb7MHLfTOab/KpE+E5cu92k=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-ee6e1bb4-4548-4e76-95a6-8d1ddd3c04d7-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>dmz4GAMjebGzYk8B8KbWpz6S9TEWoqDWkFiM/BV5XcU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>GgxqRqpRG97AfHyE0E7oKhWIL1AoDP/SPVMHoGGFSrbHMYKY2ojuWXpXA0q9+giQC0Z3vQDrGJ8n
+wno0rv9HpQ==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-157116e4-5e61-449f-8e1e-3849e41e641f"><ds:X509Data><ds:X509Certificate>MIIKzjCCCnmgAwIBAgIQQFAWoEJF0r1jcfg5XZNP/jAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTE5MTAwMTEzMDkxOFoXDTIxMDQwMTEzMDkxOFowggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjEWMBQGA1UECwwN0JPQmNChINCW0JrQpTENMAsGA1UECwwEU2lnbjFSMFAGA1UE
+CwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQuNGPINCx0LjQt9C90LXRgS3Q
+v9GA0LjQu9C+0LbQtdC90LjQuTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQCZpsxlEQayuVjUnBSZKTNxf
+27fR5cC7GdA0rpHu9A/e/w6W/fy6TyDWaymWRTXoNw+bGJA+shcf7XjzU+lxjTyjggcwMIIHLDCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCT0JjQoSDQltCa0KUsIFNpZ24sINCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC3
+0LLQuNGC0LjRjyDQsdC40LfQvdC10YEt0L/RgNC40LvQvtC20LXQvdC40LmCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMD0GBSqFA2RvBDQMMtCh
+0JrQl9CYICLQmtGA0LjQv9GC0L7Qn9GA0L4gQ1NQIiDQstC10YDRgdC40Y8gNC4wMCwGCSsGAQQB
+0AQEAwQfMB0GCSsGAQQB0AQFAwQQR1pSRUVTVThXUFJPWVgxWDArBgNVHRAEJDAigA8yMDE5MTAw
+MTEzMDkxOFqBDzIwMjEwMTAxMTMwOTE2WjAdBgNVHQ4EFgQUouDQozJ4wwXlCmGAW2HoF0ZaG74w
+gfcGCCsGAQUFBwEBBIHqMIHnMG4GCCsGAQUFBzAChmJsZGFwOi8vdmNhLmNhb3R1cy5ydS9jbj1j
+YS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2FvdHVzLGw9Y2Vu
+dHJlLHN0PXBvc3QsYz1ydTB1BggrBgEFBQcwAoZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1L0Rv
+d25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVBOEFF
+OUYwNkMwNjU0M0Q3RDZEOTUuY3J0MIHmBgNVHR8Egd4wgdswaKBmoGSGYmxkYXA6Ly92Y2EuY2Fv
+dHVzLnJ1L2NuPWNhLUNDMEE4MzNGMjgxMTYxREQxMjVBOEFFOUYwNkMwNjU0M0Q3RDZEOTUsbz1j
+YW90dXMsbD1jZW50cmUsc3Q9cG9zdCxjPXJ1MG+gbaBrhmlodHRwOi8vZmMucnVzc2lhbnBvc3Qu
+cnUvRG93bkxvYWQvRm9yX1NpdGUvVXNsdWdpL05vcm1Eb2MvY2EtQ0MwQTgzM0YyODExNjFERDEy
+NUE4QUU5RjA2QzA2NTQzRDdENkQ5NS5jcmwwgc8GBSqFA2RwBIHFMIHCDDDQodCa0JfQmCAi0JLQ
+sNC70LjQtNCw0YLQsCBDU1AiINCy0LXRgNGB0LjRjyA1LjAML9CQ0J/QmiAi0JLQsNC70LjQtNCw
+0YLQsCDQo9CmIiDQstC10YDRgdC40Y8gMy4xDC7ihJYxNDkvMy8yLzItODc0INC+0YIgMTQg0LDQ
+v9GA0LXQu9GPIDIwMTcg0LMuDC3QodCkLzEyOC0zNTk1INC+0YIgMjgg0LTQtdC60LDQsdGA0Y8g
+MjAxOCDQsy4wggFgBgNVHSMEggFXMIIBU4AUzAqDPygRYd0SWorp8GwGVD19bZWhggEspIIBKDCC
+ASQxHjAcBgkqhkiG9w0BCQEWD2RpdEBtaW5zdnlhei5ydTELMAkGA1UEBhMCUlUxGDAWBgNVBAgM
+Dzc3INCc0L7RgdC60LLQsDEZMBcGA1UEBwwQ0LMuINCc0L7RgdC60LLQsDEuMCwGA1UECQwl0YPQ
+u9C40YbQsCDQotCy0LXRgNGB0LrQsNGPLCDQtNC+0LwgNzEsMCoGA1UECgwj0JzQuNC90LrQvtC8
+0YHQstGP0LfRjCDQoNC+0YHRgdC40LgxGDAWBgUqhQNkARINMTA0NzcwMjAyNjcwMTEaMBgGCCqF
+AwOBAwEBEgwwMDc3MTA0NzQzNzUxLDAqBgNVBAMMI9Cc0LjQvdC60L7QvNGB0LLRj9C30Ywg0KDQ
+vtGB0YHQuNC4ggsA61uoKwAAAAAC3DCCAQ0GA1UdEgSCAQQwggEAoCcGA1UECqAgDB7QkNCeICLQ
+n9C+0YfRgtCwINCg0L7RgdGB0LjQuCKBIWNlcnRpZmljYXRpb24uYXV0aG9yaXR5QGNhb3R1cy5y
+daBBBgNVBBqgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1
+INGILiwg0LQuMzegLAYDVQQNoCUMI9Cj0KYg0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC40Lgi
+oEEGA1UEE6A6DDgxMzEwMDAsINCzLtCc0L7RgdC60LLQsCwg0JLQsNGA0YjQsNCy0YHQutC+0LUg
+0YguLCDQtC4zNzAMBggqhQMHAQEDAgUAA0EAgYS3ujV4Sj9w8k7g4TS5g0VHqRBewWWiqTG4mHvX
+27W1ZcdH22vPt4S5sSnWg3/f693s3NXIGitKPQChdy08cQ==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-ee6e1bb4-4548-4e76-95a6-8d1ddd3c04d7">
+    <xades:SignedProperties Id="xmldsig-ee6e1bb4-4548-4e76-95a6-8d1ddd3c04d7-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2020-04-14T09:31:18.607+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>T+BdxNS5O0nJQ2co+pRt8vgzlmz9Y6qus/WLv4KaRkY=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434388945106415493431283720343550</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>8c8574cb-7e19-11ea-9cc0-005056b61c93</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns7:NsiItemRegistryNumber>183</ns7:NsiItemRegistryNumber>
+                <ns7:Created>2020-04-14T09:31:18.603+03:00</ns7:Created>
+                <ns7:NsiElement>
+                    <ns7:Code>6231</ns7:Code>
+                    <ns7:GUID>73f1f173-b82c-4cb5-ab18-c1dbc371b80b</ns7:GUID>
+                    <ns7:Modified>2019-06-24T12:00:26.458+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы холодного водоснабжения</ns7:Name>
+                        <ns7:Value>Автономное</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6230</ns7:Code>
+                    <ns7:GUID>a3f18be7-8f08-463c-aa92-6d597caf8c5d</ns7:GUID>
+                    <ns7:Modified>2019-06-24T12:00:16.102+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы холодного водоснабжения</ns7:Name>
+                        <ns7:Value>Центральное</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>5517</ns7:Code>
+                    <ns7:GUID>420fca53-586d-4ac7-9879-d4eb077bde84</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы холодного водоснабжения</ns7:Name>
+                        <ns7:Value>Нет</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2217</ns7:Code>
+                    <ns7:GUID>ca36d540-ff68-4179-909d-b1c3aef2367e</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.9.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы холодного водоснабжения</ns7:Name>
+                        <ns7:Value>Кольцевая или с закольцованными вводами</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2216</ns7:Code>
+                    <ns7:GUID>4f45ada4-104d-4fef-8fb9-07eb99d94aea</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.9.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы холодного водоснабжения</ns7:Name>
+                        <ns7:Value>Тупиковая</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6114</ns7:Code>
+                    <ns7:GUID>1e5a0c3d-019e-40b7-aecf-c80d1e45dfc9</ns7:GUID>
+                    <ns7:Modified>2017-09-01T09:41:47.181+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы холодного водоснабжения</ns7:Name>
+                        <ns7:Value>Централизованная (от городской сети)</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

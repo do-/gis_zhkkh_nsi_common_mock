@@ -1,0 +1,903 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2020-04-14T09:30:06.533+03:00</ns4:Date>
+            <ns4:MessageGUID>bde7872d-4024-42fa-808a-13fc98d74b7e</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-51022249-396f-420d-a4c6-3ca5e2805687"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>aUixIXtvv4isobjAplgLkvBHvG5I9EPcgLKSd3EjH9c=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-51022249-396f-420d-a4c6-3ca5e2805687-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>omXuyCEbw5k50twDlpoQpSJnkY60I9iSdOJcimmaa/0=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>XPWIwr4b/8sl3kIkxDQuMkCZ6WeJsyQ9vzS6d7V89TpmoubQqp18kzbycqjbIacFI0myTuGZR4xM
+zTh7tALzNA==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-eb084e86-775b-4bcb-bff3-73aaa6ab9b6b"><ds:X509Data><ds:X509Certificate>MIIKzjCCCnmgAwIBAgIQQFAWoEJF0r1jcfg5XZNP/jAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTE5MTAwMTEzMDkxOFoXDTIxMDQwMTEzMDkxOFowggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjEWMBQGA1UECwwN0JPQmNChINCW0JrQpTENMAsGA1UECwwEU2lnbjFSMFAGA1UE
+CwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQuNGPINCx0LjQt9C90LXRgS3Q
+v9GA0LjQu9C+0LbQtdC90LjQuTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQCZpsxlEQayuVjUnBSZKTNxf
+27fR5cC7GdA0rpHu9A/e/w6W/fy6TyDWaymWRTXoNw+bGJA+shcf7XjzU+lxjTyjggcwMIIHLDCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCT0JjQoSDQltCa0KUsIFNpZ24sINCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC3
+0LLQuNGC0LjRjyDQsdC40LfQvdC10YEt0L/RgNC40LvQvtC20LXQvdC40LmCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMD0GBSqFA2RvBDQMMtCh
+0JrQl9CYICLQmtGA0LjQv9GC0L7Qn9GA0L4gQ1NQIiDQstC10YDRgdC40Y8gNC4wMCwGCSsGAQQB
+0AQEAwQfMB0GCSsGAQQB0AQFAwQQR1pSRUVTVThXUFJPWVgxWDArBgNVHRAEJDAigA8yMDE5MTAw
+MTEzMDkxOFqBDzIwMjEwMTAxMTMwOTE2WjAdBgNVHQ4EFgQUouDQozJ4wwXlCmGAW2HoF0ZaG74w
+gfcGCCsGAQUFBwEBBIHqMIHnMG4GCCsGAQUFBzAChmJsZGFwOi8vdmNhLmNhb3R1cy5ydS9jbj1j
+YS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2FvdHVzLGw9Y2Vu
+dHJlLHN0PXBvc3QsYz1ydTB1BggrBgEFBQcwAoZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1L0Rv
+d25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVBOEFF
+OUYwNkMwNjU0M0Q3RDZEOTUuY3J0MIHmBgNVHR8Egd4wgdswaKBmoGSGYmxkYXA6Ly92Y2EuY2Fv
+dHVzLnJ1L2NuPWNhLUNDMEE4MzNGMjgxMTYxREQxMjVBOEFFOUYwNkMwNjU0M0Q3RDZEOTUsbz1j
+YW90dXMsbD1jZW50cmUsc3Q9cG9zdCxjPXJ1MG+gbaBrhmlodHRwOi8vZmMucnVzc2lhbnBvc3Qu
+cnUvRG93bkxvYWQvRm9yX1NpdGUvVXNsdWdpL05vcm1Eb2MvY2EtQ0MwQTgzM0YyODExNjFERDEy
+NUE4QUU5RjA2QzA2NTQzRDdENkQ5NS5jcmwwgc8GBSqFA2RwBIHFMIHCDDDQodCa0JfQmCAi0JLQ
+sNC70LjQtNCw0YLQsCBDU1AiINCy0LXRgNGB0LjRjyA1LjAML9CQ0J/QmiAi0JLQsNC70LjQtNCw
+0YLQsCDQo9CmIiDQstC10YDRgdC40Y8gMy4xDC7ihJYxNDkvMy8yLzItODc0INC+0YIgMTQg0LDQ
+v9GA0LXQu9GPIDIwMTcg0LMuDC3QodCkLzEyOC0zNTk1INC+0YIgMjgg0LTQtdC60LDQsdGA0Y8g
+MjAxOCDQsy4wggFgBgNVHSMEggFXMIIBU4AUzAqDPygRYd0SWorp8GwGVD19bZWhggEspIIBKDCC
+ASQxHjAcBgkqhkiG9w0BCQEWD2RpdEBtaW5zdnlhei5ydTELMAkGA1UEBhMCUlUxGDAWBgNVBAgM
+Dzc3INCc0L7RgdC60LLQsDEZMBcGA1UEBwwQ0LMuINCc0L7RgdC60LLQsDEuMCwGA1UECQwl0YPQ
+u9C40YbQsCDQotCy0LXRgNGB0LrQsNGPLCDQtNC+0LwgNzEsMCoGA1UECgwj0JzQuNC90LrQvtC8
+0YHQstGP0LfRjCDQoNC+0YHRgdC40LgxGDAWBgUqhQNkARINMTA0NzcwMjAyNjcwMTEaMBgGCCqF
+AwOBAwEBEgwwMDc3MTA0NzQzNzUxLDAqBgNVBAMMI9Cc0LjQvdC60L7QvNGB0LLRj9C30Ywg0KDQ
+vtGB0YHQuNC4ggsA61uoKwAAAAAC3DCCAQ0GA1UdEgSCAQQwggEAoCcGA1UECqAgDB7QkNCeICLQ
+n9C+0YfRgtCwINCg0L7RgdGB0LjQuCKBIWNlcnRpZmljYXRpb24uYXV0aG9yaXR5QGNhb3R1cy5y
+daBBBgNVBBqgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1
+INGILiwg0LQuMzegLAYDVQQNoCUMI9Cj0KYg0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC40Lgi
+oEEGA1UEE6A6DDgxMzEwMDAsINCzLtCc0L7RgdC60LLQsCwg0JLQsNGA0YjQsNCy0YHQutC+0LUg
+0YguLCDQtC4zNzAMBggqhQMHAQEDAgUAA0EAgYS3ujV4Sj9w8k7g4TS5g0VHqRBewWWiqTG4mHvX
+27W1ZcdH22vPt4S5sSnWg3/f693s3NXIGitKPQChdy08cQ==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-51022249-396f-420d-a4c6-3ca5e2805687">
+    <xades:SignedProperties Id="xmldsig-51022249-396f-420d-a4c6-3ca5e2805687-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2020-04-14T09:30:06.538+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>T+BdxNS5O0nJQ2co+pRt8vgzlmz9Y6qus/WLv4KaRkY=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434388945106415493431283720343550</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>6169fe80-7e19-11ea-b1db-005056b62827</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns7:NsiItemRegistryNumber>69</ns7:NsiItemRegistryNumber>
+                <ns7:Created>2020-04-14T09:30:06.533+03:00</ns7:Created>
+                <ns7:NsiElement>
+                    <ns7:Code>32</ns7:Code>
+                    <ns7:GUID>904738e9-1a9f-4b5c-96b7-3ddbc4982e07</ns7:GUID>
+                    <ns7:Modified>2018-02-21T15:52:56.365+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение совокупности обязательных требований и требований, установленных муниципальными правовыми актами</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>ч.1 ст.9, ч.1 ст.10 Федерального закона от 26 декабря 2008 года N 294-ФЗ</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>34</ns7:Code>
+                    <ns7:GUID>7efe58c7-326d-4237-bf8a-21ef39b991dd</ns7:GUID>
+                    <ns7:Modified>2019-12-11T16:43:31.657+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к порядку переустройства и перепланировки нежилых помещений</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>ч. 1 статьи 20 Жилищного кодекса Российской Федерации</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>33</ns7:Code>
+                    <ns7:GUID>8078243f-6698-4a00-acdc-ed79f6f37170</ns7:GUID>
+                    <ns7:Modified>2018-02-21T15:53:14.657+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к порядку размещения информации в государственной информационной системе жилищно-коммунального хозяйства</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>ч. 1 статьи 20 Жилищного кодекса Российской Федерации</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>1</ns7:Code>
+                    <ns7:GUID>5d57d5d7-1902-405b-9585-07a025ad8879</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к жилым помещениям, их использованию и содержанию</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 1 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>28</ns7:Code>
+                    <ns7:GUID>fc919dd3-08ee-4a38-b91a-b1b64670a207</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соответствие работников лицензиата лицензионным требованиям</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>6466ce69-7b47-4564-9440-ce1fe5b44642</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>п. 7 статьи 19 Федерального закона от 04.05.2011 N 99-ФЗ "О лицензировании отдельных видов деятельности</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2</ns7:Code>
+                    <ns7:GUID>49f4c4c2-8ee8-45bc-9ee9-af3f9c45840b</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к содержанию общего имущества в многоквартирном доме</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 2 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>3</ns7:Code>
+                    <ns7:GUID>31ad2339-0c49-494d-94cb-d1390d621bbc</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к порядку перевода жилого помещения в нежилое помещение и нежилого помещения в жилое помещение</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 3 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>4</ns7:Code>
+                    <ns7:GUID>73527bb3-b6bf-4ce0-b7bc-7db9b800d88c</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к порядку признания помещений жилыми помещениями, жилых помещений непригодными для проживания, многоквартирного дома аварийным и подлежащим сносу или реконструкции в соответствии с утвержденным Правительством Российской Федерацией положением </ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 4 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>5</ns7:Code>
+                    <ns7:GUID>64212366-8f29-422b-a514-6d342e545e79</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к учету жилищного фонда</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 5 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6</ns7:Code>
+                    <ns7:GUID>669fe6e3-57f2-4ba7-a3b4-f99df759460a</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к порядку переустройства и перепланировки жилых помещений</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 6 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>7</ns7:Code>
+                    <ns7:GUID>0db362c0-cb99-40c1-a8e8-55eef99dc329</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к определению состава, содержанию и использованию общего имущества собственников помещений в многоквартирном доме</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 7 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>8</ns7:Code>
+                    <ns7:GUID>6b8210c1-7d26-4513-bd90-0f34140033c7</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к управлению многоквартирными домами</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 8 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>9</ns7:Code>
+                    <ns7:GUID>20558581-6485-49a1-8a37-48e08d4b259f</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к выполнению лицами, осуществляющими управление многоквартирными домами, услуг и работ по содержанию и ремонту общего имущества в многоквартирном доме в соответствии с требованиями законодательства Российской Федерации</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 9 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>10</ns7:Code>
+                    <ns7:GUID>2f13d990-64ec-443d-9494-70ce871833e3</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к установлению размера платы за содержание и ремонт жилого помещения.</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 10 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>11</ns7:Code>
+                    <ns7:GUID>f2bc9469-d859-4d6c-bc68-55d4a062c011</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к созданию и деятельности товарищества собственников жилья либо жилищного, жилищно-строительного или иного специализированного потребительского кооператива, соблюдению прав и обязанностей их членов</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 12 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>12</ns7:Code>
+                    <ns7:GUID>4af54644-553b-4cbb-af34-c85bfa661d2b</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к предоставлению коммунальных услуг собственникам и пользователям помещений в многоквартирных домах и жилых домах</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 13 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>13</ns7:Code>
+                    <ns7:GUID>b4cc8997-cee6-46b8-a8cd-fdfa5d423ddc</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к созданию и деятельности советов многоквартирных домов</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 14 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>14</ns7:Code>
+                    <ns7:GUID>eee172a6-5d12-40bf-b532-cb92e7cf40bd</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к определению размера и внесению платы за коммунальные услуги</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 15 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>15</ns7:Code>
+                    <ns7:GUID>51ea1a96-7dac-487c-b8b6-beaad4dc6611</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к обеспечению энергетической эффективности многоквартирных домов и жилых домов, их оснащению приборами учета используемых энергетических ресурсов и эксплуатации таких приборов</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 16 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>16</ns7:Code>
+                    <ns7:GUID>c528111d-29b9-44a0-9126-507ed42a604a</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к деятельности специализированных некоммерческих организаций, указанных в пункте 2 Положения «О государственном жилищном надзоре», по финансированию капитального ремонта общего имущества в многоквартирных домах</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 17 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>17</ns7:Code>
+                    <ns7:GUID>f593a327-274f-44b5-b0b6-03970a087aec</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к порядку и условиям заключения договоров управления многоквартирными домами и иных договоров, обеспечивающих управление многоквартирным домом, в том числе содержание и ремонт общего имущества в многоквартирном доме, договоров, содержащих условия предоставления коммунальных услуг, и договоров об использовании общего имущества собственников помещений в многоквартирном доме</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 18 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>18</ns7:Code>
+                    <ns7:GUID>8582f8cf-f88f-42d7-a117-f7ef2184733d</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к формированию фондов капитального ремонта</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 19 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>19</ns7:Code>
+                    <ns7:GUID>0e79d7de-fa4b-4f0c-a304-3ae0f1b99c46</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение других обязательных требований к использованию и сохранности жилищного фонда независимо от его форм собственности, установленных жилищным законодательством и законодательством об энергосбережении и о повышении энергетической эффективности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 1 п.п. б) п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>20</ns7:Code>
+                    <ns7:GUID>a8d31f5f-691c-41c7-bc9b-618f554ae3a7</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соответствие сведений, содержащихся в уведомлении о начале осуществления отдельных видов предпринимательской деятельности, обязательным требованиям</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>ч.1 ст.10 Федерального закона от 26 декабря 2008 года N 294-ФЗ «О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора) и муниципального контроля»</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>21</ns7:Code>
+                    <ns7:GUID>f30284b7-26a7-4f29-bd8b-6f6b0479ef53</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Выполнение предписаний органов государственного контроля (надзора), органов муниципального контроля</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>ч.1 ст.10 Федерального закона от 26 декабря 2008 года N 294-ФЗ «О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора) и муниципального контроля»</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>22</ns7:Code>
+                    <ns7:GUID>3b4975d0-444f-453b-8839-1352736f60be</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Проведение мероприятий по предотвращению причинения вреда жизни, здоровью граждан, вреда животным, растениям, окружающей среде</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>ч.1 ст.10 Федерального закона от 26 декабря 2008 года N 294-ФЗ «О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора) и муниципального контроля»</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>23</ns7:Code>
+                    <ns7:GUID>e6c9641d-6675-406b-9bed-58deb3747b76</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Проведение мероприятий по предупреждению возникновения чрезвычайных ситуаций природного и техногенного характера</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>ч.1 ст.10 Федерального закона от 26 декабря 2008 года N 294-ФЗ «О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора) и муниципального контроля»</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>24</ns7:Code>
+                    <ns7:GUID>3650f08e-9a5c-4f4c-8934-da92ea294ccc</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Проведение мероприятий по обеспечению безопасности государства</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>ч.1 ст.10 Федерального закона от 26 декабря 2008 года N 294-ФЗ «О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора) и муниципального контроля»</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>25</ns7:Code>
+                    <ns7:GUID>b92115ed-d7a1-475b-ba90-ddeee4ed830f</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Проведение мероприятий по ликвидации последствий причинения вреда жизни, здоровью граждан, вреда животным, растениям, окружающей среде, объектам культурного наследия (памятникам истории и культуры) народов Российской Федерации, безопасности государства, а также возникновение чрезвычайных ситуаций природного и техногенного характера</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>ч.1 ст.10 Федерального закона от 26 декабря 2008 года N 294-ФЗ «О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора) и муниципального контроля»</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>26</ns7:Code>
+                    <ns7:GUID>84b5303c-5799-488e-bb63-35d2f0f3c9a1</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Оценка сведений, содержащихся в заявлениях и документах, представленных соискателем для получения лицензии, на соответствие требованиям Федерального закона №99-ФЗ, а также сведениям о соискателе лицензии или лицензиате, содержащимся в едином государственном реестре юридических лиц, едином государственном реестре индивидуальных предпринимателей и других федеральных информационных ресурсах</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>6466ce69-7b47-4564-9440-ce1fe5b44642</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>п. 4 статьи 19 Федерального закона от 04.05.2011 N 99-ФЗ "О лицензировании отдельных видов деятельности</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>27</ns7:Code>
+                    <ns7:GUID>89549fd3-555c-4801-a39b-75398a1a2284</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Оценка сведений, содержащихся в документах лицензиата о его деятельности, о состоянии используемых при осуществлении лицензируемого вида деятельности помещений, зданий, сооружений, технических средств, оборудования, иных объектов</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>6466ce69-7b47-4564-9440-ce1fe5b44642</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>п. 7 статьи 19 Федерального закона от 04.05.2011 N 99-ФЗ "О лицензировании отдельных видов деятельности</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>29</ns7:Code>
+                    <ns7:GUID>352da41f-057a-414d-9b59-31a1e59aaede</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Выполняемые работы, оказываемые услуги, принимаемые лицензиатом меры по соблюдению лицензионных требований</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>6466ce69-7b47-4564-9440-ce1fe5b44642</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>п. 7 статьи 19 Федерального закона от 04.05.2011 N 99-ФЗ "О лицензировании отдельных видов деятельности</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>30</ns7:Code>
+                    <ns7:GUID>b7d33a25-1308-40b3-a50d-29fa08260f27</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Принимаемые лицензиатом меры по исполнению предписаний об устранении выявленных нарушений лицензионных требований</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>6466ce69-7b47-4564-9440-ce1fe5b44642</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>п. 7 статьи 19 Федерального закона от 04.05.2011 N 99-ФЗ "О лицензировании отдельных видов деятельности</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>31</ns7:Code>
+                    <ns7:GUID>06ad66ca-b9de-4069-b514-10bf97361859</ns7:GUID>
+                    <ns7:Modified>2016-12-23T22:20:32.947+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Предмет проверки</ns7:Name>
+                        <ns7:Value>Соблюдение обязательных требований к раскрытию информации в соответствии с утвержденным Правительством Российской Федерации стандартом раскрытия информации организациями, осуществляющими деятельность в сфере управления многоквартирными домами</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид осуществления контрольной деятельности</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>65</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>4add58da-c9e7-448c-95c0-b813e1cd0c7e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на НПА</ns7:Name>
+                        <ns7:Value>Абзац 11 п.п. «а» п. 11 Положения «О государственном жилищном надзоре», утвержденного Постановлением Правительства РФ от 11.06.2013 г. N 493</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>
