@@ -46,7 +46,7 @@ function ack (rp, guid) {
 
 async function read (rq) {
 	rq.body = ''; return new Promise ((ok, fail) => {
-		rq.on ('data', s => rq.body += s).on ('end', () => ok (rq))
+		rq.on ('data', s => rq.body += s).on ('end', () => ok (rq)).on ('error', fail)
 	})
 }
 
@@ -64,8 +64,8 @@ async function handler (rq, rp) {
 
 methods.getState = (rq, rp) => {
 
-	let [, c] = rq.body.split (':getStateRequest>'), [, g] = c.split (':MessageGUID>'), [guid] = g.split ('<')
-	
+	let [, c] = rq.body.split (':getStateRequest'), [, g] = c.split (':MessageGUID>'), [guid] = g.split ('<')
+
 	if (!/^([0-9a-f]){8}-([0-9a-f]){4}-([0-9a-f]){4}-([0-9a-f]){4}-([0-9a-f]){12}$/.test (guid)) croak (rp, `"${guid}" is not a GUID`)
 
 	let path = `./xml/${guid}.response.xml`
