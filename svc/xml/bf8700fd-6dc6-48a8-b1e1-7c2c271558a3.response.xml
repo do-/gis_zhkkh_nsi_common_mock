@@ -1,0 +1,757 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T17:26:18.156+03:00</ns4:Date>
+            <ns4:MessageGUID>bf8700fd-6dc6-48a8-b1e1-7c2c271558a3</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-3ae1eb61-6948-44bc-a681-2c56652d2052"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>DGZ0h5VfWP4IlHmRT1tAckcYwZeSijBn/v6Pba/wCIA=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-3ae1eb61-6948-44bc-a681-2c56652d2052-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>iTYPKcGAJtWc70lBkwl0w/vA6vhLUTZyyARZq+Z2naY=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>8hpjailKu3LaKoLgWrvwLiBAgPWBaYGCQTGOcC9R0uu50HbSo9UL1vsfZaQPtWt0CzsNOi6ZX1CZ
+fHfGNjvTVA==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-073da349-04f8-44c5-bd0e-ecbd43752314"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-3ae1eb61-6948-44bc-a681-2c56652d2052">
+    <xades:SignedProperties Id="xmldsig-3ae1eb61-6948-44bc-a681-2c56652d2052-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T17:26:18.162+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>e546113d-8cac-11eb-aa74-005056b624b0</ns4:MessageGUID>
+            <ns13:NsiList>
+                <ns7:Created>2021-03-24T17:26:18.156+03:00</ns7:Created>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>401</ns7:RegistryNumber>
+                    <ns7:Name>Вид благоустройства жилых помещений</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>97</ns7:RegistryNumber>
+                    <ns7:Name>Вид наружной стены</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>300</ns7:RegistryNumber>
+                    <ns7:Name>Вид несущей части</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.772+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>98</ns7:RegistryNumber>
+                    <ns7:Name>Вид разводки</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>99</ns7:RegistryNumber>
+                    <ns7:Name>Вид системы вентиляции</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.779+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>100</ns7:RegistryNumber>
+                    <ns7:Name>Вид системы отопления</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.782+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>257</ns7:RegistryNumber>
+                    <ns7:Name>Вид топлива</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>299</ns7:RegistryNumber>
+                    <ns7:Name>Вид формы собственности</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.790+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>265</ns7:RegistryNumber>
+                    <ns7:Name>Виды жилых помещений специализированного жилищного фонда</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.792+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>101</ns7:RegistryNumber>
+                    <ns7:Name>Выход на кровлю</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.796+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>102</ns7:RegistryNumber>
+                    <ns7:Name>Группа капитальности</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>258</ns7:RegistryNumber>
+                    <ns7:Name>Группы домохозяйств, относительно количества зарегистрированных граждан</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>259</ns7:RegistryNumber>
+                    <ns7:Name>Группы домохозяйств, относительно состава семьи</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>103</ns7:RegistryNumber>
+                    <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.808+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>105</ns7:RegistryNumber>
+                    <ns7:Name>Источник ресурса в системе ГВС</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.811+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>249</ns7:RegistryNumber>
+                    <ns7:Name>Категория (группа) социально значимых потребителей</ns7:Name>
+                    <ns7:Modified>2017-07-25T08:46:54.725+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>250</ns7:RegistryNumber>
+                    <ns7:Name>Категория надежности теплоснабжения потребителей</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>252</ns7:RegistryNumber>
+                    <ns7:Name>Категория потребителей, приравненных к населению</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>256</ns7:RegistryNumber>
+                    <ns7:Name>Категория системы франкирования</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>246</ns7:RegistryNumber>
+                    <ns7:Name>Категория сточных вод</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>12</ns7:RegistryNumber>
+                    <ns7:Name>Класс энергоэффективности</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.826+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>14</ns7:RegistryNumber>
+                    <ns7:Name>Количество комнат</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.829+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>106</ns7:RegistryNumber>
+                    <ns7:Name>Конструктивное решение междуэтажного перекрытия</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.832+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>107</ns7:RegistryNumber>
+                    <ns7:Name>Конструкция балкона</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.835+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>108</ns7:RegistryNumber>
+                    <ns7:Name>Материал балок перекрытия</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>109</ns7:RegistryNumber>
+                    <ns7:Name>Материал верхнего слоя отмостки</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.840+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>110</ns7:RegistryNumber>
+                    <ns7:Name>Материал внутренних стен и перегородок ЛЛУ</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.842+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>111</ns7:RegistryNumber>
+                    <ns7:Name>Материал внутренних стен и перегородок подвала</ns7:Name>
+                    <ns7:Modified>2020-03-04T07:23:19.962+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>114</ns7:RegistryNumber>
+                    <ns7:Name>Материал внутридомовой инженерной системы водоотведения</ns7:Name>
+                    <ns7:Modified>2017-09-01T09:44:18.790+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>112</ns7:RegistryNumber>
+                    <ns7:Name>Материал дымовентиляционных труб</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>113</ns7:RegistryNumber>
+                    <ns7:Name>Материал жил электрокабеля</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>115</ns7:RegistryNumber>
+                    <ns7:Name>Материал козырька приямка и входов в здание</ns7:Name>
+                    <ns7:Modified>2017-08-14T14:35:59.894+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>116</ns7:RegistryNumber>
+                    <ns7:Name>Материал колонн</ns7:Name>
+                    <ns7:Modified>2019-06-24T12:00:26.458+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>117</ns7:RegistryNumber>
+                    <ns7:Name>Материал кровельных элементов</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.858+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>118</ns7:RegistryNumber>
+                    <ns7:Name>Материал лестницы приямка и крыльца входа</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>119</ns7:RegistryNumber>
+                    <ns7:Name>Материал междуэтажного перекрытия</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>120</ns7:RegistryNumber>
+                    <ns7:Name>Материал наружных стен подвала</ns7:Name>
+                    <ns7:Modified>2019-05-21T19:10:39.192+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>121</ns7:RegistryNumber>
+                    <ns7:Name>Материал оборудования кровельных элементов</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>122</ns7:RegistryNumber>
+                    <ns7:Name>Материал ограждения балконов, лоджий</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>123</ns7:RegistryNumber>
+                    <ns7:Name>Материал окон</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.871+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>125</ns7:RegistryNumber>
+                    <ns7:Name>Материал основания покрытия</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>124</ns7:RegistryNumber>
+                    <ns7:Name>Материал основания покрытия жесткой кровли</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.877+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>126</ns7:RegistryNumber>
+                    <ns7:Name>Материал отделки внутренних стен и перегородок</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>127</ns7:RegistryNumber>
+                    <ns7:Name>Материал отделки потолка</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.883+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>128</ns7:RegistryNumber>
+                    <ns7:Name>Материал отделки фасада</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>129</ns7:RegistryNumber>
+                    <ns7:Name>Материал плиты (входная площадка) крыльца</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>130</ns7:RegistryNumber>
+                    <ns7:Name>Материал подъездной двери</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>131</ns7:RegistryNumber>
+                    <ns7:Name>Материал покрытия козырька над приямком и входами в здание</ns7:Name>
+                    <ns7:Modified>2017-07-25T08:59:31.681+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>132</ns7:RegistryNumber>
+                    <ns7:Name>Материал пола</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.895+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>133</ns7:RegistryNumber>
+                    <ns7:Name>Материал пола по грунту подвального помещения</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.898+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>135</ns7:RegistryNumber>
+                    <ns7:Name>Материал сети внутридомовой системы отопления</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>134</ns7:RegistryNumber>
+                    <ns7:Name>Материал теплоизоляции сети внутридомовой системы отопления</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>136</ns7:RegistryNumber>
+                    <ns7:Name>Материал утеплителя</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>137</ns7:RegistryNumber>
+                    <ns7:Name>Материал фундамента</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>138</ns7:RegistryNumber>
+                    <ns7:Name>Место воздухоотведения</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>139</ns7:RegistryNumber>
+                    <ns7:Name>Место выхода дымовентиляционных труб</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>140</ns7:RegistryNumber>
+                    <ns7:Name>Место поступления воздуха</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>141</ns7:RegistryNumber>
+                    <ns7:Name>Место размещения загрузочного клапана мусоропровода</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>142</ns7:RegistryNumber>
+                    <ns7:Name>Место расположения распределительного щита (щрэ или квартирного)</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.919+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>143</ns7:RegistryNumber>
+                    <ns7:Name>Место сброса ливневой канализации</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.921+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>17</ns7:RegistryNumber>
+                    <ns7:Name>Назначение помещения, относящегося к общему долевому имуществу собственников помещений</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.924+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>287</ns7:RegistryNumber>
+                    <ns7:Name>Наличие газового оборудования</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.926+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>288</ns7:RegistryNumber>
+                    <ns7:Name>Наличие изолированных (неизолированных) стояков, полотенцесушителей</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.928+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>261</ns7:RegistryNumber>
+                    <ns7:Name>Наличие электрооборудования</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>254</ns7:RegistryNumber>
+                    <ns7:Name>Направление использования тепловой энергии на нужды отопления</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>253</ns7:RegistryNumber>
+                    <ns7:Name>Направления использования газа</ns7:Name>
+                    <ns7:Modified>2017-09-14T16:53:52.418+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>284</ns7:RegistryNumber>
+                    <ns7:Name>Оснащенность жилых помещений водоразборными устройствами и санитарно-техническим оборудованием</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.938+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>273</ns7:RegistryNumber>
+                    <ns7:Name>Основание признания многоквартирного дома аварийным</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.940+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>266</ns7:RegistryNumber>
+                    <ns7:Name>Параметры теплоносителя</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.943+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>205</ns7:RegistryNumber>
+                    <ns7:Name>Поставщики информации</ns7:Name>
+                    <ns7:Modified>2020-02-03T13:38:57.613+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>145</ns7:RegistryNumber>
+                    <ns7:Name>Принадлежность транзитных линий</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.949+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>146</ns7:RegistryNumber>
+                    <ns7:Name>Принадлежность элеваторного узла</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.951+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>255</ns7:RegistryNumber>
+                    <ns7:Name>Разновидность территорий</ns7:Name>
+                    <ns7:Modified>2017-09-13T08:31:48.945+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>147</ns7:RegistryNumber>
+                    <ns7:Name>Расположение мусороприемной камеры</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.956+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>60</ns7:RegistryNumber>
+                    <ns7:Name>Расположение нежилого помещения</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.958+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>148</ns7:RegistryNumber>
+                    <ns7:Name>Собственник счета капитального ремонта</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>149</ns7:RegistryNumber>
+                    <ns7:Name>Способ накопления на КР</ns7:Name>
+                    <ns7:Modified>2020-03-04T07:35:03.981+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>251</ns7:RegistryNumber>
+                    <ns7:Name>Средняя продолжительность потребления за отопительный период</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>289</ns7:RegistryNumber>
+                    <ns7:Name>Стадия жизненного цикла(устарелый)</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.968+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>150</ns7:RegistryNumber>
+                    <ns7:Name>Схема подключения к тепловому узлу</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>248</ns7:RegistryNumber>
+                    <ns7:Name>Схема подключения теплопотребляющих установок потребителей тепловой энергии к системе теплоснабжения</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>151</ns7:RegistryNumber>
+                    <ns7:Name>Теплоноситель или теплоисточник в системе отопления</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>152</ns7:RegistryNumber>
+                    <ns7:Name>Тип (источник) системы отопления</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.977+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>153</ns7:RegistryNumber>
+                    <ns7:Name>Тип ввода системы ГВС</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>154</ns7:RegistryNumber>
+                    <ns7:Name>Тип вентиляции</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>155</ns7:RegistryNumber>
+                    <ns7:Name>Тип внутренних несущих стен</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>181</ns7:RegistryNumber>
+                    <ns7:Name>Тип внутридомовой инженерной системы водоотведения</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.987+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>156</ns7:RegistryNumber>
+                    <ns7:Name>Тип водоотводной системы</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.990+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>157</ns7:RegistryNumber>
+                    <ns7:Name>Тип водостока</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.992+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>158</ns7:RegistryNumber>
+                    <ns7:Name>Тип входа в подвал</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>159</ns7:RegistryNumber>
+                    <ns7:Name>Тип входа в чердачное помещение</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.997+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>160</ns7:RegistryNumber>
+                    <ns7:Name>Тип газоснабжения</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:17.999+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>191</ns7:RegistryNumber>
+                    <ns7:Name>Тип дверей лифта</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>161</ns7:RegistryNumber>
+                    <ns7:Name>Тип желоба</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>73</ns7:RegistryNumber>
+                    <ns7:Name>Тип жилого помещения</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.005+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>162</ns7:RegistryNumber>
+                    <ns7:Name>Тип и материал отделки цоколя</ns7:Name>
+                    <ns7:Modified>2020-01-30T15:00:26.642+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>163</ns7:RegistryNumber>
+                    <ns7:Name>Тип конструкции кровли</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.008+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>164</ns7:RegistryNumber>
+                    <ns7:Name>Тип кровли</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>165</ns7:RegistryNumber>
+                    <ns7:Name>Тип крыши</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>166</ns7:RegistryNumber>
+                    <ns7:Name>Тип лестницы</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>192</ns7:RegistryNumber>
+                    <ns7:Name>Тип лифта</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.016+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>402</ns7:RegistryNumber>
+                    <ns7:Name>Тип материала пароизоляции</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.018+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>168</ns7:RegistryNumber>
+                    <ns7:Name>Тип мусороприемника</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>169</ns7:RegistryNumber>
+                    <ns7:Name>Тип наружного утепления фасада</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>170</ns7:RegistryNumber>
+                    <ns7:Name>Тип наружных стен</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>171</ns7:RegistryNumber>
+                    <ns7:Name>Тип наружных, тамбурных и внутренних дверей</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>285</ns7:RegistryNumber>
+                    <ns7:Name>Тип общежития</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.029+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>172</ns7:RegistryNumber>
+                    <ns7:Name>Тип организации конструктивных элементов выше чердачного перекрытия</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>173</ns7:RegistryNumber>
+                    <ns7:Name>Тип основания</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>174</ns7:RegistryNumber>
+                    <ns7:Name>Тип основания покрытия</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.036+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>175</ns7:RegistryNumber>
+                    <ns7:Name>Тип отопительных приборов</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.037+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>176</ns7:RegistryNumber>
+                    <ns7:Name>Тип перекрытия</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.040+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>185</ns7:RegistryNumber>
+                    <ns7:Name>Тип поквартирной разводки внутридомовой системы отопления</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.042+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>177</ns7:RegistryNumber>
+                    <ns7:Name>Тип проходимости чердачного помещения</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>178</ns7:RegistryNumber>
+                    <ns7:Name>Тип разводки в системе отопления</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.045+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>179</ns7:RegistryNumber>
+                    <ns7:Name>Тип светильника</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.047+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>180</ns7:RegistryNumber>
+                    <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>182</ns7:RegistryNumber>
+                    <ns7:Name>Тип системы пожаротушения</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.051+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>183</ns7:RegistryNumber>
+                    <ns7:Name>Тип системы холодного водоснабжения</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.053+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>184</ns7:RegistryNumber>
+                    <ns7:Name>Тип спускного крана</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.055+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>186</ns7:RegistryNumber>
+                    <ns7:Name>Тип теплового пункта</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.056+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>187</ns7:RegistryNumber>
+                    <ns7:Name>Тип фундамента</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.058+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>188</ns7:RegistryNumber>
+                    <ns7:Name>Тип чердачной кровли</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.060+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>193</ns7:RegistryNumber>
+                    <ns7:Name>Тип шахты лифта</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>189</ns7:RegistryNumber>
+                    <ns7:Name>Тип этажа ниже нуля</ns7:Name>
+                    <ns7:Modified>1970-02-01T17:26:18.063+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>190</ns7:RegistryNumber>
+                    <ns7:Name>Форма крыши</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>400</ns7:RegistryNumber>
+                    <ns7:Name>Характеристика общежития</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>195</ns7:RegistryNumber>
+                    <ns7:Name>НПА/НТД</ns7:Name>
+                    <ns7:Modified>2016-10-25T16:57:03.649+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>196</ns7:RegistryNumber>
+                    <ns7:Name>Справочник иллюстраций</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>67</ns7:RegistryNumber>
+                    <ns7:Name>Справочник обязательных работ, обеспечивающих надлежащее содержание МКД</ns7:Name>
+                    <ns7:Modified>2017-09-27T15:10:30.564+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>70</ns7:RegistryNumber>
+                    <ns7:Name>Справочник типовых работ</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>209</ns7:RegistryNumber>
+                    <ns7:Name>Тип документа</ns7:Name>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>210</ns7:RegistryNumber>
+                    <ns7:Name>Типы документов перечня работ и услуг</ns7:Name>
+                    <ns7:Modified>2016-02-09T20:31:06.966+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:NsiItemInfo>
+                    <ns7:RegistryNumber>197</ns7:RegistryNumber>
+                    <ns7:Name>Форма описания объектов ЖФ</ns7:Name>
+                    <ns7:Modified>2018-04-20T11:11:58.152+03:00</ns7:Modified>
+                </ns7:NsiItemInfo>
+                <ns7:ListGroup>NSIRAO</ns7:ListGroup>
+            </ns13:NsiList>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

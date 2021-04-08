@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T18:08:12.582+03:00</ns4:Date>
+            <ns4:MessageGUID>372363cf-81a7-4687-b372-8a1646f92df3</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-dc7be5c5-b947-463f-96fb-d3a2ca9c1d38"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>XEHiYfdYzKEIaHHHC5UtsFbxKTGk3GJpqJoIzXVC1yg=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-dc7be5c5-b947-463f-96fb-d3a2ca9c1d38-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>ruhMtZ0F722Shg4g/cZnYcXM+CCPcoaYFEwD/cM7oKU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>m3By2lMHzh9M4S5EPUm4DrTl4ap3Rhx/NJGu+rky3ZuUZRJUMu2y/lDdEayaCWqBdG9yBucMnS0E
+KMEJ7g2WkQ==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-17d5f204-a30c-4ea7-9170-8f60b01e5af8"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-dc7be5c5-b947-463f-96fb-d3a2ca9c1d38">
+    <xades:SignedProperties Id="xmldsig-dc7be5c5-b947-463f-96fb-d3a2ca9c1d38-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T18:08:12.587+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>c066c564-8cb2-11eb-b7f1-005056b62471</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns7:NsiItemRegistryNumber>180</ns7:NsiItemRegistryNumber>
+                <ns7:Created>2021-03-24T18:08:12.582+03:00</ns7:Created>
+                <ns7:NsiElement>
+                    <ns7:Code>5518</ns7:Code>
+                    <ns7:GUID>adb5d754-c56d-486a-b6b1-a695a9e5fe7b</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Нет</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>3721</ns7:Code>
+                    <ns7:GUID>92a6aac1-4183-4484-b491-1001172cbda5</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.6.2.2</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Источник ресурса в системе ГВС</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>105</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2239</ns7:Code>
+                                <ns7:GUID>46913c35-7b40-4c2f-85f4-ba574a1ef3ec</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Индивидуальный котел</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>3720</ns7:Code>
+                    <ns7:GUID>29c7290a-f014-4741-9273-7c7954f086bf</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>195</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>591</ns7:Code>
+                                <ns7:GUID>7a45ce74-45f9-401d-a970-d9882bbdc1cb</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>прил.N3</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Источник ресурса в системе ГВС</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>105</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2239</ns7:Code>
+                                <ns7:GUID>46913c35-7b40-4c2f-85f4-ba574a1ef3ec</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Дровяная колонка</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2243</ns7:Code>
+                    <ns7:GUID>3df27306-7cc8-4a86-837e-4e9773eb399c</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.15.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Источник ресурса в системе ГВС</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>105</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2239</ns7:Code>
+                                <ns7:GUID>46913c35-7b40-4c2f-85f4-ba574a1ef3ec</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Электроводонагреватели</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2242</ns7:Code>
+                    <ns7:GUID>8e75ba6d-d60b-4e10-8946-4ae35adfb4d3</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.2.7</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Источник ресурса в системе ГВС</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>105</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2239</ns7:Code>
+                                <ns7:GUID>46913c35-7b40-4c2f-85f4-ba574a1ef3ec</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Газовые колонки (ВДГО)</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2241</ns7:Code>
+                    <ns7:GUID>213c8733-887e-4140-b5f4-69ba57a80b74</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.9.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Источник ресурса в системе ГВС</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>105</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2238</ns7:Code>
+                                <ns7:GUID>d9c2335c-fcf8-4d40-b55b-9d73ae7efe04</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Источник ресурса в системе ГВС</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>105</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2244</ns7:Code>
+                                <ns7:GUID>0ecb7a89-bfb1-4271-a7a1-3baec302414c</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Кольцевая или с закольцованными вводами</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2240</ns7:Code>
+                    <ns7:GUID>4a07c3e6-3148-43d5-9ad3-143eef8e6439</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.9.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Источник ресурса в системе ГВС</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>105</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2238</ns7:Code>
+                                <ns7:GUID>d9c2335c-fcf8-4d40-b55b-9d73ae7efe04</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Источник ресурса в системе ГВС</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>105</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2244</ns7:Code>
+                                <ns7:GUID>0ecb7a89-bfb1-4271-a7a1-3baec302414c</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Тупиковая</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6221</ns7:Code>
+                    <ns7:GUID>177af9b4-a93a-42b2-8b65-0c62a30bc3d3</ns7:GUID>
+                    <ns7:Modified>2019-05-21T19:10:39.192+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Центральное (закрытая система)</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6220</ns7:Code>
+                    <ns7:GUID>fdba06b4-a10b-4fe6-81a7-71a62b78ef91</ns7:GUID>
+                    <ns7:Modified>2019-05-21T19:10:21.137+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Центральное (открытая система)</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6219</ns7:Code>
+                    <ns7:GUID>24a75cea-5b3b-4e6a-895e-75633a478e17</ns7:GUID>
+                    <ns7:Modified>2019-05-21T19:09:58.942+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Автономная котельная (крышная, встроенно-пристроенная)</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6203</ns7:Code>
+                    <ns7:GUID>6c64df1f-ac10-4a8e-9944-a8909aec2ee8</ns7:GUID>
+                    <ns7:Modified>2018-10-03T11:22:42.288+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Теплообменник</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6164</ns7:Code>
+                    <ns7:GUID>f97b3124-d79f-4f6a-9395-05a356b34532</ns7:GUID>
+                    <ns7:Modified>2017-12-18T16:37:18.845+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>Центральное</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6120</ns7:Code>
+                    <ns7:GUID>57940388-3801-4097-9f18-6e1902055da6</ns7:GUID>
+                    <ns7:Modified>2017-09-21T11:56:46.651+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип системы горячего водоснабжения</ns7:Name>
+                        <ns7:Value>П-образная, с нижней разводкой магистралей</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

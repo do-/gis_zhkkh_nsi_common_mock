@@ -1,0 +1,1477 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T18:06:59.980+03:00</ns4:Date>
+            <ns4:MessageGUID>62242b8c-0b6c-4cb8-9837-a0f503e8cf6e</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-70c9c6a8-b1ed-43de-a929-594f61891dd4"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>rX/JvTGcfFZTmF6GomE2gmg2foZTPVBfEauqA0sxyVU=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-70c9c6a8-b1ed-43de-a929-594f61891dd4-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>9EXd8ItKAQirz4YoOPO9mZb19gGAXs1xp/KfNB2aV+o=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>nuYorplZVqlucM1eoaWaFLvEG2ITNpOU1oH3++SSdfj77ts3sed2PzEkQFQ9fo8r3ezdjEQLUCv5
+S4W0sBlBVQ==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-c6ba216e-2b70-49aa-befb-06331f18ef8a"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-70c9c6a8-b1ed-43de-a929-594f61891dd4">
+    <xades:SignedProperties Id="xmldsig-70c9c6a8-b1ed-43de-a929-594f61891dd4-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T18:06:59.987+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>9521ce00-8cb2-11eb-883d-005056b66349</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns7:NsiItemRegistryNumber>63</ns7:NsiItemRegistryNumber>
+                <ns7:Created>2021-03-24T18:06:59.980+03:00</ns7:Created>
+                <ns7:NsiElement>
+                    <ns7:Code>18</ns7:Code>
+                    <ns7:GUID>415f1097-d732-4741-b8ec-f2e1dc8ac42e</ns7:GUID>
+                    <ns7:Modified>2018-07-21T21:35:55.881+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 4.4 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 4.4 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>17</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>18.1</ns7:Code>
+                        <ns7:GUID>bcf8a00f-416f-42a1-8209-0e8098b7d55d</ns7:GUID>
+                        <ns7:Modified>2018-07-21T21:35:55.878+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Заключение собственниками помещений в МКД, действующими от своего имени, договора, содержащего положения о предоставлении коммунальных услуг, договора на оказание услуг по обращению с ТКО</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Заключение собственниками помещений в МКД, действующими от своего имени, договора, содержащего положения о предоставлении коммунальных услуг, договора на оказание услуг по обращению с ТКО</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>415f1097-d732-4741-b8ec-f2e1dc8ac42e</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>17.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>1</ns7:Code>
+                    <ns7:GUID>862ba965-dd8b-4f47-8565-3847e99b446c</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.4</ns7:Code>
+                        <ns7:GUID>ca801c5b-40c3-4360-96dc-73b3033174c6</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Использование фонда капитального ремонта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Использование фонда капитального ремонта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>862ba965-dd8b-4f47-8565-3847e99b446c</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>1.4</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.3</ns7:Code>
+                        <ns7:GUID>e2a98b24-8490-469f-beb6-28b0f02bbc7a</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Капитальный ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Капитальный ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>862ba965-dd8b-4f47-8565-3847e99b446c</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>1.3</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.2</ns7:Code>
+                        <ns7:GUID>b904b86a-7c47-4858-a927-fb87280b6237</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Строительство хозяйственных построек и др. зданий, строений, сооружений.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Строительство хозяйственных построек и др. зданий, строений, сооружений.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>862ba965-dd8b-4f47-8565-3847e99b446c</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>1.2</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.1</ns7:Code>
+                        <ns7:GUID>466a2d43-b9f6-4792-996a-ec305c6e1e6d</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Реконструкция многоквартирного дома (в том числе его расширение или надстройка)</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Реконструкция многоквартирного дома</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>862ba965-dd8b-4f47-8565-3847e99b446c</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>1.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.5</ns7:Code>
+                        <ns7:GUID>3be1fef7-77c7-48f0-8cdc-d609016ed6f0</ns7:GUID>
+                        <ns7:Modified>2016-03-15T21:38:33.265+03:00</ns7:Modified>
+                        <ns7:IsActual>false</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Российская кредитная организация, в которой должен быть открыт специальный счет</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Кредитная организация</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>862ba965-dd8b-4f47-8565-3847e99b446c</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>1.5</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2</ns7:Code>
+                    <ns7:GUID>f3d56b11-63b1-4224-aeee-5e52610060eb</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 1.1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 1.1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>2</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.4</ns7:Code>
+                        <ns7:GUID>0f5e6862-378c-43a3-8562-40e2821196f9</ns7:GUID>
+                        <ns7:Modified>2018-11-22T11:31:58.148+03:00</ns7:Modified>
+                        <ns7:IsActual>false</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Выбор лица, уполномоченного на открытие специального счета в российской кредитной организациии</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Выбор лица уполномоченного на открытие специального счета в российской кредитной организации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>f3d56b11-63b1-4224-aeee-5e52610060eb</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>2.4</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.4</ns7:Code>
+                        <ns7:GUID>c9123824-d9d7-4ce4-b6d3-08b6d3340086</ns7:GUID>
+                        <ns7:Modified>2018-11-22T11:31:58.156+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Выбор лица, уполномоченного на открытие специального счета в российской кредитной организации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Выбор лица уполномоченного на открытие специального счета в российской кредитной организации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>f3d56b11-63b1-4224-aeee-5e52610060eb</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>2.4</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.5</ns7:Code>
+                        <ns7:GUID>2d0da7d8-e456-4bd2-babc-bbb67392f3c7</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Совершение операций с денежными средствами, находящимися на специальном счете</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Совершение операций с денежными средствами, находящимися на специальном счете</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>f3d56b11-63b1-4224-aeee-5e52610060eb</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>2.5</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.1</ns7:Code>
+                        <ns7:GUID>c795d7ba-5608-4f13-8b61-6a7f94df2190</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Выбор способа формирования фонда капитального ремонта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Выбор способа формирования фонда капитального ремонта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>f3d56b11-63b1-4224-aeee-5e52610060eb</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>2.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.3</ns7:Code>
+                        <ns7:GUID>f404f456-8ec3-46c6-b4bb-c357b6155d82</ns7:GUID>
+                        <ns7:Modified>2017-03-08T19:14:07.348+03:00</ns7:Modified>
+                        <ns7:IsActual>false</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Выбор минимального размера фонда капитального ремонта в части превышения его размера над установленным минимальным размером фонда капитального ремонта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Выбор минимального размера фонда капитального ремонта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>f3d56b11-63b1-4224-aeee-5e52610060eb</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>2.3</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.2</ns7:Code>
+                        <ns7:GUID>c21b0204-eade-44d6-975d-5ba77dbbd093</ns7:GUID>
+                        <ns7:Modified>2017-03-08T19:14:01.410+03:00</ns7:Modified>
+                        <ns7:IsActual>false</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Выбор размера взноса на капитальный ремонт в части превышения его размера над установленным минимальным размером взноса на капитальный ремонт</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Выбор размера взноса на капитальный ремонт</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>f3d56b11-63b1-4224-aeee-5e52610060eb</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>2.2</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>16</ns7:Code>
+                    <ns7:GUID>ad7499e0-8e71-4c7d-b93b-e795cba8f96c</ns7:GUID>
+                    <ns7:Modified>2017-03-08T19:18:44.982+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 1.1-1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 1.1-1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>3</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>16.4</ns7:Code>
+                        <ns7:GUID>e68649d1-6bfa-4f8c-ae08-8a52cd7174fc</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Размещение временно свободных средств фонда капитального ремонта, формируемого на специальном счете, на специальном депозите в российской кредитной организации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Размещение временно свободных средств фонда капитального ремонта, формируемого на специальном счете, на специальном депозите в российской кредитной организации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>ad7499e0-8e71-4c7d-b93b-e795cba8f96c</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>3.4</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>16.2</ns7:Code>
+                        <ns7:GUID>9bf23423-feb6-4321-aa61-5545a08e9cff</ns7:GUID>
+                        <ns7:Modified>2017-03-08T19:18:09.599+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Минимальный размер фонда капитального ремонта в части превышения его размера над установленным минимальным размером фонда капитального ремонта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Минимальный размер фонда капитального ремонта в части превышения его размера над установленным минимальным размером фонда капитального ремонта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>ad7499e0-8e71-4c7d-b93b-e795cba8f96c</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>3.2</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>16.1</ns7:Code>
+                        <ns7:GUID>632347de-5948-44b1-bdde-52b89d6ee972</ns7:GUID>
+                        <ns7:Modified>2017-03-08T19:17:38.693+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Размер взноса на капитальный ремонт в части превышения его размера над установленным минимальным размером взноса на капитальный ремонт</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Размер взноса на капитальный ремонт  в части превышения его размера над установленным минимальным размером взноса на капитальный ремонт</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>ad7499e0-8e71-4c7d-b93b-e795cba8f96c</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>3.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>16.3</ns7:Code>
+                        <ns7:GUID>031e64a0-4ff2-4455-8b92-682f779df6c6</ns7:GUID>
+                        <ns7:Modified>2017-03-08T19:19:16.254+03:00</ns7:Modified>
+                        <ns7:IsActual>false</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Выбор лица, уполномоченного на открытие специального счета и совершение операций с денежными средствами, находящимися на специальном счете</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Выбор лица уполномоченного на открытие специального счета</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>ad7499e0-8e71-4c7d-b93b-e795cba8f96c</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>16.3</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>16.3</ns7:Code>
+                        <ns7:GUID>d1555423-c6eb-4d62-9f13-b17cebdb5197</ns7:GUID>
+                        <ns7:Modified>2017-03-08T19:19:16.263+03:00</ns7:Modified>
+                        <ns7:IsActual>false</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Выбор лица, уполномоченного на открытие специального счета и совершение операций с денежными средствами, находящимися на специальном счете</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Выбор лица, уполномоченного на открытие специального счета</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>ad7499e0-8e71-4c7d-b93b-e795cba8f96c</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>16.3</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>3</ns7:Code>
+                    <ns7:GUID>96cda5de-05a4-4f19-a744-76ca50d63b68</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 1.2 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 1.2 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>4</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.7</ns7:Code>
+                        <ns7:GUID>2a68c866-6c18-4367-aae5-d34f68e6033c</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Условия получения гарантии, поручительства по кредиту или займу  на капитальный ремонт общего имущества  в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Условия получения гарантии, поручительства по кредиту или займу  на капитальный ремонт общего имущества  в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>96cda5de-05a4-4f19-a744-76ca50d63b68</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>4.7</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.6</ns7:Code>
+                        <ns7:GUID>f863e0c9-b09d-44b0-9645-fa0daebd16e5</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Оплата за счет фонда капитального ремонта расходов на получение гарантии, поручительства на капитальный ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Оплата за счет фонда капитального ремонта расходов на получение гарантии, поручительства по кредиту или займу  на капитальный ремонт общего имущества  в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>96cda5de-05a4-4f19-a744-76ca50d63b68</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>4.6</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.5</ns7:Code>
+                        <ns7:GUID>0c6904f0-f349-4a93-ab2b-cd6ba21f90b1</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Уплата процентов за пользование кредитом или займом, использованных на оплату расходов на капитальный ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Уплата за счет фонда капитального ремонта процентов за пользование кредитом или займом использованных на оплату расходов на капитальный ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>96cda5de-05a4-4f19-a744-76ca50d63b68</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>4.5</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.4</ns7:Code>
+                        <ns7:GUID>cc47b637-90ce-417a-95a8-ef377ddadb19</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Погашение за счет фонда капитального ремонта кредита или займа, использованных на оплату расходов на капитальный ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Погашение за счет фонда капитального ремонта кредита или займа, использованных на оплату расходов на капитальный ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>96cda5de-05a4-4f19-a744-76ca50d63b68</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>4.4</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.3</ns7:Code>
+                        <ns7:GUID>300e05fa-178a-4a19-9f81-2e7caca63274</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Получение гарантии, поручительства по кредиту или займу на капитальный ремонт общего имущества в многоквартирном доме и об условиях получения указанных гарантии, поручительства</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Получение гарантии, поручительства по кредиту или займу на капитальный ремонт общего имущества  в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>96cda5de-05a4-4f19-a744-76ca50d63b68</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>4.3</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.2</ns7:Code>
+                        <ns7:GUID>3831dfd6-64f2-4446-a6b1-043008a703c8</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Определение существенных условий кредитного договора или договора займа на капитальный ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Определение существенных условий кредитного договора или договора займа</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>96cda5de-05a4-4f19-a744-76ca50d63b68</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>4.2</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.1</ns7:Code>
+                        <ns7:GUID>3864b523-dd63-4c62-8df2-dfda6531ca22</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Получение товариществом собственников жилья либо жилищно-строительным кооперативом, жилищным кооперативом или иным специализированным потребительским кооперативом, управляющей организацией и при непосредственном управлении многоквартирным домом собственниками помещений в этом доме лицом, уполномоченным решением общего собрания таких собственников, кредита или займа на капитальный ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Получение кредита или займа на капитальный ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>96cda5de-05a4-4f19-a744-76ca50d63b68</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>4.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6</ns7:Code>
+                    <ns7:GUID>12fad800-d2cd-4a00-baf5-d98d325724d7</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 3.1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 3.1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>8</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>6.1</ns7:Code>
+                        <ns7:GUID>c7116f29-e120-4829-bf4a-3acdead36371</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Определение лиц, которые от имени собственников помещений в многоквартирном доме уполномочены на заключение договоров об использовании общего имущества собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Определение лиц, уполномоченных на заключение договоров об использовании общего имущества собственников помещений в многоквартирном доме на условиях, определенных решением общего собрания</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>12fad800-d2cd-4a00-baf5-d98d325724d7</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>8.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>12</ns7:Code>
+                    <ns7:GUID>8362e307-d20f-4ee3-aa03-2de81e8cffc0</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 4.1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 4.1 части 2 статьи 44</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>14</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>12.1</ns7:Code>
+                        <ns7:GUID>dd958bd6-e91c-4afb-9e8a-826a54d5a18b</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Текущий ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Текущий ремонт общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>8362e307-d20f-4ee3-aa03-2de81e8cffc0</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>14.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>4</ns7:Code>
+                    <ns7:GUID>bdb3467e-bb2a-4791-94ed-7d8943269f3d</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 2 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 2 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>5</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>4.2</ns7:Code>
+                        <ns7:GUID>5efaebf6-7339-4ea8-937a-395bd729bea7</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Введение ограничений пользования земельным участком, на котором расположен многоквартирный дом</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Введение ограничений пользования земельным участком, на котором расположен многоквартирный дом</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>bdb3467e-bb2a-4791-94ed-7d8943269f3d</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>5.2</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>4.1</ns7:Code>
+                        <ns7:GUID>578e399d-a1a2-41b7-a7c7-00cc3430e875</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Пределы использования земельного участка, на котором расположен многоквартирный дом, в том числе введение ограничений пользования им</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Пределы использования земельного участка на котором расположен многоквартирный дом</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>bdb3467e-bb2a-4791-94ed-7d8943269f3d</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>5.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>17</ns7:Code>
+                    <ns7:GUID>a190e2d2-1e14-4052-ae11-742779733fd6</ns7:GUID>
+                    <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 2.1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 2.1 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>6</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>17.4</ns7:Code>
+                        <ns7:GUID>46087ee4-210a-484f-a240-2237ff759fcb</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Эксплуатация элементов озеленения и благоустройства на земельном участке, относящемся к общему имуществу собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Эксплуатация элементов озеленения и благоустройства на земельном участке, относящемся к общему имуществу собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>a190e2d2-1e14-4052-ae11-742779733fd6</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>6.4</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>17.3</ns7:Code>
+                        <ns7:GUID>a0e912f8-142c-4bea-a784-998dfb75b6af</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Обслуживание элементов озеленения и благоустройства на земельном участке, относящемся к общему имуществу собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Обслуживание элементов озеленения и благоустройства на земельном участке, относящемся к общему имуществу собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>a190e2d2-1e14-4052-ae11-742779733fd6</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>6.3</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>17.2</ns7:Code>
+                        <ns7:GUID>33a7f8ed-a213-4569-ac0d-96ea3d0b8e05</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Размещение элементов озеленения и благоустройства на земельном участке, относящемся к общему имуществу собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Размещение элементов озеленения и благоустройства на земельном участке, относящемся к общему имуществу собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>a190e2d2-1e14-4052-ae11-742779733fd6</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>6.2</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>17.1</ns7:Code>
+                        <ns7:GUID>26d304e7-4577-48ef-853f-813990a3cddd</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Благоустройство земельного участка, на котором расположен многоквартирный дом и который относится к общему имуществу собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Благоустройство земельного участка, на котором расположен многоквартирный дом и который относится к общему имуществу собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>a190e2d2-1e14-4052-ae11-742779733fd6</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>6.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>5</ns7:Code>
+                    <ns7:GUID>e7c1630c-81d0-4b56-a2d9-b25638f2436e</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 3 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 3 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>7</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>5.3</ns7:Code>
+                        <ns7:GUID>7dfe81ea-b830-4048-8f70-20c98925b334</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Заключение договоров на эксплуатацию рекламных конструкций, если для их эксплуатации предполагается использовать общее имущество собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Заключение договоров на эксплуатацию рекламных конструкций, если для их эксплуатации предполагается использовать общее имущество собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>e7c1630c-81d0-4b56-a2d9-b25638f2436e</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>7.3</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>5.2</ns7:Code>
+                        <ns7:GUID>32d3577f-df3c-49cc-8f56-77f480fe41db</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Заключение договоров на установку рекламных конструкций, если для их установки предполагается использовать общее имущество собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Заключение договоров на установку рекламных конструкций, если для их установки предполагается использовать общее имущество собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>e7c1630c-81d0-4b56-a2d9-b25638f2436e</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>7.2</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>5.1</ns7:Code>
+                        <ns7:GUID>b6da15b4-fe0e-4cce-a4a5-f56c92dd697e</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Пользование общим имуществом собственников помещений в многоквартирном доме иными лицами, в том числе заключение договоров на установку и эксплуатацию рекламных конструкций</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Пользование общим имуществом собственников иными лицами</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>e7c1630c-81d0-4b56-a2d9-b25638f2436e</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>7.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>7</ns7:Code>
+                    <ns7:GUID>b3ec37eb-04e8-409c-8bb9-c786ec6d07e3</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 3.2 части 2 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 3.2 части 2 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>9</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.1</ns7:Code>
+                        <ns7:GUID>2812aa9d-cd58-476b-994f-7d04b33a238c</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Использование государственной информационной системы при проведении общего собрания собственников помещений в многоквартирном доме в форме заочного голосования</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Использование государственной информационной системы при проведении общего собрания собственников помещений в многоквартирном доме  в форме заочного голосования</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>b3ec37eb-04e8-409c-8bb9-c786ec6d07e3</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>9.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.2</ns7:Code>
+                        <ns7:GUID>d9c9aa08-349a-4bbb-b305-4cb85567229b</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Использование иной информационной системы при проведении общего собрания собственников помещений в многоквартирном доме  в форме заочного голосования</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Использование иной информационной системы при проведении общего собрания собственников помещений в многоквартирном доме  в форме заочного голосования</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>b3ec37eb-04e8-409c-8bb9-c786ec6d07e3</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>9.2</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>8</ns7:Code>
+                    <ns7:GUID>4c2d29a7-d12d-46bf-b00e-0d254c6f3ba3</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 3.3 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 3.3 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>10</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.1</ns7:Code>
+                        <ns7:GUID>34054fc0-9d71-4fbd-b10e-11305cc76562</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Определение лиц, которые от имени собственников помещений в многоквартирном доме уполномочены на использование системы или иных информационных систем при проведении общего собрания собственников помещений в многоквартирном доме в форме заочного голосования (администратора общего собрания собственников)</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Определение администратора общего собрания </ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>4c2d29a7-d12d-46bf-b00e-0d254c6f3ba3</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>10.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>9</ns7:Code>
+                    <ns7:GUID>751011bb-c954-4883-92d7-91265f42a5ae</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 3.4 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 3.4 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>11</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>9.3</ns7:Code>
+                        <ns7:GUID>5800f54d-8bca-46af-aacb-5a2fdbd2c75f</ns7:GUID>
+                        <ns7:Modified>2018-03-16T22:25:30.000+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Порядок приема администратором общего собрания решений собственников помещений в многоквартирном доме по вопросам, поставленным на голосование</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Порядок приема администратором общего собрания решений собственников помещений в многоквартирном доме по вопросам, поставленным на голосование</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>751011bb-c954-4883-92d7-91265f42a5ae</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>11.3</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>9.2</ns7:Code>
+                        <ns7:GUID>940b29b7-66bd-41a9-b30d-0b636798e569</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Продолжительность голосования по вопросам повестки дня общего собрания собственников помещений в многоквартирном доме в форме заочного голосования с использованием системы</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Продолжительность голосования по вопросам повестки дня общего собрания собственников помещений в многоквартирном доме в форме заочного голосования с использованием системы</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>751011bb-c954-4883-92d7-91265f42a5ae</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>11.2</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>9.1</ns7:Code>
+                        <ns7:GUID>52b36e78-fddd-4e03-9753-f477ca503246</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Порядок приема администратором общего собрания сообщений о проведении общих собраний собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Порядок приема администратором общего собрания сообщений о проведении общих собраний собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>751011bb-c954-4883-92d7-91265f42a5ae</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>11.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>10</ns7:Code>
+                    <ns7:GUID>9e57e18d-8d2d-4fc5-9aaf-5de4e65f09e6</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 3.5 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 3.5 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>12</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>10.1</ns7:Code>
+                        <ns7:GUID>7fff4d0b-f9dd-46aa-8b99-afff8bec6d1f</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Порядок финансирования расходов, связанных с созывом и организацией проведения управляющей организацией, правлением товарищества собственников жилья, жилищного или жилищно-строительного кооператива, иного специализированного потребительского кооператива общего собрания в соответствии с частью 6 статьи 45 Жилищного Кодекса</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Порядок финансирования расходов, связанных с созывом и организацией проведения общего собрания в соответствии с частью 6 статьи 45 Жилищного кодекса Российской Федерации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>9e57e18d-8d2d-4fc5-9aaf-5de4e65f09e6</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>12.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>11</ns7:Code>
+                    <ns7:GUID>52b83c88-6bce-4faf-827f-6fa4de3d9b98</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 4 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 4 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>13</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>11.1</ns7:Code>
+                        <ns7:GUID>5b7c2473-18ce-4c97-b374-b81b56c5423d</ns7:GUID>
+                        <ns7:Modified>2015-02-06T11:19:04.170+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Выбор способа управления многоквартирным домом</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Выбор способа управления многоквартирным домом</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>52b83c88-6bce-4faf-827f-6fa4de3d9b98</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>13.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>13</ns7:Code>
+                    <ns7:GUID>b6b71370-08a0-4fb1-af08-a801c991a9e1</ns7:GUID>
+                    <ns7:Modified>2016-03-15T21:38:33.265+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 4.2 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 4.2 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>15</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>13.1</ns7:Code>
+                        <ns7:GUID>ccd5223c-ae05-41be-ba73-12182584f4df</ns7:GUID>
+                        <ns7:Modified>2016-03-15T21:38:33.265+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Наделение совета многоквартирного дома полномочиями на принятие решений о текущем ремонте общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Наделение совета многоквартирного дома полномочиями на принятие решений о текущем ремонте общего имущества в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>b6b71370-08a0-4fb1-af08-a801c991a9e1</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>15.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>14</ns7:Code>
+                    <ns7:GUID>61c4a2d1-498f-4002-9490-35d65ba1126b</ns7:GUID>
+                    <ns7:Modified>2016-03-15T21:38:33.265+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 4.3 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 4.3 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>16</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>14.1</ns7:Code>
+                        <ns7:GUID>70f975ef-770c-4f9f-80ed-d4b419d5e02c</ns7:GUID>
+                        <ns7:Modified>2016-03-15T21:38:33.265+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Наделение председателя совета многоквартирного дома полномочиями на принятие решений по вопросам, не указанным в части 5 статьи 161.1 настоящего Кодекса, за исключением полномочий, отнесенных к компетенции общего собрания собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Наделение председателя совета многоквартирного дома полномочиями на принятие решений по вопросам, не указанным в части 5 статьи 161.1 Жилищного кодекса Российской Федерации, за исключением полномочий, отнесенных к компетенции общего собрания собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>61c4a2d1-498f-4002-9490-35d65ba1126b</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>16.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>15</ns7:Code>
+                    <ns7:GUID>aecd8137-bd93-4147-a36d-9ccf6c48fc9f</ns7:GUID>
+                    <ns7:Modified>2016-03-15T21:38:33.265+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Полное наименование</ns7:Name>
+                        <ns7:Value>Пункт 5 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Краткое наименование</ns7:Name>
+                        <ns7:Value>Пункт 5 части 2 статьи 44 ЖК РФ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Порядок сортировки</ns7:Name>
+                        <ns7:Value>17</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>15.1</ns7:Code>
+                        <ns7:GUID>fa780ea1-5be4-410e-b0fc-a032a90c2043</ns7:GUID>
+                        <ns7:Modified>2016-03-15T21:38:33.265+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Полное наименование</ns7:Name>
+                            <ns7:Value>Другие вопросы, отнесенные к компетенции общего собрания собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Краткое наименование</ns7:Name>
+                            <ns7:Value>Другие вопросы, отнесенные Жилищным кодексом Российской Федерации к компетенции общего собрания собственников помещений в многоквартирном доме</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:Value>aecd8137-bd93-4147-a36d-9ccf6c48fc9f</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Порядок сортировки</ns7:Name>
+                            <ns7:Value>17.1</ns7:Value>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

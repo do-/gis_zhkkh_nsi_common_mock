@@ -1,0 +1,2633 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T18:08:36.706+03:00</ns4:Date>
+            <ns4:MessageGUID>14f3e49b-fc9e-43be-a0b5-8c70ab2b8325</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-acfd0803-3643-4f95-bcd3-8e51e0b1a861"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>g3hFpSBVJSBpTa4PtBm0yUYsHStnnH3g1EvftUmoPx8=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-acfd0803-3643-4f95-bcd3-8e51e0b1a861-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>4jzkCJ3OYV0SDmOjfHz2kFTqIHPfiB1ejLStHRvAYTE=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>FeHA82M45qP230CI3qa5xc8R/7jMbDGq5cMv9lwR9HWVuPXcOLVmR1igaBoWkmJVDxPPurWc9xR9
+bpMpBb0Xow==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-45ce6024-7338-4299-9daa-d44f7ed45e1c"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-acfd0803-3643-4f95-bcd3-8e51e0b1a861">
+    <xades:SignedProperties Id="xmldsig-acfd0803-3643-4f95-bcd3-8e51e0b1a861-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T18:08:36.717+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>ce9a5481-8cb2-11eb-883d-005056b66349</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                <ns7:Created>2021-03-24T18:08:36.706+03:00</ns7:Created>
+                <ns7:NsiElement>
+                    <ns7:Code>2</ns7:Code>
+                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                    <ns7:Modified>2017-11-24T20:37:47.965+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование группы тем</ns7:Name>
+                        <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование темы</ns7:Name>
+                        <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.1</ns7:Code>
+                        <ns7:GUID>958cfa1c-c3e2-47d7-8d56-8ecce2d2dbf0</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Отсутствие отопления</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.2</ns7:Code>
+                        <ns7:GUID>c35dbdab-1170-4749-9b80-069fa9ca7de8</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Отсутствие водоснабжения</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.3</ns7:Code>
+                        <ns7:GUID>505b22f7-8f67-453e-95fa-103e983cba62</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение температурного режима подачи воды</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.4</ns7:Code>
+                        <ns7:GUID>b4cd6977-125d-4fe2-a784-395675415477</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение санитарного состояния подъездов и лифтов</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.5</ns7:Code>
+                        <ns7:GUID>be2ebc2f-9525-4f7d-832b-d55af75f96cd</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Неисправность лифта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.6</ns7:Code>
+                        <ns7:GUID>95bf1779-e1a5-4ce8-b86d-eff0cd0eae9e</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Подъезды в плохом техническом состоянии</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.7</ns7:Code>
+                        <ns7:GUID>2b716da7-ece7-4c25-b7fc-7babc474b5f3</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Протечка кровли (крыши)</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.8</ns7:Code>
+                        <ns7:GUID>71b63501-ec63-4350-95c7-37c7ecbf7627</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Плохое качество водопроводной воды</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.9</ns7:Code>
+                        <ns7:GUID>ed433f3d-3c52-4ac7-83a5-bb22bff6bfda</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Антисанитария в жилых домах</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.10</ns7:Code>
+                        <ns7:GUID>c6e98881-0bb9-4ab9-8370-d68790c1bec3</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Насекомые и грызуны</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.11</ns7:Code>
+                        <ns7:GUID>7d0e91f1-8f64-4d13-89bb-79563784b655</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Отсутствие капитального ремонта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.12</ns7:Code>
+                        <ns7:GUID>6e250fa9-8625-46b2-91bd-08ed1656b01f</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Сломанный почтовый ящик</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.13</ns7:Code>
+                        <ns7:GUID>93a5721a-1375-4b15-9caf-783be4f0a7d7</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Несанкционированные объявления, надписи и рисунки на фасадах</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.14</ns7:Code>
+                        <ns7:GUID>66417b19-fe25-469a-9004-fece168d2f1e</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Низкая/высокая температура в местах общего пользования</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.15</ns7:Code>
+                        <ns7:GUID>3a1ab288-4a55-4172-9f7d-b962d31fe3a2</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Затопления квартир</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.16</ns7:Code>
+                        <ns7:GUID>69f2f39f-98a6-4b65-b764-f65cfe04168e</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Прорыв трубы</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.17</ns7:Code>
+                        <ns7:GUID>fb21d89c-d8ec-4357-94db-fea196260297</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Угроза возникновения пожара</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.18</ns7:Code>
+                        <ns7:GUID>364938b1-1153-490c-ab16-0831a807d39a</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Незаконные реконструкции</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.19</ns7:Code>
+                        <ns7:GUID>a1141aaa-9b45-4b30-ad66-e4c1dbfaffe8</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Проблемы с дымоходами в многоквартирных домах</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.20</ns7:Code>
+                        <ns7:GUID>3a327003-777b-4fe2-a4eb-1e84bdca9824</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Повреждение имущества при проведении ремонтных работ</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.21</ns7:Code>
+                        <ns7:GUID>a9a31d8f-57c0-42ac-b34e-7d6a184efcf6</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Проблемы со стоками на загородных участках</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.22</ns7:Code>
+                        <ns7:GUID>cfae22f7-5ee5-44f6-86d5-f05e872f8bfc</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Не работает освещение в подъезде/лифте/подвале многоквартирного дома</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.23</ns7:Code>
+                        <ns7:GUID>792170a4-2118-4fb4-b6d3-df1123880b5f</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Угроза падения льда с крыш зданий</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>2.24</ns7:Code>
+                        <ns7:GUID>eb1aa8b7-6c0e-4352-b93d-5f7cc60780fc</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к внутридомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Угроза падения предметов с крыш зданий</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>2</ns7:Code>
+                                    <ns7:GUID>688185c0-c4ab-49cc-b0a3-fed1576664b8</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>8</ns7:Code>
+                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                    <ns7:Modified>2017-11-24T20:37:47.965+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование группы тем</ns7:Name>
+                        <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование темы</ns7:Name>
+                        <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.1</ns7:Code>
+                        <ns7:GUID>d9611890-130d-47ae-9dee-b47f9c367ce0</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение требований к порядку создания ТСЖ, ЖК, ЖСК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>8</ns7:Code>
+                                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.2</ns7:Code>
+                        <ns7:GUID>87b8f087-3283-4749-834b-82068ec34799</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение требований к уставу ТСЖ, ЖК, ЖСК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>8</ns7:Code>
+                                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.3</ns7:Code>
+                        <ns7:GUID>d445c88b-8bcf-47d1-bb73-7fb18e8b6da5</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение требований к порядку внесения изменений в устав ТСЖ, ЖК, ЖСК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>8</ns7:Code>
+                                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.4</ns7:Code>
+                        <ns7:GUID>2122e5d8-35bd-4278-b089-dc2f073d22a1</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение требований к порядку выбора управляющей организации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>8</ns7:Code>
+                                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.5</ns7:Code>
+                        <ns7:GUID>f840e281-3ea5-45d7-b858-4c7312d41a94</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение требований к порядку заключения договоров с управляющей организацией</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>8</ns7:Code>
+                                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.6</ns7:Code>
+                        <ns7:GUID>2ac9174a-e432-4d7f-b1e6-92888f274032</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение требований к порядку содержания и осуществления текущего и капитального ремонта общего имущества</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>8</ns7:Code>
+                                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.7</ns7:Code>
+                        <ns7:GUID>d63c3069-bd03-4091-89ea-55280af2ee24</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение управляющей организацией обязательств по управлению многоквартирным домом</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>8</ns7:Code>
+                                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.8</ns7:Code>
+                        <ns7:GUID>82993d80-b3e8-4462-a5d0-e16c7bed8940</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение при применении предельных (макс.) индексов изменения размера платы граждан за коммунальные услуги</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>8</ns7:Code>
+                                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.9</ns7:Code>
+                        <ns7:GUID>bc436b2d-88c5-4f09-9b2c-6499ed852b75</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение требований к наймодателям или нанимателям в наемных домах социального использования</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>8</ns7:Code>
+                                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>8.10</ns7:Code>
+                        <ns7:GUID>ea1916e1-1be0-4b68-b665-fdc844ee1238</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Нарушения со стороны УК, ТСЖ, ЖСК, ЖК или иного СПК</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение требований к заключению и исполнению договоров найма в наемных домах социального использования</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>8</ns7:Code>
+                                    <ns7:GUID>cae6664e-c389-4f3f-a909-ea7c204a5fa4</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>1</ns7:Code>
+                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                    <ns7:Modified>2017-11-24T20:37:47.965+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование группы тем</ns7:Name>
+                        <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование темы</ns7:Name>
+                        <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.9</ns7:Code>
+                        <ns7:GUID>6a02343d-b581-47eb-8c88-443a6e3a4bf0</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Отсутствие урн для мусора у подъездов многоквартирных домов</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.11</ns7:Code>
+                        <ns7:GUID>91895d69-dbc3-4df2-ba41-a7a13a4c5c0c</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение порядка содержания зеленых насаждений</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.12</ns7:Code>
+                        <ns7:GUID>8dd9c25e-bdab-4b9a-a714-f5e5b0db0590</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Неблагоустроенные парковочные места</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.13</ns7:Code>
+                        <ns7:GUID>ac226b86-7ca5-4633-95ae-5aad202263fd</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Неправильное размещение мусорных контейнеров</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.14</ns7:Code>
+                        <ns7:GUID>39788d41-53ef-4eeb-8169-a3f6688b22f0</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Перекрытие пожарных проездов</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.15</ns7:Code>
+                        <ns7:GUID>8016e2e4-107b-4e8d-ac8a-4f19f953a1c6</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Строительство опасных объектов вблизи жилых домов</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.16</ns7:Code>
+                        <ns7:GUID>46e9eb18-917f-416b-8f01-a2fae997c433</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Ненадлежащее состояние площадки для выгула домашних животных</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.17</ns7:Code>
+                        <ns7:GUID>72d00754-12d8-4ec2-995f-e094d5c54174</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Незалитый или некачественно залитый каток</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.18</ns7:Code>
+                        <ns7:GUID>9ce13767-ffdb-4ff2-8c76-51dcbcd336fd</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Брошенное разукомплектованное транспортное средство</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.19</ns7:Code>
+                        <ns7:GUID>4e28d2fe-415b-4538-ac78-85603fdd31cd</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Не работает освещение на придомовой территории (в.т.ч., на детских, спортивных/игровых площадках, парковочных карманах/гостевых парковках)</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.1</ns7:Code>
+                        <ns7:GUID>a8118b8a-0600-42c2-bd11-6f16ad72f15d</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Не работает уличное освещение</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.2</ns7:Code>
+                        <ns7:GUID>d23af192-46e9-4c06-911c-3c6c2515b7e4</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Ненадлежащее техническое состояние оборудования детских площадок</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.3</ns7:Code>
+                        <ns7:GUID>46dc9abc-b216-4e74-90d1-09a7432aec7e</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Ненадлежащее санитарное состояние дворовых территорий</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.4</ns7:Code>
+                        <ns7:GUID>3e841999-585e-48ad-b3a7-24c1369bb7ad</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Локальные разрушения асфальтобетонного покрытия (ямы/выбоины)</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.5</ns7:Code>
+                        <ns7:GUID>e1320837-9dcb-4d99-bdf8-3b65785b1a3f</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение графика вывоза ТБО и КГМ (мусор)</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.6</ns7:Code>
+                        <ns7:GUID>dfdc29a9-2d97-403d-8da4-f2cff429c841</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Некачественная уборка территории от снега и наледи</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.7</ns7:Code>
+                        <ns7:GUID>6dc10a5e-cd18-40ad-a5ea-4030725ccd97</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Отсутствие детских площадок во дворах</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.8</ns7:Code>
+                        <ns7:GUID>452efaa6-315d-4fe3-a32d-3e07c66f9e9e</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нехватка парковочных мест во дворе</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>1.10</ns7:Code>
+                        <ns7:GUID>1c5e1a67-ed71-4cf7-8804-0e2b070c2fae</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, относящиеся к придомовой территории</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Опасные объекты во дворах жилых домов</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>1</ns7:Code>
+                                    <ns7:GUID>e43d8419-9f27-4a81-baa3-630acfce8915</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>3</ns7:Code>
+                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                    <ns7:Modified>2017-11-24T20:37:47.965+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование группы тем</ns7:Name>
+                        <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование темы</ns7:Name>
+                        <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.1</ns7:Code>
+                        <ns7:GUID>074cf57f-5847-473c-af20-d2d4db52fa4d</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушение договоров об аренде жилья</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.2</ns7:Code>
+                        <ns7:GUID>1c0a701c-65d4-4789-919c-c482d20a43fa</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Выселение собственников/нанимателей жилья</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.3</ns7:Code>
+                        <ns7:GUID>cfc3022d-36f5-4779-b14f-211bf31ec8e2</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Оплата за неиспользуемую ТВ-антенну в коммунальных счетах</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.4</ns7:Code>
+                        <ns7:GUID>f5cf13df-cbe7-4ae0-a658-3c11dc2da5c0</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Нарушения при выборе (смене) управляющей организации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.5</ns7:Code>
+                        <ns7:GUID>18de085a-df3d-4d9d-82ca-82eb0cc19dcc</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Плата за неоказанные услуги (невыполненные работы)</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.6</ns7:Code>
+                        <ns7:GUID>b7ffbebd-e33a-46da-a97f-34d28c6515a6</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Незаконное отключение коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.7</ns7:Code>
+                        <ns7:GUID>2b18e33c-9098-49d9-a603-7b81123283b6</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Проблемы с поставщиками газа</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.8</ns7:Code>
+                        <ns7:GUID>08078e50-20b2-4ada-9b11-adf09a524ab9</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Расселение из аварийного дома</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.9</ns7:Code>
+                        <ns7:GUID>dca7991a-4991-48d9-8fa7-08312930fc6f</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Дополнительные платежи в управляющие компании</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.10</ns7:Code>
+                        <ns7:GUID>af5e92ea-fb4a-44da-9cfc-e05bc36cc101</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Радиоточки в квитанциях на оплату квартиры</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.11</ns7:Code>
+                        <ns7:GUID>01121f02-b9ed-45db-b427-be8cd11e7d0b</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Ошибки в квитанциях</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.12</ns7:Code>
+                        <ns7:GUID>309ce711-5d86-41dc-8fe2-9134cef76e64</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Проблемы с поставщиками электроэнергии</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>3.13</ns7:Code>
+                        <ns7:GUID>e89b52f0-a385-4f54-b353-05c1f0e7090e</ns7:GUID>
+                        <ns7:Modified>2015-07-22T21:59:03.015+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Проблемы, связанные с ошибками в квитанциях, оплате, договорах и т.п.</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Игнорирование обращений в управляющие компании</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>3</ns7:Code>
+                                    <ns7:GUID>c9227cbf-27f7-4642-9674-e4058ae0b67d</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6</ns7:Code>
+                    <ns7:GUID>37de927d-4baf-4143-ba4f-d550bcf9701c</ns7:GUID>
+                    <ns7:Modified>2017-11-24T20:37:47.965+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование группы тем</ns7:Name>
+                        <ns7:Value>Оказание услуг по содержанию и ремонту</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование темы</ns7:Name>
+                        <ns7:Value>Оказание услуг по содержанию и ремонту</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>6.1</ns7:Code>
+                        <ns7:GUID>f125bb13-6848-492e-bb6c-dc4d90660e34</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание услуг по содержанию и ремонту</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Качество оказания услуг по содержанию и ремонту</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>6</ns7:Code>
+                                    <ns7:GUID>37de927d-4baf-4143-ba4f-d550bcf9701c</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>6.2</ns7:Code>
+                        <ns7:GUID>40677460-22ef-4fb6-af47-557e1d927aa4</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание услуг по содержанию и ремонту</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Сроки оказания услуг по содержанию и ремонту</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>6</ns7:Code>
+                                    <ns7:GUID>37de927d-4baf-4143-ba4f-d550bcf9701c</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>6.3</ns7:Code>
+                        <ns7:GUID>f636679d-9dc3-42d0-a674-52aeed6b90e7</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание услуг по содержанию и ремонту</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Цены (тарифы) на предоставляемые услуги по содержанию и ремонту</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>6</ns7:Code>
+                                    <ns7:GUID>37de927d-4baf-4143-ba4f-d550bcf9701c</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>6.4</ns7:Code>
+                        <ns7:GUID>5d0a0c78-f6fb-48c5-99a9-e5f06a2e0b85</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание услуг по содержанию и ремонту</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Размер оплаты за предоставляемые услуги по содержанию и ремонту</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>6</ns7:Code>
+                                    <ns7:GUID>37de927d-4baf-4143-ba4f-d550bcf9701c</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>6.5</ns7:Code>
+                        <ns7:GUID>aefb146c-7ac3-4be8-8b34-d5e8176d85af</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание услуг по содержанию и ремонту</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Объем и перечень предоставляемых услуг по содержанию и ремонту</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>6</ns7:Code>
+                                    <ns7:GUID>37de927d-4baf-4143-ba4f-d550bcf9701c</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>7</ns7:Code>
+                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                    <ns7:Modified>2017-11-24T20:37:47.965+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование группы тем</ns7:Name>
+                        <ns7:Value>Предоставление информации</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование темы</ns7:Name>
+                        <ns7:Value>Предоставление информации</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.1</ns7:Code>
+                        <ns7:GUID>d883855b-6795-4b74-b84d-ddcda7c645e8</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация об операциях по спец. счету (фонд капитального ремонта)</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.2</ns7:Code>
+                        <ns7:GUID>dd15b952-bd4f-42f2-a3ec-a57223b25447</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация о муниципальных программах сфере ЖКХ</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.3</ns7:Code>
+                        <ns7:GUID>e0859f5c-22a5-4343-bac6-30abbd08d682</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация о нормативных правовых актах органов местного самоуправления по ЖКХ</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.4</ns7:Code>
+                        <ns7:GUID>98138a8e-3bea-4cbd-b708-8c0f5eefdc1d</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация о состоянии объектов коммунальной и инженерной инфраструктуры</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.5</ns7:Code>
+                        <ns7:GUID>09574fa0-76a7-4b8a-bc3c-6768bd613dce</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация о лицах, осуществляющих эксплуатацию объектов ЖКХ</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.6</ns7:Code>
+                        <ns7:GUID>69308bc6-89f9-47fa-a0a4-95aa38a61dd2</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация о производственных программах ресурсоснабжающих организаций</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.7</ns7:Code>
+                        <ns7:GUID>5422d619-3d06-4be9-bc0c-923de1bab092</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация об инвестиционных программах ресурсоснабжающих организаций</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.8</ns7:Code>
+                        <ns7:GUID>427b68a2-7eeb-4318-b2d8-55ea535cd683</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация о соблюдении параметров качества товаров и услуг ресурсоснабжающих организаций</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.9</ns7:Code>
+                        <ns7:GUID>0cb68a51-0c9d-4afe-a2be-b415e742df29</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация о состоянии расчетов исполнителей коммунальных услуг с ресурсоснабжающими организациями</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.10</ns7:Code>
+                        <ns7:GUID>b40d8c2f-b78b-4f7c-ba2b-8987672cae7d</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация о состоянии расчетов потребителей с исполнителями коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.11</ns7:Code>
+                        <ns7:GUID>175c9332-787b-486c-aff3-07aab055cf62</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация о внеплановой проверке деятельности управляющей организации органом местного самоуправления</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>7.12</ns7:Code>
+                        <ns7:GUID>79d60023-49a3-4686-b98f-4b0d287cdf39</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Предоставление информации</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Информация об участии органа местного самоуправления в общем собрании собственников помещений</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>7</ns7:Code>
+                                    <ns7:GUID>da6b80ed-9ad3-4739-a0c5-00dc6b942aef</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>9</ns7:Code>
+                    <ns7:GUID>b2c89406-5e74-40ef-9cb1-fdb67ca15dc2</ns7:GUID>
+                    <ns7:Modified>2017-11-24T20:37:47.965+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование группы тем</ns7:Name>
+                        <ns7:Value>Комфортная городская среда</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование темы</ns7:Name>
+                        <ns7:Value>Комфортная городская среда</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>9.1</ns7:Code>
+                        <ns7:GUID>80255a26-8cd0-47e9-ba33-58f50a22705b</ns7:GUID>
+                        <ns7:Modified>2017-05-26T21:27:43.342+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Комфортная городская среда</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Предложения к муниципальной/региональной программе</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>9</ns7:Code>
+                                    <ns7:GUID>b2c89406-5e74-40ef-9cb1-fdb67ca15dc2</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>9.2</ns7:Code>
+                        <ns7:GUID>c7f81057-dd1e-425c-b3b9-dd82847f77fa</ns7:GUID>
+                        <ns7:Modified>2017-05-26T21:27:43.342+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Комфортная городская среда</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Жалоба на действия ОМСУ в части реализации Проекта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>9</ns7:Code>
+                                    <ns7:GUID>b2c89406-5e74-40ef-9cb1-fdb67ca15dc2</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>9.3</ns7:Code>
+                        <ns7:GUID>9dd27b83-76b0-423e-b8f4-e035e155edb3</ns7:GUID>
+                        <ns7:Modified>2017-05-26T21:27:43.342+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Комфортная городская среда</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Жалоба на качество работ, выполненных в Проекте</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>9</ns7:Code>
+                                    <ns7:GUID>b2c89406-5e74-40ef-9cb1-fdb67ca15dc2</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>9.4</ns7:Code>
+                        <ns7:GUID>539772ea-1b62-4a1d-a6ed-bdcdd4ab1e43</ns7:GUID>
+                        <ns7:Modified>2017-05-26T21:27:43.342+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Комфортная городская среда</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Жалоба на проведение общественных обсуждений или их отсутствие</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>9</ns7:Code>
+                                    <ns7:GUID>b2c89406-5e74-40ef-9cb1-fdb67ca15dc2</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>9.5</ns7:Code>
+                        <ns7:GUID>f759980b-a9f8-42a4-a406-f50ea7059e9d</ns7:GUID>
+                        <ns7:Modified>2017-05-26T21:27:43.342+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Комфортная городская среда</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Жалоба на нарушение сроков выполнения работ в Проекте</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>9</ns7:Code>
+                                    <ns7:GUID>b2c89406-5e74-40ef-9cb1-fdb67ca15dc2</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>9.6</ns7:Code>
+                        <ns7:GUID>84ac7287-6d75-40bd-8c50-6467ea92f13b</ns7:GUID>
+                        <ns7:Modified>2017-05-26T21:27:43.342+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Комфортная городская среда</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Запрос разъяснений по вопросам реализации Проекта</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>9</ns7:Code>
+                                    <ns7:GUID>b2c89406-5e74-40ef-9cb1-fdb67ca15dc2</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>9.7</ns7:Code>
+                        <ns7:GUID>0d9b2563-9344-4663-9fd4-f6293b7d5288</ns7:GUID>
+                        <ns7:Modified>2017-05-26T21:27:43.342+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Комфортная городская среда</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Вопрос, замечание или предложение по работе с Проектом</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>9</ns7:Code>
+                                    <ns7:GUID>b2c89406-5e74-40ef-9cb1-fdb67ca15dc2</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>4</ns7:Code>
+                    <ns7:GUID>3b3650ad-4f23-4ed9-bd9d-7898a2d5dd53</ns7:GUID>
+                    <ns7:Modified>2017-11-24T20:37:47.965+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование группы тем</ns7:Name>
+                        <ns7:Value>Другая тема</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование темы</ns7:Name>
+                        <ns7:Value>Другая тема</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>5</ns7:Code>
+                    <ns7:GUID>403752c3-8ea0-4a0f-9232-178296b59c83</ns7:GUID>
+                    <ns7:Modified>2017-11-24T20:37:47.965+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование группы тем</ns7:Name>
+                        <ns7:Value>Оказание коммунальных услуг</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование темы</ns7:Name>
+                        <ns7:Value>Оказание коммунальных услуг</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>5.1</ns7:Code>
+                        <ns7:GUID>c4d0beb7-3c37-465b-b008-7129c061f45b</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Качество оказания коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>5</ns7:Code>
+                                    <ns7:GUID>403752c3-8ea0-4a0f-9232-178296b59c83</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>5.2</ns7:Code>
+                        <ns7:GUID>f08558e2-37cf-4de9-af2f-7b30e1a29f00</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Сроки оказания коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>5</ns7:Code>
+                                    <ns7:GUID>403752c3-8ea0-4a0f-9232-178296b59c83</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>5.3</ns7:Code>
+                        <ns7:GUID>0db9d818-663d-47cc-baf3-b5cbb8ad8cd7</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Цены (тарифы) на предоставляемые коммунальные услуги</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>5</ns7:Code>
+                                    <ns7:GUID>403752c3-8ea0-4a0f-9232-178296b59c83</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>5.4</ns7:Code>
+                        <ns7:GUID>847c58bb-5bcc-4e92-a95a-1d1671a0c1a1</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Размер оплаты за предоставляемые коммунальные услуги</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>5</ns7:Code>
+                                    <ns7:GUID>403752c3-8ea0-4a0f-9232-178296b59c83</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>5.5</ns7:Code>
+                        <ns7:GUID>2cb5d6a6-8cde-4080-874b-bfd0e154737f</ns7:GUID>
+                        <ns7:Modified>2016-09-03T12:51:33.176+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Объем и перечень предоставляемых коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>5</ns7:Code>
+                                    <ns7:GUID>403752c3-8ea0-4a0f-9232-178296b59c83</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>5.6</ns7:Code>
+                        <ns7:GUID>b19183a1-3860-4123-af48-66583bc9ecaa</ns7:GUID>
+                        <ns7:Modified>2016-12-25T13:33:40.193+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Оказание коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Размещение информации об индивидуальном приборе учета</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>5</ns7:Code>
+                                    <ns7:GUID>403752c3-8ea0-4a0f-9232-178296b59c83</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>10</ns7:Code>
+                    <ns7:GUID>37037150-b388-4ef9-8196-ef5068a31b3f</ns7:GUID>
+                    <ns7:Modified>2021-01-19T21:08:54.843+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование группы тем</ns7:Name>
+                        <ns7:Value>Неразмещение информации, размещение информации не в полном объеме или размещение недостоверной информации в государственной информационной системе жилищно-коммунального хозяйства</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование темы</ns7:Name>
+                        <ns7:Value>Неразмещение информации, размещение информации не в полном объеме или размещение недостоверной информации в государственной информационной системе жилищно-коммунального хозяйства</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:ChildElement>
+                        <ns7:Code>10.1</ns7:Code>
+                        <ns7:GUID>811ec452-670a-4ba2-9c4f-1c2a8322eb63</ns7:GUID>
+                        <ns7:Modified>2021-01-19T21:08:54.843+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Неразмещение информации, размещение информации не в полном объеме или размещение недостоверной информации в государственной информационной системе жилищно-коммунального хозяйства</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Отсутствие объекта жилищного фонда в ГИС ЖКХ</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>10</ns7:Code>
+                                    <ns7:GUID>37037150-b388-4ef9-8196-ef5068a31b3f</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>10.2</ns7:Code>
+                        <ns7:GUID>295e543c-f641-470a-9282-0c059329efb9</ns7:GUID>
+                        <ns7:Modified>2021-01-19T21:08:54.843+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Неразмещение информации, размещение информации не в полном объеме или размещение недостоверной информации в государственной информационной системе жилищно-коммунального хозяйства</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Непредоставление информации поставщиком услуг сведений о задолженности в обусловленный приказом срок</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>10</ns7:Code>
+                                    <ns7:GUID>37037150-b388-4ef9-8196-ef5068a31b3f</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                    <ns7:ChildElement>
+                        <ns7:Code>10.3</ns7:Code>
+                        <ns7:GUID>ee7d53e4-4842-491d-9749-7a3a709dd75b</ns7:GUID>
+                        <ns7:Modified>2021-01-19T21:08:54.843+03:00</ns7:Modified>
+                        <ns7:IsActual>true</ns7:IsActual>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование группы тем</ns7:Name>
+                            <ns7:Value>Неразмещение информации, размещение информации не в полном объеме или размещение недостоверной информации в государственной информационной системе жилищно-коммунального хозяйства</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                            <ns7:Name>Наименование темы</ns7:Name>
+                            <ns7:Value>Отсутствие информации о предоставлении жилищно-коммунальных услуг</ns7:Value>
+                        </ns7:NsiElementField>
+                        <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                            <ns7:Name>Ссылка на вышестоящую запись</ns7:Name>
+                            <ns7:NsiRef>
+                                <ns7:NsiItemRegistryNumber>220</ns7:NsiItemRegistryNumber>
+                                <ns7:Ref>
+                                    <ns7:Code>10</ns7:Code>
+                                    <ns7:GUID>37037150-b388-4ef9-8196-ef5068a31b3f</ns7:GUID>
+                                </ns7:Ref>
+                            </ns7:NsiRef>
+                        </ns7:NsiElementField>
+                    </ns7:ChildElement>
+                </ns7:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

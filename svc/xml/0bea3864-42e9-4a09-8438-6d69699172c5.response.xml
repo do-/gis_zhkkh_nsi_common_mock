@@ -1,0 +1,1237 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T18:09:11.494+03:00</ns4:Date>
+            <ns4:MessageGUID>0bea3864-42e9-4a09-8438-6d69699172c5</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-0f7f756f-6a93-4d5e-a9e3-3fb7678d79b5"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>2VPfbvph/Epy8WIFakFVNiLtBc8mIUZWPnGLvj0nAT0=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-0f7f756f-6a93-4d5e-a9e3-3fb7678d79b5-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>78l/Yhw22nYPbLLZognOYYjUDNoA+q/zdpAQiKKqSXg=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>w6KX3xwDkeKGx3VE/LsJ8GsmPItq6sT8sdwexdkm6U12ebOOrt4/SY2dPEY7fLe3UldJEqZ8dvAL
+3GY26oBHpw==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-2a7e3f99-ac3f-4d30-8c29-0cdaa7c3f28d"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-0f7f756f-6a93-4d5e-a9e3-3fb7678d79b5">
+    <xades:SignedProperties Id="xmldsig-0f7f756f-6a93-4d5e-a9e3-3fb7678d79b5-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T18:09:11.500+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>e385404f-8cb2-11eb-b7f1-005056b62471</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns6:NsiItemRegistryNumber>293</ns6:NsiItemRegistryNumber>
+                <ns6:Created>2021-03-24T18:09:11.494+03:00</ns6:Created>
+                <ns6:NsiElement>
+                    <ns6:Code>51</ns6:Code>
+                    <ns6:GUID>4f01796c-2a29-44f5-94b7-d3766653f4de</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о региональных стандартах нормативной площади жилого помещения</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>52</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 2 п/п 3.3 Раздел 6 п/п 2.2</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>52</ns6:Code>
+                    <ns6:GUID>6f6d2623-485b-461f-995d-42ad3c95d2a5</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о региональных стандартах стоимости жилищно-коммунальных услуг</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>53</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 2 п/п 3.4 Раздел 6 п/п 2.3</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>53</ns6:Code>
+                    <ns6:GUID>ce627d3e-e9e8-49a6-afa9-3f8e6a25853e</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о максимально допустимой доли расходов граждан на оплату жилого помещения и коммунальных услуг в совокупном доходе семьи</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>54</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 2 п/п 3.5 Раздел 6 п/п 2.4</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>54</ns6:Code>
+                    <ns6:GUID>ace40949-30c6-48f5-b93e-9e61d5d48992</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о прожиточных минимумах для граждан различных социально-демографических групп в субъекте Российской Федерации</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>55</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 2 п/п 3.6</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>55</ns6:Code>
+                    <ns6:GUID>109b2e6a-59c7-462a-953e-6e5d8705c877</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о нормативах потребления коммунальных ресурсов в целях содержания общего имущества в многоквартирном доме</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>56</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 2 п/п 2 209-ФЗ Статья 6 пункт 20</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>56</ns6:Code>
+                    <ns6:GUID>f145a48d-e29a-4734-9384-c7b912ebec16</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о нормативах потребления коммунальной услуги при использовании земельного участка и надворных построек</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>57</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 2 п/п 2 209-ФЗ Статья 6 пункт 20</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>57</ns6:Code>
+                    <ns6:GUID>eb1a55ac-648c-4d18-86e9-fb78677789b4</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о нормативах накопления твердых коммунальных отходов</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>58</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 2 п/п 2 209-ФЗ Статья 6 пункт 20</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>58</ns6:Code>
+                    <ns6:GUID>40745085-fcc5-4d1b-a904-288a06de0237</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о нормативах потребления коммунальных услуг в жилых помещениях</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>59</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 2 п/п 2 209-ФЗ Статья 6 пункт 20</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>59</ns6:Code>
+                    <ns6:GUID>7c3913a4-ba65-46e4-a47b-11d04c90ca3b</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о нормативах потребления коммунальных услуг на общедомовые нужды</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>60</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 2 п/п 2 209-ФЗ Статья 6 пункт 20</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>60</ns6:Code>
+                    <ns6:GUID>51b0be26-3b61-4c3e-842f-f40e3bbc00db</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о размерах платы за пользование жилым помещением (платы за наем)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>61</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 6 п/п 11</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>63</ns6:Code>
+                    <ns6:GUID>112349bc-fa48-46a2-8c3c-e23a28cfdc20</ns6:GUID>
+                    <ns6:Modified>2021-01-19T21:08:54.829+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Запрос о наличии/отсутствии у заявителя подтвержденной вступившим в законную силу судебным актом непогашенной задолженности по оплате жилого помещения и коммунальных услуг, которая образовалась за период не более чем 3 последних года</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>63</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 2 п/п 3.7.3.4</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>64</ns6:Code>
+                    <ns6:GUID>35dc3ba5-e858-4e02-bf48-70deb3934124</ns6:GUID>
+                    <ns6:Modified>2021-01-19T21:08:54.829+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Сведения о наличии или отсутствии у заявителя подтвержденной вступившим в законную силу судебным актом непогашенной задолженности по оплате жилого помещения и коммунальных услуг, которая образовалась за период не более чем 3 последних года</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>64</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 74/114/пр Раздел 8 п/п 5.3 Раздел 9 п/п 16.7 Раздел 10 п/п 21 Раздел 11 п/п 3.2.7</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>26</ns6:Code>
+                    <ns6:GUID>e4894451-4d33-4980-84ba-cca7dcad0d5b</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация об обращениях по вопросам жилищно-коммунального хозяйства</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>33</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>40</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>61</ns6:Code>
+                    <ns6:GUID>a61692de-6fa0-4aa6-8c57-7dbc2c12e6a7</ns6:GUID>
+                    <ns6:Modified>2017-07-22T00:04:32.814+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о социальной норме потребления электрической энергии (мощности)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>62</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ 455/825/пр Статья 6 п/п 2</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>19</ns6:Code>
+                    <ns6:GUID>02354288-c0f8-4b7d-b8cd-24f8db84d293</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о ценах, тарифах на услуги и работы по содержанию и ремонту общего имущества в многоквартирных домах и жилых помещений в них</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>24</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>30</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>20</ns6:Code>
+                    <ns6:GUID>f4a151af-57f5-41fa-ae4f-54dc92cef6b0</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о состоянии расчетов с лицами, оказывающими услуги, выполняющими работы по содержанию и текущему ремонту общего имущества в многоквартирном доме</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>25</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>32</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>34</ns6:Code>
+                    <ns6:GUID>fdf26e64-868b-45ae-b762-93c592e83201</ns6:GUID>
+                    <ns6:Modified>2016-09-21T20:50:44.541+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о лицевых счетах, присвоенных собственникам и пользователям жилых (нежилых) помещений в многоквартирных домах, жилых домов (домовладений)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>27</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>33 (14 по 4 приказу)</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>35</ns6:Code>
+                    <ns6:GUID>7b1c6fdf-1afb-43cb-b48b-61f0c8b19da8</ns6:GUID>
+                    <ns6:Modified>2016-09-21T20:50:44.541+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о состоянии расчетов потребителей за жилое помещение и коммунальные услуги</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>28</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>33 (9.2.,  9.3. по 4 приказу)</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>23</ns6:Code>
+                    <ns6:GUID>f8c577b0-e137-4b14-869b-bbc2a8e12c99</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация, содержащаяся в договоре управления, отчеты о выполнении договора управления</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>30</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>35, 38</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>24</ns6:Code>
+                    <ns6:GUID>17e11080-a714-4ef1-943a-7f3a574640fc</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о проведении общих собраний собственников помещений в многоквартирном доме</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>31</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>36</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>25</ns6:Code>
+                    <ns6:GUID>eef6b1de-96b6-4c01-afbd-467b6a50a915</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Договоры о предоставлении в пользование части общего имущества в многоквартирном доме</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>32</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>39</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>28</ns6:Code>
+                    <ns6:GUID>f002612d-a6ca-4834-a593-6860a0d1aba8</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:30.532+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о внесении платы за жилое помещение и коммунальные услуги</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>35</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>42 (не выделен в 209-ФЗ)</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>29</ns6:Code>
+                    <ns6:GUID>827a8c08-c278-425e-b186-11a6ee7d0ee1</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:31.393+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о лицах, осуществляющих поставки ресурсов, необходимых для предоставления коммунальных услуг, в многоквартирные дома, жилые дома</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>36</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Ч.1, ст.6, п.1 Ст 6 ч.1 п.1</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>30</ns6:Code>
+                    <ns6:GUID>12996f52-f50d-4de1-8802-cf0ffad320f3</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:31.393+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о деятельности по управлению многоквартирным домом</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>37</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Часть 10.1 статьи 161 ЖК РФ; части 2, 6, 21, 22, 36, 38, 39, 42 статьи 6 209-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>31</ns6:Code>
+                    <ns6:GUID>0fe6d518-d5d1-484e-9719-75723709a2cc</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:31.393+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информационные сообщения</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>38</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Часть 42 статьи 6 209-ФЗ; Части 8, 9 статьи 173, часть 2.1 статьи 176 ЖК РФ; Приказ Минкомсвязи России № 589, Минстроя России № 944/пр от 28.12.2015</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>32</ns6:Code>
+                    <ns6:GUID>51602cd6-4a4b-4e04-b8bb-3a3604b4d432</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:31.393+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о лицензиях на осуществление предпринимательской деятельности по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>39</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Часть 42 статьи 6 209-ФЗ; Часть 1 статьи 195 ЖК РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>33</ns6:Code>
+                    <ns6:GUID>0e2ef2dd-3eaa-4210-a73e-2842473202d5</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:31.393+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о дисквалифицированных лицах управляющих организаций</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>40</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Часть 42 статьи 6 209-ФЗ; Часть 1 статьи 195 ЖК РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>36</ns6:Code>
+                    <ns6:GUID>57b6fae6-9b9e-45d0-9c1e-266c370a63fc</ns6:GUID>
+                    <ns6:Modified>2016-10-16T02:28:39.137+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о страховых продуктах</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>41</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>37</ns6:Code>
+                    <ns6:GUID>8e8f8412-c003-414a-ad1f-3b165023018a</ns6:GUID>
+                    <ns6:Modified>2016-10-16T02:29:09.517+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о состоянии расчетов лиц, осуществляющих предоставление коммунальных услуг, с ресурсоснабжающими организациями</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>42</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>42</ns6:Code>
+                    <ns6:GUID>9fd59a4d-a4b4-4d5a-8b26-f8daf71cb57b</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о краткосрочных планах реализации региональной программы капитального ремонта, о региональных адресных и муниципальных адресных программах капитального ремонта</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>43</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ от 29.02.2016 №74/114/пр Раздел 2, п/п 4.1, 4.4 Раздел 6, п/п 8.1, 8.3</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>43</ns6:Code>
+                    <ns6:GUID>25419fc3-0c27-489c-adc4-23e29c607151</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Отчеты о ходе реализации программ капитального ремонта</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>44</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ от 29.02.2016 №74/114/пр Раздел 2, п/п 4.2, 4.5 Раздел 6, п/п 8.2</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>44</ns6:Code>
+                    <ns6:GUID>a71b8096-8de4-43c9-85d4-6f7843a53752</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о решениях по капитальному ремонту, а также о счетах, открытых в целях формирования фонда капитального ремонта, об операциях и остатках по таким счетам</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>45</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ от 29.02.2016 №74/114/пр Раздел 6, п/п 7 Раздел 9, п/п 3, 4, 5, 6, 7, 9, 10, 14.1, 14.2, 14.3, 14.4 Раздел 10, п/п 12.1, 12.3.1-12.3.4, 12.4, 12.6, 12.7, 13.1, 13.2</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>45</ns6:Code>
+                    <ns6:GUID>0cd8b2fb-0c36-423c-a6c3-1b9fc356c9d7</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация об учете фондов капитального ремонта</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>46</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ от 29.02.2016 №74/114/пр Раздел 9, п/п 11 Раздел 10, п/п 12.3.5</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>46</ns6:Code>
+                    <ns6:GUID>d376be36-6be4-4285-8963-9885247e6eba</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация об установленных минимальных размерах фонда капитального ремонта</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>47</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ от 29.02.2016 №74/114/пр Раздел 2, п/п 5</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>47</ns6:Code>
+                    <ns6:GUID>dd4cb20b-8bc0-4d2e-96cc-6408a0883d3c</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о кредитах, займах, привлеченных региональным оператором капитального ремонта в целях финансирования услуг и (или) работ по капитальному ремонту общего имущества в многоквартирном доме</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>48</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ от 29.02.2016 №74/114/пр Раздел 9, п/п 12.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>48</ns6:Code>
+                    <ns6:GUID>8ca691fe-b869-43e7-9aab-a5441d73cf9a</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о решениях Фонда содействия реформированию ЖКХ</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>49</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ от 02.03.2016 №77/120/пр</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>49</ns6:Code>
+                    <ns6:GUID>543a470b-50ff-4c53-bd9d-35d3113e3f4e</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информационные сообщения в адрес ОМС, Регоператора о многоквартирных домах, собственники помещений в которых не выбрали способ формирования фондов капитального ремонта и (или) не реализовали его</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>50</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ от 29.02.2016 №74/114/пр Раздел 4, п/п 5.11</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>50</ns6:Code>
+                    <ns6:GUID>d112771c-f2be-4bda-ad8f-171527b622f0</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о региональных программах капитального ремонта</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>51</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>Приказ от 29.02.2016 №74/114/пр Раздел 2, п/п 4.3</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>62</ns6:Code>
+                    <ns6:GUID>66aa1767-85be-4a46-965e-8c10c89bb854</ns6:GUID>
+                    <ns6:Modified>2017-08-25T20:48:02.079+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о качестве услуг по обращению с твердыми коммунальными отходами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>20</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>прик 4:р11п5</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>3</ns6:Code>
+                    <ns6:GUID>77c3ac6b-31dd-4928-9eca-1b8dec1d4ae6</ns6:GUID>
+                    <ns6:Modified>2017-10-07T13:15:25.207+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация об объектах государственного учета жилищного фонда</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>3</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>6, 14</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1</ns6:Code>
+                    <ns6:GUID>5ddf85ee-c99d-4122-9e3c-542d2dd09079</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация об органах, уполномоченных на осуществление государственного жилищного надзора, муниципального контроля, осуществляющих государственный учет жилищного фонда</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>1</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>3, 4</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>2</ns6:Code>
+                    <ns6:GUID>427a63d2-7f0a-4eec-8de8-eac00ecc7938</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о мероприятиях государственного жилищного надзора, муниципального жилищного контроля</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>2</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>5</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>4</ns6:Code>
+                    <ns6:GUID>a724190c-57fe-494e-8384-beb78dfd52e9</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация об объектах коммунальной и инженерной инфраструктур, в том числе информация о соответствии требованиям энергетической эффективности</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>4</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>7, 14</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>5</ns6:Code>
+                    <ns6:GUID>7442a8f6-6f44-4636-81b3-2e7076c5d421</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о нормативных правовых актах</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>5</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>9</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>38</ns6:Code>
+                    <ns6:GUID>75be0494-1105-44ed-8a97-2a292ffef39b</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о предоставлении гражданам субсидий на оплату жилого помещения и коммунальных услуг</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>7</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>10</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>39</ns6:Code>
+                    <ns6:GUID>0dd642af-cc2b-4ec0-bb63-5370a3258f54</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о предоставлении гражданам компенсаций расходов на оплату жилого помещения и коммунальных услуг</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>8</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>10</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>40</ns6:Code>
+                    <ns6:GUID>8cbe7e2c-5fb8-49ef-a858-1aefa771bb43</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о порядке предоставления субсидий</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>9</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>10 (4й приказ, 3.1)</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>41</ns6:Code>
+                    <ns6:GUID>a89dc834-e1c5-42ad-b1e6-4949aef87cc2</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:35:03.369+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о порядке предоставления компенсаций</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>10</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>10 (4й приказ, 3.2)</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>7</ns6:Code>
+                    <ns6:GUID>f0dfcd73-3999-4312-a862-ccdd616b7f13</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о производственных и инвестиционных программах</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>11</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>11</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>8</ns6:Code>
+                    <ns6:GUID>429e2852-0164-405b-b31b-82e314b4f5b0</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о предоставлении финансовой поддержки</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>12</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>15</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>16</ns6:Code>
+                    <ns6:GUID>30a581bd-b89c-4e6b-98ca-088934833215</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о приборах учета, о показаниях приборов учета</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>21</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>23</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>10</ns6:Code>
+                    <ns6:GUID>380c22ac-5226-43bc-aba0-0bc58f228d8f</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о региональных программах, отчетах о ходе реализации указанных программ (за исключением программ проведения капитального ремонта)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>14</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>17</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>11</ns6:Code>
+                    <ns6:GUID>f1d8d122-b9bb-4155-bf9c-5baad2288076</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация об установленных минимальных размерах взноса на капитальный ремонт общего имущества в многоквартирном доме</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>15</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>18</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>17</ns6:Code>
+                    <ns6:GUID>ed8ee77f-1fac-4f1c-86d0-fcc72f572463</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о ценах, тарифах на коммунальные ресурсы</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>22</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>27</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>13</ns6:Code>
+                    <ns6:GUID>4b65b8e6-ae60-4c8e-9475-fb47a096b045</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о работах по капитальному ремонту, о качестве проведения указанных работ</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>17</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>21</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>14</ns6:Code>
+                    <ns6:GUID>96c53340-a05e-4536-86cb-eb24a184081b</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация об услугах по управлению общим имуществом в многоквартирном доме, работах по содержанию, текущему ремонту общего имущества, о соблюдении установленных параметров качества при оказании услуг, выполнении работ</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>18</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>21, 24, 29</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>15</ns6:Code>
+                    <ns6:GUID>49fda479-2b4a-48d2-a4d9-37fce6892413</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о перечне, об объеме, о качестве коммунальных ресурсов, коммунальных услуг</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>19</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>22</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>18</ns6:Code>
+                    <ns6:GUID>02cff97f-bd8a-46b7-92eb-e104717a2a6d</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о ценах, тарифах на коммунальные услуги</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>23</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>28</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>22</ns6:Code>
+                    <ns6:GUID>360e8a8e-3ae7-42c8-b8f0-236a72720221</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация об индексах изменения размера платы, вносимой гражданами за коммунальные услуги</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>29</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>34</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6</ns6:Code>
+                    <ns6:GUID>69fac5a2-ee3c-4a7b-a229-1942d295e6ab</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о мерах социальной поддержки, в том числе о субсидиях гражданам на оплату жилого помещения и коммунальных услуг</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>6</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>10</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>9</ns6:Code>
+                    <ns6:GUID>d3fa6be4-23e6-40a9-adb4-89b5c7752d3f</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о программах капитального ремонта, отчетах о ходе реализации указанных программ</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>13</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>17</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>27</ns6:Code>
+                    <ns6:GUID>69641fef-e360-4c2b-84b7-b35a4ca7c76d</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о случаях привлечения лиц к административной ответственности</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>34</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>41</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>12</ns6:Code>
+                    <ns6:GUID>84d00f45-45e6-40f1-9402-6590ac024fb6</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о совершенных операциях по счетам, которые открыты в целях формирования фонда капитального ремонта</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>16</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>19</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>21</ns6:Code>
+                    <ns6:GUID>587079fc-5881-46b4-9f6e-e0a4e2022e85</ns6:GUID>
+                    <ns6:Modified>2016-07-03T00:11:22.552+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Информация о состоянии расчетов потребителей за жилое помещение и коммунальные услуги</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Порядок сортировки</ns6:Name>
+                        <ns6:Value>26</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Пункт 209ФЗ</ns6:Name>
+                        <ns6:Value>33</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>
