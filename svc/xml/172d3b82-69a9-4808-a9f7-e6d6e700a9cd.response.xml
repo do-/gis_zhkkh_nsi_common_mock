@@ -1,0 +1,1627 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T18:07:08.465+03:00</ns4:Date>
+            <ns4:MessageGUID>172d3b82-69a9-4808-a9f7-e6d6e700a9cd</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-3d8ce022-20a0-4e66-81d8-bfea63d2ca28"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>FRuiodIG7zG1XWh5QY/Lqalxt+B/lw3NI5LeXaGd0+g=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-3d8ce022-20a0-4e66-81d8-bfea63d2ca28-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>3lQL9jhlWjzDQw6p5DbdZ5LuKGn/ycRvgpour8ezKxo=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>QaIGpWdkC/I9HLm/X/oOP96yTJL9Sxqx0GTlSAxiQPywcEZ7EuTPVpl9eTAiCS0LpkTifg8UrDP0
+AkqAJ9aB0Q==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-3d9c8d1f-f4cd-40ce-931e-5d4311d0ff52"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-3d8ce022-20a0-4e66-81d8-bfea63d2ca28">
+    <xades:SignedProperties Id="xmldsig-3d8ce022-20a0-4e66-81d8-bfea63d2ca28-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T18:07:08.473+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>9a25871d-8cb2-11eb-883d-005056b66349</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns6:NsiItemRegistryNumber>68</ns6:NsiItemRegistryNumber>
+                <ns6:Created>2021-03-24T18:07:08.465+03:00</ns6:Created>
+                <ns6:NsiElement>
+                    <ns6:Code>34</ns6:Code>
+                    <ns6:GUID>271be852-692a-4ce9-aa76-bb789885c784</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушения требований к порядку принятия собственниками помещений в многоквартирном доме решения о выборе юридического лица независимо от организационно-правовой формы или индивидуального предпринимателя, осуществляющих деятельность по управлению многоквартирным домом (далее - управляющая организация), в целях заключения с управляющей организацией договора управления многоквартирным домом, решения о заключении с управляющей организацией договора оказания услуг и (или) выполнения работ по содержанию и ремонту общего имущества в многоквартирном доме, решения о заключении с указанными в части 1 статьи 164 Жилищного Кодекса Российской Федерации лицами договоров оказания услуг по содержанию и (или) выполнению работ по ремонту общего имущества в многоквартирном доме, порядку утверждения условий этих договоров и их заключения</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>35</ns6:Code>
+                    <ns6:GUID>9e9d88c5-015b-40ed-b36b-271084dfc9e7</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах нарушения требований к порядку принятия собственниками помещений в многоквартирном доме решения о выборе юридического лица независимо от организационно-правовой формы или индивидуального предпринимателя, осуществляющих деятельность по управлению многоквартирным домом (далее - управляющая организация), в целях заключения с управляющей организацией договора управления многоквартирным домом, решения о заключении с управляющей организацией договора оказания услуг и (или) выполнения работ по содержанию и ремонту общего имущества в многоквартирном доме, решения о заключении с указанными в части 1 статьи 164 Жилищного Кодекса Российской Федерации лицами договоров оказания услуг по содержанию и (или) выполнению работ по ремонту общего имущества в многоквартирном доме, порядку утверждения условий этих договоров и их заключения</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>25</ns6:Code>
+                    <ns6:GUID>c2250ea7-2fad-4b7a-837a-f58ffa55ca15</ns6:GUID>
+                    <ns6:Modified>2017-09-06T11:45:27.150+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Решение руководителя соответствующего органа государственного контроля (надзора) по согласованию с прокуратурой субъекта Российской Федерации, принимаемого на основании обращений граждан, юридических лиц и информации от государственных органов о фактах нарушений законодательства Российской Федерации, влекущих возникновение чрезвычайных ситуаций, угрозу жизни и здоровью граждан, а также массовые нарушения прав граждан</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п 2.6 статья 77 N131- ФЗ от 06.10.2003</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>41</ns6:Code>
+                    <ns6:GUID>5f3995a7-ac48-41ff-a2ed-61be13dcefa1</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах нарушения в области применения предельных (максимальных) индексов изменения размера вносимой гражданами платы за коммунальные услуги</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>53</ns6:Code>
+                    <ns6:GUID>ea6f978c-0a2a-4387-9f15-87726911bdcf</ns6:GUID>
+                    <ns6:Modified>2019-06-21T22:19:30.372+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный лицензионный контроль за предпринимательской деятельностью по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступление в адрес органа государственного жилищного надзора в течение трех месяцев подряд двух и более протоколов общего собрания собственников помещений в многоквартирном доме, содержащих решения по аналогичным вопросам повестки дня</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.1.1 ст.46 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>26</ns6:Code>
+                    <ns6:GUID>6fed75c2-e753-4710-af68-f512f92527d9</ns6:GUID>
+                    <ns6:Modified>2018-04-20T22:27:25.367+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный лицензионный контроль за предпринимательской деятельностью по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступление в лицензирующий орган обращений, заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушений лицензиатом лицензионных требований (в том числе грубых)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.2 ч.10 ст.19 N 99-ФЗ от 04 мая 2011 года, ч.3 ст. 196 №188-ФЗ РФ от 29 декабря 2004 (ЖК)</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>4</ns6:Code>
+                    <ns6:GUID>da67b977-838c-419a-8cb2-d9e725745cbe</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение срока исполнения юридическим лицом, индивидуальным предпринимателем ранее выданного предписания об устранении выявленного нарушения обязательных требований и (или) требований, установленных муниципальными правовыми актами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.1 ч. 2 ст. 10 ФЗ от 26 декабря 2008 года N 294-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>9</ns6:Code>
+                    <ns6:GUID>eb59ee87-f422-4baf-95fc-f95a259a06d6</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный лицензионный контроль за предпринимательской деятельностью по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение срока исполнения лицензиатом ранее выданного лицензирующим органом предписания об устранении выявленного нарушения лицензионных требований</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.1 ч.10 ст.19 N 99-ФЗ от 04 мая 2011 года</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>11</ns6:Code>
+                    <ns6:GUID>c67c0ed9-e43d-4935-ac91-9cb995ddbef2</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный лицензионный контроль за предпринимательской деятельностью по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение срока, на который было приостановлено действие лицензии </ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.3 ч.10 ст.19 N 99-ФЗ от 04 мая 2011 года</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>12</ns6:Code>
+                    <ns6:GUID>696a04cb-67e1-44dc-a567-cff635f53250</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный лицензионный контроль за предпринимательской деятельностью по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Наличие ходатайства лицензиата о проведении лицензирующим органом внеплановой выездной проверки в целях установления факта досрочного исполнения предписания лицензирующего органа</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.4 ч.10 ст.19 N 99-ФЗ от 04 мая 2011 года</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>23</ns6:Code>
+                    <ns6:GUID>a8e878b8-26cf-495c-b777-a95410affc7f</ns6:GUID>
+                    <ns6:Modified>2017-02-15T18:29:24.492+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступление в орган гос.контроля (надзора), орган муниц.контроля заявления от ЮЛ или ИП о предоставлении правового статуса, специального разрешения (лицензии) на право осуществления отдельных видов деятельности или разрешения (согласования) на осуществление иных юридически значимых действий</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.1.1 ч. 2 ст. 10 ФЗ от 26 декабря 2008 года N 294-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>28</ns6:Code>
+                    <ns6:GUID>553ad0a1-fa2a-49f1-b896-a87ec595906e</ns6:GUID>
+                    <ns6:Modified>2018-09-21T22:37:54.601+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, юридических лиц, информации от органов государственной власти, органов местного самоуправления</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>19</ns6:Code>
+                    <ns6:GUID>1cc29165-e984-401d-8dfc-4eaa13747ba7</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение трех лет со дня государственной регистрации юридического лица, индивидуального предпринимателя</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.8 ст. 9 ФЗ от 26 декабря 2008 года N 294-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>27</ns6:Code>
+                    <ns6:GUID>6000ed77-487a-44cf-8701-f52265a29ed9</ns6:GUID>
+                    <ns6:Modified>2018-04-20T22:27:25.367+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный лицензионный контроль за предпринимательской деятельностью по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступление в лицензирующий орган обращений, заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, средств массовой информации о фактах нарушений лицензиатом лицензионных требований (в том числе грубых)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.2 ч.10 ст.19 N 99-ФЗ от 04 мая 2011 года, ч.3 ст. 196 №188-ФЗ РФ от 29 декабря 2004 (ЖК)</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>29</ns6:Code>
+                    <ns6:GUID>9b7c4c6d-fa05-4e81-bc40-9236a4236b56</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение одного года со дня установления или изменения нормативов потребления коммунальных ресурсов (коммунальных услуг)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.3 ч.4.1 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>30</ns6:Code>
+                    <ns6:GUID>f70e04b8-3704-46a7-babe-d419a4420676</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушения требований правил предоставления, приостановки и ограничения предоставления коммунальных услуг собственникам и пользователям помещений в многоквартирных домах и жилых домах</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>33</ns6:Code>
+                    <ns6:GUID>3420be46-159a-48f8-bf24-ea897693b483</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах нарушения требований к порядку создания товарищества собственников жилья, жилищного, жилищно-строительного или иного специализированного потребительского кооператива, уставу товарищества собственников жилья, жилищного, жилищно-строительного или иного специализированного потребительского кооператива и порядку внесения изменений в устав такого товарищества или такого кооператива</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>36</ns6:Code>
+                    <ns6:GUID>e8df0c55-322b-4303-a589-deef107da117</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушения требований к порядку содержания общего имущества собственников помещений в многоквартирном доме и осуществления текущего и капитального ремонта общего имущества в данном доме</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>38</ns6:Code>
+                    <ns6:GUID>c6e87805-95b7-4ba5-a0e1-5a229b8e726e</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушения управляющей организацией обязательств, предусмотренных частью 2 статьи 162 Жилищного Кодекса Российской Федерации</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>39</ns6:Code>
+                    <ns6:GUID>34ee12e4-6ad7-42c9-8966-bf93e451dfb0</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах нарушения управляющей организацией обязательств, предусмотренных частью 2 статьи 162 Жилищного Кодекса Российской Федерации</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>40</ns6:Code>
+                    <ns6:GUID>b84281ff-d3bf-408c-abe9-532267354c16</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушения в области применения предельных (максимальных) индексов изменения размера вносимой гражданами платы за коммунальные услуги</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>42</ns6:Code>
+                    <ns6:GUID>10bf4636-13d1-4c60-8a84-4df1a25c7304</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах необоснованности размера установленного норматива потребления коммунальных ресурсов (коммунальных услуг)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>43</ns6:Code>
+                    <ns6:GUID>667e64b9-c1c6-402f-b7ae-c7d2d16203e5</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах необоснованности размера установленного норматива потребления коммунальных ресурсов (коммунальных услуг)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>44</ns6:Code>
+                    <ns6:GUID>8cfb01c5-ba1d-444c-8850-619498279358</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушения требований к составу нормативов потребления коммунальных ресурсов (коммунальных услуг), несоблюдения условий и методов установления нормативов потребления коммунальных ресурсов (коммунальных услуг)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>45</ns6:Code>
+                    <ns6:GUID>11bdc3e3-0ea6-46e6-861a-2b38caf2e908</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах нарушения требований к составу нормативов потребления коммунальных ресурсов (коммунальных услуг), несоблюдения условий и методов установления нормативов потребления коммунальных ресурсов (коммунальных услуг)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>46</ns6:Code>
+                    <ns6:GUID>08b678ce-6a16-4bf9-845f-17aafec8a654</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушения правил содержания общего имущества в многоквартирном доме и правил изменения размера платы за содержание жилого помещения</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>47</ns6:Code>
+                    <ns6:GUID>40f03c57-9878-44ab-88fb-aaaa0f3f094f</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах нарушения правил содержания общего имущества в многоквартирном доме и правил изменения размера платы за содержание жилого помещения</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>48</ns6:Code>
+                    <ns6:GUID>e984bd44-a876-4a06-bc69-5cd075d380ab</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушения наймодателями жилых помещений в наемных домах социального использования обязательных требований к наймодателям и нанимателям жилых помещений в таких домах, к заключению и исполнению договоров найма жилых помещений жилищного фонда социального использования и договоров найма жилых помещений</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>5</ns6:Code>
+                    <ns6:GUID>120465f5-0ecd-448f-ba6f-17d554a49558</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Мотивированное представление по результатам анализа результатов мероприятий по контролю без взаимодействия с ЮЛ, ИП, рассмотрения или предварительной проверки поступивших в органы гос.контроля (надзора), органы муниц.контроля обращений и заявлений граждан, в т.ч ИП, ЮЛ, информации от ОГВ, ОМС, из СМИ</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.2 ч. 2 ст. 10 ФЗ от 26 декабря 2008 года N 294-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>20</ns6:Code>
+                    <ns6:GUID>508760ab-fc5d-48e5-9b41-ca7d34f9156a</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение 3-х лет со дня окончания проведения последней плановой проверки юридического лица, индивидуального предпринимателя</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.8 ст. 9 ФЗ от 26 декабря 2008 года N 294-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>49</ns6:Code>
+                    <ns6:GUID>0980295a-0a29-47fb-b4e9-e873442346a3</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах нарушения наймодателями жилых помещений в наемных домах социального использования обязательных требований к наймодателям и нанимателям жилых помещений в таких домах, к заключению и исполнению договоров найма жилых помещений жилищного фонда социального использования и договоров найма жилых помещений</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>50</ns6:Code>
+                    <ns6:GUID>96a7f8e5-bde8-425d-aac5-efcd9d68adba</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушения органами местного самоуправления, ресурсоснабжающими организациями, лицами, осуществляющими деятельность по управлению многоквартирными домами, гражданами требований к порядку размещения информации в системе</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>51</ns6:Code>
+                    <ns6:GUID>90309395-8a66-43b2-82cf-81c178595461</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах нарушения органами местного самоуправления, ресурсоснабжающими организациями, лицами, осуществляющими деятельность по управлению многоквартирными домами, гражданами требований к порядку размещения информации в системе</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>22</ns6:Code>
+                    <ns6:GUID>278364b4-ea6f-4166-a069-d28d7b3f6e92</ns6:GUID>
+                    <ns6:Modified>2017-02-10T13:32:22.495+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Проведение в отношении ЮЛ, ИП внеплановой выездной проверки и без предварительного уведомления ЮЛ, ИП в течение трех месяцев со дня составления акта о невозможности проведения предыдущей внеплановой выездной проверки</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.7 ст.12 Федеральный закон от 26.12.2008 N 294-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>6</ns6:Code>
+                    <ns6:GUID>93880b05-8822-4fc1-8d69-fb028b0b75ee</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Приказ (распоряжение) руководителя органа государственного контроля (надзора), изданный в соответствии с поручениями Президента Российской Федерации, Правительства Российской Федерации и на основании требования прокурора о проведении внеплановой проверки в рамках надзора за исполнением законов по поступившим в органы прокуратуры материалам и обращениям</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.3 ч. 2 ст. 10 ФЗ от 26 декабря 2008 года N 294-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>7</ns6:Code>
+                    <ns6:GUID>bd9729ae-2213-49ef-97bc-8b29dd6dbc24</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Ежегодный план проведения проверок деятельности органов местного самоуправления и должностных лиц местного самоуправления</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.2.3 ст.77 Федеральный закон от 06.10.2003 N 131-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>14</ns6:Code>
+                    <ns6:GUID>436900f5-618d-4efa-93eb-8dc6f1892d3d</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Приказ (распоряжение) органа государственной  власти, органа власти  субъекта РФ о проведении плановой проверки деятельности региональных операторов</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.3 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>18</ns6:Code>
+                    <ns6:GUID>c0b20a92-8ccb-4a64-9f33-dcd5ae7a1e0b</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Проверка соблюдения органами государственного жилищного надзора обязательных требований (не чаще одного раза в 3 года)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч. 4 Положения об осуществлении контроля за соблюдением органами исполнительной власти субъектов Российской Федерации, осуществляющими региональный государственный жилищный надзор, требований Жилищного кодекса Российской Федерации и Федерального закона "О лицензировании отдельных видов деятельности" к лицензированию предпринимательской деятельности по управлению многоквартирными домами (утв. постановлением Правительства РФ от 28 октября 2014 г. N 1110)</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>1</ns6:Code>
+                    <ns6:GUID>14fdc62b-9494-48ac-9bd8-4035fc1e4ca7</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение одного года со дня начала осуществления ЮЛ, ИП деятельности по управлению МКД и деятельности по оказанию услуг и (или) выполнению работ по содержанию и ремонту общего имущества в МКД в соответствии с представленным в орган государственного жилищного надзора уведомлением о начале указанной деятельности</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.1 ч.4.1 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>2</ns6:Code>
+                    <ns6:GUID>d0079aa7-15b7-43f5-9fa3-1ffa03a13141</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение одного года со дня постановки на учет в муниципальном реестре наемных домов социального использования первого наемного дома социального использования, наймодателем жилых помещений в котором является лицо, деятельность которого подлежит проверке</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.1.1 ч.4.1 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>3</ns6:Code>
+                    <ns6:GUID>ab4a2f4c-3e39-4c97-bba0-2ccc26b1989f</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение одного года со дня окончания проведения последней плановой проверки ЮЛ, ИП</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.2 ч.4.1 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>24</ns6:Code>
+                    <ns6:GUID>f0cc4ba2-8dfb-469c-a068-d598a3fae73c</ns6:GUID>
+                    <ns6:Modified>2017-09-06T11:44:05.221+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение срока исполнения физическим лицом ранее выданного предписания об устранении выявленного нарушения обязательных требований и (или) требований, установленных правовыми актами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>52</ns6:Code>
+                    <ns6:GUID>ad9c3d14-eae2-4efb-bec1-dd4382cbea15</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Приказ (распоряжение) главного государственного жилищного инспектора Российской Федерации о назначении внеплановой проверки, изданный в соответствии с поручениями Президента Российской Федерации, Правительства Российской Федерации</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>14</ns6:Code>
+                    <ns6:GUID>e3ad62a6-eee2-42a3-a50f-d5a0975201ec</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Приказ (распоряжение) органа государственной власти, органа власти субъекта РФ о проведении плановой проверки деятельности региональных операторов</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.3 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>8</ns6:Code>
+                    <ns6:GUID>3317b0d6-1dc9-4270-8174-98d65594f49e</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный лицензионный контроль за предпринимательской деятельностью по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение трех лет со дня окончания последней плановой проверки лицензиата</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.2 ч.9 ст.19 N 99-ФЗ от 04 мая 2011 года</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>13</ns6:Code>
+                    <ns6:GUID>d9ed6daf-a112-4fce-8a0d-7436de054674</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный лицензионный контроль за предпринимательской деятельностью по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Наличие приказа (распоряжения), изданного лицензирующим органом в соответствии с поручением Президента Российской Федерации или Правительства Российской Федерации</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.5 ч.10 ст.19 N 99-ФЗ от 04 мая 2011 года</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>15</ns6:Code>
+                    <ns6:GUID>7091e7dc-483e-4246-9c4f-89754e394b69</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный лицензионный контроль за предпринимательской деятельностью по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Истечение одного года со дня принятия решения о предоставлении лицензии или переоформлении лицензии</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.1 ч.9 ст.19 N 99-ФЗ от 04 мая 2011 года</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>7</ns6:Code>
+                    <ns6:GUID>98f419ba-31c1-4a21-8d94-84fd05c76b63</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Ежегодный план проведения проверок деятельности органов местного самоуправления и должностных лиц местного самоуправления</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.2.3 ст.77 Федеральный закон от 06.10.2003 N 131-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>17</ns6:Code>
+                    <ns6:GUID>665b36b8-6bfc-4bcd-bff4-2bd639547d28</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступление в адрес органа государственного жилищного надзора в течение трех месяцев подряд двух и более протоколов общего собрания собственников помещений в многоквартирном доме, содержащих решения по аналогичным вопросам повестки дня</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.1.1 ст.46 Жилищного Кодекса РФ п.7 п.п.б) Федерального закона от 29 июня 2015 года N176-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>21</ns6:Code>
+                    <ns6:GUID>2bd6fa7f-e06b-4a22-8bda-36dae5b748a6</ns6:GUID>
+                    <ns6:Modified>2017-02-10T13:30:26.348+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>1</ns6:Code>
+                                <ns6:GUID>e20b89ea-9ec9-4dfb-9570-581399ed8f26</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Проведение в отношении ЮЛ, ИП плановой выездной проверки без внесения плановой проверки в ежегодный план плановых проверок и без предварительного уведомления ЮЛ, ИП в течение трех месяцев со дня составления акта невозможности проведения предыдущей плановой выездной проверки</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.7 ст.12 Федеральный закон от 26.12.2008 N 294-ФЗ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>31</ns6:Code>
+                    <ns6:GUID>c0a12b43-2080-4cf8-aac1-fc627f15a6a9</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах нарушения требований правил предоставления, приостановки и ограничения предоставления коммунальных услуг собственникам и пользователям помещений в многоквартирных домах и жилых домах</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>32</ns6:Code>
+                    <ns6:GUID>b982f1e7-4420-4c3e-9de2-da36d3cc0ac3</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, о фактах нарушения требований к порядку создания товарищества собственников жилья, жилищного, жилищно-строительного или иного специализированного потребительского кооператива, уставу товарищества собственников жилья, жилищного, жилищно-строительного или иного специализированного потребительского кооператива и порядку внесения изменений в устав такого товарищества или такого кооператива</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>37</ns6:Code>
+                    <ns6:GUID>bc664f6e-d9ff-49f6-aa4c-6980f7dcbcf1</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступления, в частности посредством системы, в орган государственного жилищного надзора, орган муниципального жилищного контроля обращений и заявлений юридических лиц, информации от органов государственной власти, органов местного самоуправления, выявление органом государственного жилищного надзора, органом муниципального жилищного контроля в системе информации о фактах нарушения требований к порядку содержания общего имущества собственников помещений в многоквартирном доме и осуществления текущего и капитального ремонта общего имущества в данном доме</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.4.2 ст.20 Жилищного Кодекса РФ</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>16</ns6:Code>
+                    <ns6:GUID>978711bb-1728-41d9-81fd-ccc6e54ff7c4</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:20:33.470+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный лицензионный контроль за предпринимательской деятельностью по управлению многоквартирными домами</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Представление в лицензирующий орган заявления о предоставлении лицензии или заявления о переоформлении лицензии</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>ч.3 ст.19 N 99-ФЗ от 04 мая 2011 года</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>10</ns6:Code>
+                    <ns6:GUID>a0c16780-7fb9-4fa1-8be6-202f4055ee62</ns6:GUID>
+                    <ns6:Modified>2018-06-22T22:51:50.690+03:00</ns6:Modified>
+                    <ns6:IsActual>false</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementNsiRefFieldType">
+                        <ns6:Name>Вид проверки</ns6:Name>
+                        <ns6:NsiRef>
+                            <ns6:NsiItemRegistryNumber>66</ns6:NsiItemRegistryNumber>
+                            <ns6:Ref>
+                                <ns6:Code>2</ns6:Code>
+                                <ns6:GUID>35b10605-56da-4477-b0df-5b401ab8e6f7</ns6:GUID>
+                            </ns6:Ref>
+                        </ns6:NsiRef>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Вид осуществления контрольной деятельности</ns6:Name>
+                        <ns6:Value>Региональный государственный жилищный надзор, Муниципальный жилищный контроль</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Основание проведения проверки</ns6:Name>
+                        <ns6:Value>Поступление в лицензирующий орган обращений, заявлений граждан, в том числе индивидуальных предпринимателей, юридических лиц, информации от органов государственной власти, органов местного самоуправления, средств массовой информации о фактах нарушений лицензиатом лицензионных требований (в том числе грубых)</ns6:Value>
+                    </ns6:NsiElementField>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Ссылка на НПА</ns6:Name>
+                        <ns6:Value>п.2 ч.10 ст.19 N 99-ФЗ от 04 мая 2011 года, ч.3 ст. 196 №188-ФЗ РФ от 29 декабря 2004 (ЖК)</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

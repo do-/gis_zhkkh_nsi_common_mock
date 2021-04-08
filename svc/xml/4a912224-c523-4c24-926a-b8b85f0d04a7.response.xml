@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T18:06:54.124+03:00</ns4:Date>
+            <ns4:MessageGUID>4a912224-c523-4c24-926a-b8b85f0d04a7</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-6b610d1f-d3e3-462a-9479-337a7ad1ca2d"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>F8n3NPJVOYtVJuTAIOmMiNYEM9aqdXuICKX5myPw9h4=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-6b610d1f-d3e3-462a-9479-337a7ad1ca2d-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>gMfVVSAv8/U/y1SGXWAf5cPKkR+2jGmBB5PcHJ+vgoI=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>pyOzH4wdJVqiAMvAklHxldFBwnUF0aQbyB4dQXUxXlItpo/ZWXLsDxpCWAKi3RbdgqnR1gLDWbh0
+bw6bMth4kA==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-1a7bd49f-153a-4a63-91f7-f3a326f0aa38"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-6b610d1f-d3e3-462a-9479-337a7ad1ca2d">
+    <xades:SignedProperties Id="xmldsig-6b610d1f-d3e3-462a-9479-337a7ad1ca2d-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T18:06:54.128+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>91a5c710-8cb2-11eb-8d2d-005056b64000</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns7:NsiItemRegistryNumber>49</ns7:NsiItemRegistryNumber>
+                <ns7:Created>2021-03-24T18:06:54.124+03:00</ns7:Created>
+                <ns7:NsiElement>
+                    <ns7:Code>19</ns7:Code>
+                    <ns7:GUID>8bb0fc5e-5283-4dc1-8c15-a1294c422f44</ns7:GUID>
+                    <ns7:Modified>2020-12-15T19:32:46.737+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Бетонные заливные</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>7</ns7:Code>
+                    <ns7:GUID>862a69e6-eed0-42bc-a8bc-71d0887744fc</ns7:GUID>
+                    <ns7:Modified>2015-04-27T18:02:52.031+03:00</ns7:Modified>
+                    <ns7:IsActual>false</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Блочные</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>7</ns7:Code>
+                    <ns7:GUID>7d55a117-a303-4831-a714-502de105aeeb</ns7:GUID>
+                    <ns7:Modified>2015-04-27T18:02:52.031+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Блочный</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>10</ns7:Code>
+                    <ns7:GUID>9e946f82-da05-4946-a01e-a58b78e6ed6e</ns7:GUID>
+                    <ns7:Modified>2016-06-23T16:34:57.118+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Брус</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6</ns7:Code>
+                    <ns7:GUID>2e7e9faf-6b86-44d1-9689-45ccbb62f9bd</ns7:GUID>
+                    <ns7:Modified>2015-04-24T14:27:45.150+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Деревянные</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>4</ns7:Code>
+                    <ns7:GUID>e504c1d2-9d98-4564-82ac-6a912cc9847d</ns7:GUID>
+                    <ns7:Modified>2015-04-17T17:01:22.498+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>ж/б панели</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>5</ns7:Code>
+                    <ns7:GUID>5c41aa24-be76-4b51-bc77-c40ecb3bf29e</ns7:GUID>
+                    <ns7:Modified>2015-04-24T14:10:12.004+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Каркасные</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>14</ns7:Code>
+                    <ns7:GUID>ec16bcc1-f928-466b-b31e-38a9dfddeb83</ns7:GUID>
+                    <ns7:Modified>2017-01-24T12:08:19.169+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Каркасные с монолитными ж/б ростверками</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>12</ns7:Code>
+                    <ns7:GUID>8f10db9d-43fc-4820-bf20-aea2f36575bd</ns7:GUID>
+                    <ns7:Modified>2016-12-30T08:23:52.629+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Керамзитобетонные блоки</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>15</ns7:Code>
+                    <ns7:GUID>9e82f145-4a4a-440c-9cba-39145515c1d3</ns7:GUID>
+                    <ns7:Modified>2017-02-14T10:28:00.969+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Керамзитобетонные панели</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>20</ns7:Code>
+                    <ns7:GUID>cd1239f3-1979-41e7-ba90-b09956d49ee7</ns7:GUID>
+                    <ns7:Modified>2021-03-22T10:01:11.424+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Керамические блоки</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>1</ns7:Code>
+                    <ns7:GUID>3e852563-3d85-4c6b-be91-ec49202c0804</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:02.555+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Кирпич</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>13</ns7:Code>
+                    <ns7:GUID>47768adc-b4ca-4298-adb0-73599cd0ebc3</ns7:GUID>
+                    <ns7:Modified>2016-12-30T09:29:04.087+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Крупнопанельные</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>9</ns7:Code>
+                    <ns7:GUID>86131b2e-c357-49a1-9980-a784b1b76931</ns7:GUID>
+                    <ns7:Modified>2016-03-18T15:42:57.248+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Монолитный железобетон</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>18</ns7:Code>
+                    <ns7:GUID>295eb6dd-82b6-4fe6-a896-8f9eccdf6beb</ns7:GUID>
+                    <ns7:Modified>2018-09-05T11:33:04.082+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Пазогребневые гипсовые плиты</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>3</ns7:Code>
+                    <ns7:GUID>3c023e5b-9a90-43b2-afa8-b2347d969ad5</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:02.555+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Поротерм</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>17</ns7:Code>
+                    <ns7:GUID>db4332dd-e94d-4fcc-bd7a-6f9a2ac55d1f</ns7:GUID>
+                    <ns7:Modified>2017-12-13T13:13:48.664+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Прессованные плиты</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>11</ns7:Code>
+                    <ns7:GUID>71d84546-75bc-4fd3-9327-f2ede0226495</ns7:GUID>
+                    <ns7:Modified>2016-06-23T16:35:32.416+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Сборно-щитовые панели</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>8</ns7:Code>
+                    <ns7:GUID>6df1057e-fd16-46f9-b154-16f51d9b7931</ns7:GUID>
+                    <ns7:Modified>2015-04-27T18:01:48.534+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Силикальцит</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>16</ns7:Code>
+                    <ns7:GUID>51a884cb-6b22-4aae-bb36-471cde80787c</ns7:GUID>
+                    <ns7:Modified>2017-12-07T14:29:55.632+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Стены фибролитовые с обшивкой</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2</ns7:Code>
+                    <ns7:GUID>8f2b063e-3377-4a2f-9c65-9e91690f9b9e</ns7:GUID>
+                    <ns7:Modified>2015-02-06T11:19:02.555+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Тип внутренних стен</ns7:Name>
+                        <ns7:Value>Шлакоблок</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

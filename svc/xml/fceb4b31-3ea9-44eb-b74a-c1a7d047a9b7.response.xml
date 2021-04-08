@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T18:08:06.237+03:00</ns4:Date>
+            <ns4:MessageGUID>fceb4b31-3ea9-44eb-b74a-c1a7d047a9b7</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-da1cc70b-4b2d-4fce-ba97-7dab8c43c3d1"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>aWQRBib9Gf24Fqhj3dxFc3azxxAI9YIkW1c0BkHn2u4=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-da1cc70b-4b2d-4fce-ba97-7dab8c43c3d1-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>LHnT5Rs8WbQxKhSBap8YyQ1/x0tG7lSiEa9ap6dUkaE=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>U0c8/7eilG3E+6fZcVRrIURd0n0B1KeK0mrXERRI+RYaa+km4rnLiwETx3pdHQ3qkG4kmzm0xnUu
+XU056GmHag==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-cca22da1-7b1f-4bed-ad70-6976c267ee44"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-da1cc70b-4b2d-4fce-ba97-7dab8c43c3d1">
+    <xades:SignedProperties Id="xmldsig-da1cc70b-4b2d-4fce-ba97-7dab8c43c3d1-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T18:08:06.241+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>bca10ad2-8cb2-11eb-9605-005056b64bd9</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns6:NsiItemRegistryNumber>167</ns6:NsiItemRegistryNumber>
+                <ns6:Created>2021-03-24T18:08:06.237+03:00</ns6:Created>
+                <ns6:NsiElement>
+                    <ns6:Code>102</ns6:Code>
+                    <ns6:GUID>fb81a27f-b23b-432d-80eb-01eb07e6c7fe</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:22:37.702+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.2 Заявление КО - Поступление в органы государственного контроля (надзора), органы муниципального контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, юридических лиц, информации от органов государственной власти, органов местного самоуправления, из средств массовой информации о следующих фактах - возникновение угрозы причинения вреда жизни, здоровью граждан, вреда животным, растениям, окружающей среде, объектам культурного наследия (памятникам истории и культуры) народов Российской Федерации, безопасности государства, а также угрозы чрезвычайных ситуаций природного и техногенного характера.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>103</ns6:Code>
+                    <ns6:GUID>1761556b-a80d-4459-90ae-35cbbe954aef</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:22:37.702+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.3 Уведомление - Поступление в органы государственного контроля (надзора), органы муниципального контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, юридических лиц, информации от органов государственной власти, органов местного самоуправления, из средств массовой информации о следующих фактах - причинение вреда жизни, здоровью граждан, вреда животным, растениям, окружающей среде, объектам культурного наследия (памятникам истории и культуры) народов Российской Федерации, безопасности государства, а также возникновение чрезвычайных ситуаций природного и техногенного характера.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>101</ns6:Code>
+                    <ns6:GUID>0e15a690-bb82-4496-8497-fc39be623e23</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:22:37.702+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.1 Без уведомления - Истечение срока исполнения юридическим лицом, индивидуальным предпринимателем ранее выданного предписания об устранении выявленного нарушения обязательных требований и (или) требований, установленных муниципальными правовыми актами.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>105</ns6:Code>
+                    <ns6:GUID>4a4ae983-32a1-48fd-b58d-12f8927d6f03</ns6:GUID>
+                    <ns6:Modified>2016-12-23T22:22:37.702+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.5 Требование прокуратуры - Приказ (распоряжение) руководителя органа государственного контроля (надзора), изданный в соответствии с поручениями Президента Российской Федерации, Правительства Российской Федерации и на основании требования прокурора о проведении внеплановой проверки в рамках надзора за исполнением законов по поступившим в органы прокуратуры материалам и обращениям.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>109</ns6:Code>
+                    <ns6:GUID>788f0fa8-9209-4afb-8f18-4630c8be0f8d</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.9 Причинение вреда охраняемым законом ценностям, а также возникновение чрезвычайных ситуаций природного и техногенного характера.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>104</ns6:Code>
+                    <ns6:GUID>ec63eeff-588d-4dee-90c1-8bbdfe3eca0f</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.4 Заявление КО - Поступление в органы государственного контроля (надзора), органы муниципального контроля обращений и заявлений граждан, в том числе индивидуальных предпринимателей, юридических лиц, информации от органов государственной власти, органов местного самоуправления, из средств массовой информации о следующих фактах - нарушение прав потребителей (в случае обращения граждан, права которых нарушены).</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>106</ns6:Code>
+                    <ns6:GUID>d3a1395e-a0a7-4781-b5dc-0e4eb3aab870</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.6 Истечение срока исполнения гражданином и организацией ранее выданного предписания об устранении выявленного нарушения обязательных требований или наличие ходатайства гражданина и организации о проведении органом государственного контроля (надзора), муниципального контроля внеплановой выездной проверки в целях установления факта досрочного исполнения гражданином, организацией предписания органа государственного контроля (надзора), муниципального контроля.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>107</ns6:Code>
+                    <ns6:GUID>172f691d-1b8b-46bf-9f4d-5f7f4948182b</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.7 Поступление в орган государственного контроля (надзора), муниципального контроля заявления от гражданина, организации о предоставлении правового статуса, специального разрешения (лицензии) на право осуществления отдельных видов деятельности или разрешения (согласования) на осуществление иных юридически значимых действий, если проведение соответствующей внеплановой проверки гражданина, организации предусмотрено правилами предоставления правового статуса, специального разрешения (лицензии), выдачи разрешения (согласования).</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>108</ns6:Code>
+                    <ns6:GUID>8c68fdf3-5b6c-4a9e-8857-2f8a397c19f3</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.8 Возникновение угрозы причинения вреда охраняемым законом ценностям, а также угрозы чрезвычайных ситуаций природного и техногенного характера.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>110</ns6:Code>
+                    <ns6:GUID>dc82378e-2f4b-4ea0-aebc-ac725b423099</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.10 Нарушение прав потребителей (в случае обращения в орган, осуществляющий федеральный государственный надзор в области защиты прав потребителей, граждан, права которых нарушены, при условии, что заявитель обращался за защитой (восстановлением) своих нарушенных прав к юридическому лицу, индивидуальному предпринимателю и такое обращение не было рассмотрено либо требования заявителя не были удовлетворены).</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>112</ns6:Code>
+                    <ns6:GUID>55e9c594-be93-4684-9613-cef8a5714abb</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.12 Выявление при проведении мероприятий по контролю без взаимодействия с юридическими лицами, индивидуальными предпринимателями параметров деятельности юридического лица, индивидуального предпринимателя, соответствие которым или отклонение от которых согласно утвержденным федеральным органом исполнительной власти, осуществляющим функции по выработке и реализации государственной политики и нормативно-правовому регулированию в установленной сфере деятельности, индикаторам риска нарушения обязательных требований является основанием для проведения внеплановой проверки, предусмотренным в положении о виде федерального государственного контроля (надзора).</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>113</ns6:Code>
+                    <ns6:GUID>52ee01a3-5222-4424-bdc0-2d5a5f0879aa</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.13 Решение руководителя органа государственного контроля (надзора), органа муниципального контроля, изданное в соответствии с поручениями Президента Российской Федерации, Правительства Российской Федерации и на основании требования прокурора о проведении внеплановой проверки в рамках надзора за исполнением законов по поступившим в органы прокуратуры материалам и обращениям.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>114</ns6:Code>
+                    <ns6:GUID>4f64bc3d-96d2-4785-9371-3d5669199684</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.14 (99-ФЗ) Поступление в лицензирующий орган обращений, заявлений граждан, в том числе индивидуальных предпринимателей, юридических лиц, информации от органов государственной власти, органов местного самоуправления, средств массовой информации о фактах грубых нарушений лицензиатом лицензионных требований.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>115</ns6:Code>
+                    <ns6:GUID>c23bfa35-f547-41cc-8204-56be5b88f981</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>2.2.1 На основании обращений граждан, организаций и полученной от государственных органов, органов местного самоуправления информации о фактах нарушений законодательства Российской Федерации, влекущих или могущих повлечь возникновение чрезвычайных ситуаций, угрозу жизни и здоровью граждан, а также массовые нарушения прав граждан.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>116</ns6:Code>
+                    <ns6:GUID>7e33fd5a-cf03-4a21-b068-1af4547d5ec5</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>2.2.2 В соответствии с поручениями Президента Российской Федерации, Правительства Российской Федерации, на основании требования Генерального прокурора Российской Федерации, прокурора субъекта Российской Федерации о проведении внеплановой проверки в рамках надзора за исполнением законов по поступившим в органы прокуратуры материалам и обращениям, а также в целях контроля за исполнением ранее выданного предписания об устранении нарушения обязательных требований.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>117</ns6:Code>
+                    <ns6:GUID>c9013503-638b-4c74-a429-eac6c8b9e259</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>3.2.1 На основании обращений граждан, юридических лиц и информации от государственных органов о фактах нарушений законодательства Российской Федерации, влекущих возникновение чрезвычайных ситуаций, угрозу жизни и здоровью граждан, а также массовые нарушения прав граждан.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>118</ns6:Code>
+                    <ns6:GUID>a320d35b-d82a-4ae1-94ee-5db0dfd15483</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>3.2.2 Приказ (распоряжение) руководителя органа государственного контроля (надзора), изданный в соответствии с поручениями Президента Российской Федерации, Правительства Российской Федерации и на основании требования прокурора о проведении внеплановой проверки в рамках надзора за исполнением законов по поступившим в органы прокуратуры материалам и обращениям.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>119</ns6:Code>
+                    <ns6:GUID>411d15da-0c0a-402d-95f4-99090c83ec56</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.15 (135-ФЗ) Материалы, поступившие из правоохранительных органов, других государственных органов, из органов местного самоуправления, от общественных объединений, от Уполномоченного при Президенте Российской Федерации по защите прав предпринимателей, уполномоченных по защите прав предпринимателей в субъектах Российской Федерации и указывающие на признаки нарушения антимонопольного законодательства.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>120</ns6:Code>
+                    <ns6:GUID>701001ff-e8e6-4dbf-a8fc-7517230e47f8</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.16 (135-ФЗ) Сообщения и заявления физических лиц, юридических лиц, сообщения средств массовой информации, указывающие на признаки нарушения антимонопольного законодательства.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>121</ns6:Code>
+                    <ns6:GUID>c8003cf2-4dab-4e5c-a4c0-94e0d27dacd8</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.17 (135-ФЗ) Истечение срока исполнения предписания, выданного по результатам рассмотрения дела о нарушении антимонопольного законодательства, или при осуществлении государственного контроля за экономической концентрацией в порядке, установленном главой 7 настоящего Федерального закона.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>122</ns6:Code>
+                    <ns6:GUID>12128da2-dc92-4d75-8697-add4d430621d</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.18 (135-ФЗ) Поручения Президента Российской Федерации и Правительства Российской Федерации.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>123</ns6:Code>
+                    <ns6:GUID>a3457ee2-cde7-4f75-a2e7-27af76722ac2</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.19 (135-ФЗ) Обнаружение антимонопольным органом признаков нарушения антимонопольного законодательства.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>124</ns6:Code>
+                    <ns6:GUID>5f6959cb-918a-4324-a511-95e0c930c67b</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.20 (99-ФЗ) В соответствии с периодичностью, установленной положением о лицензировании для лицензионного контроля, осуществляемого с применением риск-ориентированного подхода.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>125</ns6:Code>
+                    <ns6:GUID>46e371ff-760b-41c6-9b68-3a0ab8e37625</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.21 (99-ФЗ) В соответствии с периодичностью, установленной Правительством Российской Федерации для плановых проверок лицензиата, осуществляющего лицензируемый вид деятельности в сферах здравоохранения, образования, в социальной сфере.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>136</ns6:Code>
+                    <ns6:GUID>f80f5865-8fec-47dd-bbd2-213a93b20d6d</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Возникновение угрозы причинения вреда жизни, здоровью граждан, вреда животным, растениям, окружающей среде, объектам культурного наследия (памятникам истории и культуры) народов Российской Федерации, музейным предметам и музейным коллекциям, включенным в состав Музейного фонда Российской Федерации, особо ценным, в том числе уникальным, документам Архивного фонда Российской Федерации, документам, имеющим особое историческое, научное, культурное значение, входящим в состав национального библиотечного фонда, безопасности государства, а также угрозы чрезвычайных ситуаций природного и техногенного характера.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>138</ns6:Code>
+                    <ns6:GUID>51a0e3ab-62b6-478b-aeaa-c1fdecec6ccc</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>Причинение вреда жизни, здоровью граждан, вреда животным, растениям, окружающей среде, объектам культурного наследия (памятникам истории и культуры) народов Российской Федерации, музейным предметам и музейным коллекциям, включенным в состав Музейного фонда Российской Федерации, особо ценным, в том числе уникальным, документам Архивного фонда Российской Федерации, документам, имеющим особое историческое, научное, культурное значение, входящим в состав национального библиотечного фонда, безопасности государства, а также возникновение чрезвычайных ситуаций природного и техногенного характера.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>139</ns6:Code>
+                    <ns6:GUID>4b808dc3-8a61-4686-9485-38b41eac6b67</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.24 (99-ФЗ) Истечение срока исполнения лицензиатом ранее выданного лицензирующим органом предписания об устранении выявленного нарушения лицензионных требований.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>140</ns6:Code>
+                    <ns6:GUID>1715eeba-60f0-480a-a296-f96367a9a948</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.25 (99-ФЗ) Истечение срока, на который было приостановлено действие лицензии.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>141</ns6:Code>
+                    <ns6:GUID>a1daf6f2-a25b-4024-afcf-5d64c6356e73</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.26 (99-ФЗ) Наличие ходатайства лицензиата о проведении лицензирующим органом внеплановой выездной проверки в целях установления факта досрочного исполнения предписания лицензирующего органа.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>142</ns6:Code>
+                    <ns6:GUID>0c17a60f-30a4-442a-960f-1dae8a69f5f7</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.27 (99-ФЗ) Наличие приказа (распоряжения), изданного лицензирующим органом в соответствии с поручением Президента Российской Федерации или Правительства Российской Федерации.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+                <ns6:NsiElement>
+                    <ns6:Code>166</ns6:Code>
+                    <ns6:GUID>d801e256-ba58-4793-baf7-6231e2baeef6</ns6:GUID>
+                    <ns6:Modified>2021-02-20T20:41:28.608+03:00</ns6:Modified>
+                    <ns6:IsActual>true</ns6:IsActual>
+                    <ns6:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns6:NsiElementStringFieldType">
+                        <ns6:Name>Наименование</ns6:Name>
+                        <ns6:Value>1.2.22 Иные основания в соответствии с федеральным законом.</ns6:Value>
+                    </ns6:NsiElementField>
+                </ns6:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

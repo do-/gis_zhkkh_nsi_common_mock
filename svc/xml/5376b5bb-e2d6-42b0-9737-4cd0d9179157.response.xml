@@ -1,0 +1,783 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T18:07:21.221+03:00</ns4:Date>
+            <ns4:MessageGUID>5376b5bb-e2d6-42b0-9737-4cd0d9179157</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-f6dda93a-58ec-4eae-a64a-35c1cf82ab3e"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>nuNlc0YJP9+CMH1dWTmddAzcyk5aXZEPr3IJBqQJmAo=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-f6dda93a-58ec-4eae-a64a-35c1cf82ab3e-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>/bE9X0YlM1qlZemYn/lwmKKqA6BYo7/FN3rQDyObPMk=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Xpnbwc81Bfbdk69pg64M+Lgr/JVl1V+AmNqM7yRyMjdbev3zGwPSKcVd7F6k39RCYY+f2zCvPCjr
+iUyBzf8SZw==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-62e47601-06ba-4c21-aee1-cce12c5cfcb4"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-f6dda93a-58ec-4eae-a64a-35c1cf82ab3e">
+    <xades:SignedProperties Id="xmldsig-f6dda93a-58ec-4eae-a64a-35c1cf82ab3e-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T18:07:21.229+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>a1c3253b-8cb2-11eb-8263-005056b6828f</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns7:NsiItemRegistryNumber>90</ns7:NsiItemRegistryNumber>
+                <ns7:Created>2021-03-24T18:07:21.221+03:00</ns7:Created>
+                <ns7:NsiElement>
+                    <ns7:Code>1</ns7:Code>
+                    <ns7:GUID>c3142506-ee6a-430f-bc21-8ca935523d92</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля проб питьевой воды, не соответствующих санитарным нормам и правилам по микробиологическим показателям</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>db8551cd-11ed-45fd-9b8a-c07ad9a02620</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2</ns7:Code>
+                    <ns7:GUID>2fb83e5e-8f90-4e89-9274-a2d2223d7188</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля проб питьевой воды, не соответствующих санитарным нормам и правилам по санитарно-химическим показателям</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>db8551cd-11ed-45fd-9b8a-c07ad9a02620</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>3</ns7:Code>
+                    <ns7:GUID>b999f24f-f757-49d0-9de5-8d4e14bac66b</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>объем недопоставленной питьевой воды в результате перерывов водоснабжения</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>db8551cd-11ed-45fd-9b8a-c07ad9a02620</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>4</ns7:Code>
+                    <ns7:GUID>cf1c1f80-4eb8-436d-93ac-b341e3f3b861</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>аварийность систем водоснабжения</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>шт./км сетей</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>db8551cd-11ed-45fd-9b8a-c07ad9a02620</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>5</ns7:Code>
+                    <ns7:GUID>4ed3dba7-bf42-4d87-acf7-17607b537ab5</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>уровень потерь воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%/км сетей</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>db8551cd-11ed-45fd-9b8a-c07ad9a02620</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6</ns7:Code>
+                    <ns7:GUID>d8a11d34-bdf6-43c7-bcaa-176813780cea</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля объема воды, расчеты за которую производятся с использованием приборов учета</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>db8551cd-11ed-45fd-9b8a-c07ad9a02620</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>7</ns7:Code>
+                    <ns7:GUID>645d5ec3-5c07-4b9d-852c-18bf3e67b613</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>динамика удельных операционных расходов участника программы</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>db8551cd-11ed-45fd-9b8a-c07ad9a02620</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>8</ns7:Code>
+                    <ns7:GUID>9a2fc3e3-bf1c-4be3-84f9-0eec7cfed275</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля населения, получающая горячую воду из открытых систем теплоснабжения</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>ebcd431a-6e08-44d7-894d-ee924991fd2e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>9</ns7:Code>
+                    <ns7:GUID>8fd62e71-d18d-41a8-bbf2-644a7fca9f25</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля проб горячей воды, не соответствующих санитарным нормам и правилам по микробиологическим показателям</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>ebcd431a-6e08-44d7-894d-ee924991fd2e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>10</ns7:Code>
+                    <ns7:GUID>4aab2b3c-b482-47a8-b37f-075b277251aa</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля проб горячей воды, не соответствующих санитарным нормам и правилам по санитарно-химическим показателям</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>ebcd431a-6e08-44d7-894d-ee924991fd2e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>11</ns7:Code>
+                    <ns7:GUID>1aff62a9-4a44-4a76-987d-b728e03b90d4</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля горячей воды, поданной с нарушением установленных требований в части температурных и гидравлических режимов</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>ebcd431a-6e08-44d7-894d-ee924991fd2e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>12</ns7:Code>
+                    <ns7:GUID>a203cc5c-d3cf-424d-b748-96837ce05080</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля горячей воды, расчеты за которую производятся с использованием приборов учета</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>ebcd431a-6e08-44d7-894d-ee924991fd2e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>13</ns7:Code>
+                    <ns7:GUID>202a4b61-d4f2-49b9-ab00-a4ada88f434b</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля сточных вод, прошедших через очистные сооружения</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>5d040fb0-1be9-4c91-a41e-afe8e7499d72</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>14</ns7:Code>
+                    <ns7:GUID>10851c50-fb06-4087-aa84-f2e1e691e2b3</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>концентрация в сточных водах загрязняющих веществ</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>5d040fb0-1be9-4c91-a41e-afe8e7499d72</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>15</ns7:Code>
+                    <ns7:GUID>e7a8e29d-3ece-4228-bb7a-8326905f4960</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>аварийность систем водоотведения</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>шт./км сетей</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>5d040fb0-1be9-4c91-a41e-afe8e7499d72</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>16</ns7:Code>
+                    <ns7:GUID>9a6ffc5a-afa7-4a92-82b7-7a8c3a10dd1d</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>динамика удельных операционных расходов участника программы</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>5d040fb0-1be9-4c91-a41e-afe8e7499d72</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>17</ns7:Code>
+                    <ns7:GUID>916aba0b-bf43-4755-986c-2162fec17a09</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля тепловой энергии, поданной в соответствии с установленными требованиями в части температурных и гидравлических режимов</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>c574fdd3-6a3b-4259-b430-6766cfabf3a4</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>18</ns7:Code>
+                    <ns7:GUID>02678f1d-9b2b-4755-bda1-3798a3ab6301</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>аварийность систем теплоснабжения</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>шт./км сетей</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>c574fdd3-6a3b-4259-b430-6766cfabf3a4</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>19</ns7:Code>
+                    <ns7:GUID>c72fd323-80e3-484d-860e-09fb12b94cf3</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>уровень потерь тепловой энергии</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%/км сетей</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>c574fdd3-6a3b-4259-b430-6766cfabf3a4</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>20</ns7:Code>
+                    <ns7:GUID>fa31b740-eb68-468c-b0f8-4d2b049a73ec</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>уровень потерь теплоносителя при транспортировке в закрытых системах теплоснабжения</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%/км сетей</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>c574fdd3-6a3b-4259-b430-6766cfabf3a4</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>21</ns7:Code>
+                    <ns7:GUID>3a7bfea3-a4fd-4063-9537-d574540339c5</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля объемов тепловой энергии, расчеты за которую осуществляются с использованием приборов учета</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>c574fdd3-6a3b-4259-b430-6766cfabf3a4</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>22</ns7:Code>
+                    <ns7:GUID>2e1401e9-de01-468c-9c9d-33c9fa9ec599</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>резерв мощностей по производству тепловой энергии, оплачиваемый потребителями</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>c574fdd3-6a3b-4259-b430-6766cfabf3a4</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>23</ns7:Code>
+                    <ns7:GUID>6c2859a0-9d42-4232-80d5-efc451f30478</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>динамика удельных операционных расходов участника программы</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>c574fdd3-6a3b-4259-b430-6766cfabf3a4</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>24</ns7:Code>
+                    <ns7:GUID>6c1432c4-daba-4f35-b856-3ddb5589914c</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>объем недопоставленной электрической энергии в результате аварийных отключений электрической энергии</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>6</ns7:Code>
+                                <ns7:GUID>1d23e565-3b2a-414b-aaf7-47c9dff88653</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>25</ns7:Code>
+                    <ns7:GUID>068e6c2b-c866-44e6-a2d2-32177ed41bd6</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>уровень потерь электрической энергии</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%/км сетей</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>6</ns7:Code>
+                                <ns7:GUID>1d23e565-3b2a-414b-aaf7-47c9dff88653</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>26</ns7:Code>
+                    <ns7:GUID>ac87e33b-e7f7-4186-a50f-0d7380d09e42</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>доля электрической энергии, расчеты за которую осуществляются с использованием приборов учета</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>6</ns7:Code>
+                                <ns7:GUID>1d23e565-3b2a-414b-aaf7-47c9dff88653</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>27</ns7:Code>
+                    <ns7:GUID>16aec485-25b5-498b-9be9-988b7250313d</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>динамика удельных операционных расходов участника программы</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>6</ns7:Code>
+                                <ns7:GUID>1d23e565-3b2a-414b-aaf7-47c9dff88653</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>28</ns7:Code>
+                    <ns7:GUID>2665105f-35f9-4d02-a516-9b85b4ca596c</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>Доля твердых бытовых отходов, утилизированных и размещенных в соответствии с требованиями законодательства Российской Федерации на полигонах, мусороперерабатывающих заводах и других объектах, предназначенных для этих целей</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>e558d06d-3633-41e0-a695-17ca0017f066</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>29</ns7:Code>
+                    <ns7:GUID>32093d9a-42be-4452-870c-31f002fc6f59</ns7:GUID>
+                    <ns7:Modified>2015-07-22T21:59:02.456+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование целевого показателя</ns7:Name>
+                        <ns7:Value>Доля переработанных твердых бытовых отходов, используемых для извлечения вторичного ресурса, в том числе выработки тепловой и электрической энергии</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Единица измерения целевого показателя</ns7:Name>
+                        <ns7:Value>%</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Сфера реализации программы</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>89</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>e558d06d-3633-41e0-a695-17ca0017f066</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

@@ -1,0 +1,2567 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T18:08:54.042+03:00</ns4:Date>
+            <ns4:MessageGUID>aa41047f-e332-4d5f-9641-38f781d619ef</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-4bab246a-0ce5-4b59-8512-5d7db1399c43"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>d+tSiicu8sH5wPkyo+sti0eUXtAgUte6Mxxhlc5tRv4=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-4bab246a-0ce5-4b59-8512-5d7db1399c43-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>i2wwD0SgztAyvDZRMCjdLNgy8o2v/0Enj6HRBr92B+E=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>jTSzDGUmkeYNniIPfaOADLW6Tjs4JmqdXx7cCcLpnlYlxjCOZ37mtEHUtPg445QstqsMCrmcg9nB
+mH4f04eFHQ==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-12fb90ab-9077-4491-866d-76f9928a0c9b"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-4bab246a-0ce5-4b59-8512-5d7db1399c43">
+    <xades:SignedProperties Id="xmldsig-4bab246a-0ce5-4b59-8512-5d7db1399c43-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T18:08:54.051+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>d8decf11-8cb2-11eb-9605-005056b64bd9</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns7:NsiItemRegistryNumber>262</ns7:NsiItemRegistryNumber>
+                <ns7:Created>2021-03-24T18:08:54.042+03:00</ns7:Created>
+                <ns7:NsiElement>
+                    <ns7:Code>31</ns7:Code>
+                    <ns7:GUID>1a9d11f8-6654-4c75-a3e8-86660a675926</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>13</ns7:Code>
+                                <ns7:GUID>e2bf1006-3957-4808-b39b-56f4836c9687</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 единицу (в зависимости от вида топлива)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>11</ns7:Code>
+                                <ns7:GUID>baac94cc-55ef-45cf-b161-6e0cd3b811c1</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>121</ns7:Code>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>168</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>52</ns7:Code>
+                    <ns7:GUID>1d96d21d-3691-4c84-a31e-8f3e21c24059</ns7:GUID>
+                    <ns7:Modified>2019-09-13T22:24:13.875+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>20</ns7:Code>
+                                <ns7:GUID>744ff796-0958-44d1-b030-02be9a32d91c</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 кв.м.</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>14</ns7:Code>
+                                <ns7:GUID>462aceaa-1ae3-4b7c-a334-a73c243c1f05</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>055</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>28</ns7:Code>
+                    <ns7:GUID>0a4218c7-42db-4e32-8e8b-a6963f6d6e83</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>10</ns7:Code>
+                                <ns7:GUID>93d2d49e-5f02-4f42-943e-8e0c784c7d1f</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 кВт·ч.</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>8</ns7:Code>
+                                <ns7:GUID>7379be86-6c95-4e41-b000-3bc703d35969</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>245</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>55</ns7:Code>
+                    <ns7:GUID>dbf404d3-e5dd-4612-989e-a8345e43c4a2</ns7:GUID>
+                    <ns7:Modified>2019-09-13T22:24:13.875+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>20</ns7:Code>
+                                <ns7:GUID>744ff796-0958-44d1-b030-02be9a32d91c</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 кг</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>14</ns7:Code>
+                                <ns7:GUID>462aceaa-1ae3-4b7c-a334-a73c243c1f05</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>168</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>32</ns7:Code>
+                    <ns7:GUID>1e9a8fda-03a1-498d-bc4b-6ee8267c9749</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>14</ns7:Code>
+                                <ns7:GUID>a71bd4e6-e860-4fcf-9da0-23069fe06b10</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 кг</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>12</ns7:Code>
+                                <ns7:GUID>5bbd6039-60ce-476d-9125-5bcdb4347bcd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>166</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>30</ns7:Code>
+                    <ns7:GUID>cc9bf5a4-8c5f-404d-9f9e-250b08dccaf2</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>12</ns7:Code>
+                                <ns7:GUID>4fdf0746-e40f-49eb-a89b-66c8c81a7ead</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 кг (1 куб.м)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>10</ns7:Code>
+                                <ns7:GUID>c9e7c982-70d7-43b8-8792-d4deddaefd0e</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>166</ns7:Code>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>114</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>53</ns7:Code>
+                    <ns7:GUID>cf3df1b4-c77d-4249-91fb-a3e4b25b45c3</ns7:GUID>
+                    <ns7:Modified>2019-09-13T22:24:13.875+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>20</ns7:Code>
+                                <ns7:GUID>744ff796-0958-44d1-b030-02be9a32d91c</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб.м</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>14</ns7:Code>
+                                <ns7:GUID>462aceaa-1ae3-4b7c-a334-a73c243c1f05</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>38</ns7:Code>
+                    <ns7:GUID>9c21a670-d8e0-477b-a1c7-175ecd0ef37e</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>8</ns7:Code>
+                                <ns7:GUID>da85cfd9-e449-4af3-acee-02ddf97e249a</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр горячей воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>d5c97336-7190-47bf-9452-640ec6dd7960</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>49</ns7:Code>
+                    <ns7:GUID>58ce3710-f46f-4a1e-9fc4-2cd8c0813284</ns7:GUID>
+                    <ns7:Modified>2016-10-16T01:29:42.816+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>19</ns7:Code>
+                                <ns7:GUID>56c2ff86-929b-4231-af63-fe430ee6a741</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр горячей воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>d5c97336-7190-47bf-9452-640ec6dd7960</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>50</ns7:Code>
+                    <ns7:GUID>4261f057-141a-4f8f-b96f-ae9b30da1932</ns7:GUID>
+                    <ns7:Modified>2016-10-16T01:29:42.816+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>19</ns7:Code>
+                                <ns7:GUID>56c2ff86-929b-4231-af63-fe430ee6a741</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр горячей воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>d5c97336-7190-47bf-9452-640ec6dd7960</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>34</ns7:Code>
+                    <ns7:GUID>e3eeeb56-5d43-4b1d-b77b-625ea8a0a87d</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>d5f4d821-0e06-4c07-b701-5f07ab9440a0</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр горячей воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>d5c97336-7190-47bf-9452-640ec6dd7960</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>35</ns7:Code>
+                    <ns7:GUID>097e1ab5-b8e0-4813-845c-1c95270c1c1d</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>d5f4d821-0e06-4c07-b701-5f07ab9440a0</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр горячей воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>d5c97336-7190-47bf-9452-640ec6dd7960</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>37</ns7:Code>
+                    <ns7:GUID>64cbac74-969d-494a-80e3-bd5543ea0005</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>8</ns7:Code>
+                                <ns7:GUID>da85cfd9-e449-4af3-acee-02ddf97e249a</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр горячей воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>d5c97336-7190-47bf-9452-640ec6dd7960</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>36</ns7:Code>
+                    <ns7:GUID>afdc6fa4-5ac6-43c7-bd5f-0cb68df0ddfb</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>d5f4d821-0e06-4c07-b701-5f07ab9440a0</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр горячей воды в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>d5c97336-7190-47bf-9452-640ec6dd7960</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>51</ns7:Code>
+                    <ns7:GUID>4a0546f5-a5c3-45aa-bb73-d8cd64437304</ns7:GUID>
+                    <ns7:Modified>2016-10-16T01:29:42.816+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>19</ns7:Code>
+                                <ns7:GUID>56c2ff86-929b-4231-af63-fe430ee6a741</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр горячей воды в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>d5c97336-7190-47bf-9452-640ec6dd7960</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>39</ns7:Code>
+                    <ns7:GUID>11ad3ae4-7c9c-49ee-a66d-0dc5384608a0</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>8</ns7:Code>
+                                <ns7:GUID>da85cfd9-e449-4af3-acee-02ddf97e249a</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр горячей воды в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>d5c97336-7190-47bf-9452-640ec6dd7960</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>17</ns7:Code>
+                    <ns7:GUID>ef51fc87-612e-466b-8a6b-02dd55e06f7b</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>afb94e0f-d5d2-48d5-82e8-1b0d3e7313ab</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр принятых сточных вод</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>7</ns7:Code>
+                                <ns7:GUID>33addbca-505a-4978-b2be-32501607f115</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>41</ns7:Code>
+                    <ns7:GUID>be06b5e5-cdb0-4f20-aee9-e63a729ea711</ns7:GUID>
+                    <ns7:Modified>2016-05-31T21:56:28.288+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>16</ns7:Code>
+                                <ns7:GUID>1f9303f5-4215-4b34-901f-f1b2cc533643</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр принятых сточных вод</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>7</ns7:Code>
+                                <ns7:GUID>33addbca-505a-4978-b2be-32501607f115</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>16</ns7:Code>
+                    <ns7:GUID>f73fc8aa-7d29-422e-85df-c8e18d5aee2e</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>afb94e0f-d5d2-48d5-82e8-1b0d3e7313ab</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр принятых сточных вод</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>7</ns7:Code>
+                                <ns7:GUID>33addbca-505a-4978-b2be-32501607f115</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>40</ns7:Code>
+                    <ns7:GUID>4efac522-ab76-46d3-97fc-177ce9dd4540</ns7:GUID>
+                    <ns7:Modified>2016-05-31T21:56:28.271+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>16</ns7:Code>
+                                <ns7:GUID>1f9303f5-4215-4b34-901f-f1b2cc533643</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр принятых сточных вод</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>7</ns7:Code>
+                                <ns7:GUID>33addbca-505a-4978-b2be-32501607f115</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>18</ns7:Code>
+                    <ns7:GUID>466be972-b94a-4a69-ac34-e1dc143669ca</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>afb94e0f-d5d2-48d5-82e8-1b0d3e7313ab</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр принятых сточных вод в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>7</ns7:Code>
+                                <ns7:GUID>33addbca-505a-4978-b2be-32501607f115</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>42</ns7:Code>
+                    <ns7:GUID>514e3368-a396-4d2d-910a-3616a9bbf418</ns7:GUID>
+                    <ns7:Modified>2016-05-31T21:56:28.300+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>16</ns7:Code>
+                                <ns7:GUID>1f9303f5-4215-4b34-901f-f1b2cc533643</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр принятых сточных вод в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>7</ns7:Code>
+                                <ns7:GUID>33addbca-505a-4978-b2be-32501607f115</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>23</ns7:Code>
+                    <ns7:GUID>f93948cd-bbad-4885-98f6-2b547530599a</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>8</ns7:Code>
+                                <ns7:GUID>da85cfd9-e449-4af3-acee-02ddf97e249a</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Двухкомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                        <ns7:Value>Компонент на теплоноситель</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр теплоносителя</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>9f5f7a97-1fce-49e1-bac2-90a30f908f3f</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>22</ns7:Code>
+                    <ns7:GUID>da15fa44-a3a1-4622-b526-24e29e2da53d</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>7</ns7:Code>
+                                <ns7:GUID>3a9918d3-fb80-4090-9fc9-133b0194173b</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр теплоносителя</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>5</ns7:Code>
+                                <ns7:GUID>9f5f7a97-1fce-49e1-bac2-90a30f908f3f</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>1</ns7:Code>
+                    <ns7:GUID>988bbe4e-2c8f-4de5-8c20-95864bbe3784</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>358ef4dc-6e8a-43e3-8c7e-4bee02a0a14f</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>4</ns7:Code>
+                    <ns7:GUID>80c4764a-d196-4c7e-b17b-f2e702766d97</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>89804c76-e12d-4333-bad5-025617017f15</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>3265527d-b2e3-4adc-b8eb-679da257db3d</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>7</ns7:Code>
+                    <ns7:GUID>d0f11985-8a25-4561-bd08-3430e0dd3b14</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>956ee883-e533-4901-a61d-d2c8611ee179</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>8</ns7:Code>
+                    <ns7:GUID>85c2ab6e-8f59-478c-bbfd-f84d618471d1</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>956ee883-e533-4901-a61d-d2c8611ee179</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>10</ns7:Code>
+                    <ns7:GUID>b04e91f1-dafa-404f-a1ba-9c44f3dd60bc</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>d5f4d821-0e06-4c07-b701-5f07ab9440a0</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Двухкомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                        <ns7:Value>Компонент на холодную воду (совпадает по количеству ставок с тарифом на питьевую воду)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>11</ns7:Code>
+                    <ns7:GUID>73948fd5-8d4f-48bb-9a11-6d9a2800bb24</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>d5f4d821-0e06-4c07-b701-5f07ab9440a0</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Двухкомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                        <ns7:Value>Компонент на холодную воду (совпадает по количеству ставок с тарифом на питьевую воду)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>43</ns7:Code>
+                    <ns7:GUID>6a38812d-ca09-4d0e-844b-f53b059a2898</ns7:GUID>
+                    <ns7:Modified>2016-10-16T01:29:42.816+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>17</ns7:Code>
+                                <ns7:GUID>63cea187-dcf4-45c3-8372-ae8cdb55db32</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>44</ns7:Code>
+                    <ns7:GUID>a2a822b6-16d2-4f11-afd8-ab1e3e5b6097</ns7:GUID>
+                    <ns7:Modified>2016-10-16T01:29:42.816+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>17</ns7:Code>
+                                <ns7:GUID>63cea187-dcf4-45c3-8372-ae8cdb55db32</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>47</ns7:Code>
+                    <ns7:GUID>a37ccc48-a218-40be-b9f6-239e1fd1fb87</ns7:GUID>
+                    <ns7:Modified>2016-10-16T01:29:42.816+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>18</ns7:Code>
+                                <ns7:GUID>aabc6459-0009-4b7f-9a9a-9499e191de9d</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>3265527d-b2e3-4adc-b8eb-679da257db3d</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>46</ns7:Code>
+                    <ns7:GUID>8f40e163-bae8-4661-9a9a-41222520412d</ns7:GUID>
+                    <ns7:Modified>2016-10-16T01:29:42.816+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>18</ns7:Code>
+                                <ns7:GUID>aabc6459-0009-4b7f-9a9a-9499e191de9d</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>3265527d-b2e3-4adc-b8eb-679da257db3d</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2</ns7:Code>
+                    <ns7:GUID>c648b19d-36e8-46bd-a745-128be9564961</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>358ef4dc-6e8a-43e3-8c7e-4bee02a0a14f</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>5</ns7:Code>
+                    <ns7:GUID>da90312b-727a-46a7-8dbd-3bbb683f301c</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>89804c76-e12d-4333-bad5-025617017f15</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды </ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>3265527d-b2e3-4adc-b8eb-679da257db3d</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>6</ns7:Code>
+                    <ns7:GUID>bf87ab9f-8775-4712-b45c-62805965b6cf</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>89804c76-e12d-4333-bad5-025617017f15</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>3265527d-b2e3-4adc-b8eb-679da257db3d</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>45</ns7:Code>
+                    <ns7:GUID>7c9d4a31-b472-4ce1-aa82-e0af585d7808</ns7:GUID>
+                    <ns7:Modified>2016-10-16T01:29:42.816+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>17</ns7:Code>
+                                <ns7:GUID>63cea187-dcf4-45c3-8372-ae8cdb55db32</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>3</ns7:Code>
+                    <ns7:GUID>508e7446-143c-4dac-9702-6e95f4df2d2b</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>358ef4dc-6e8a-43e3-8c7e-4bee02a0a14f</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>12</ns7:Code>
+                    <ns7:GUID>1573c0b8-4097-43bc-abe2-45a837c408f2</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>d5f4d821-0e06-4c07-b701-5f07ab9440a0</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Двухкомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                        <ns7:Value>Компонент на холодную воду (совпадает по количеству ставок с тарифом на питьевую воду)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>48</ns7:Code>
+                    <ns7:GUID>888ffafa-deee-465e-a0b6-9d8e03a8b361</ns7:GUID>
+                    <ns7:Modified>2016-10-16T01:29:42.816+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>18</ns7:Code>
+                                <ns7:GUID>aabc6459-0009-4b7f-9a9a-9499e191de9d</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>2</ns7:Code>
+                                <ns7:GUID>3265527d-b2e3-4adc-b8eb-679da257db3d</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>9</ns7:Code>
+                    <ns7:GUID>6a2934d5-e5c7-446a-879c-ebc4a3c8df21</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>3</ns7:Code>
+                                <ns7:GUID>956ee883-e533-4901-a61d-d2c8611ee179</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 куб. метр холодной воды в час присоединенной мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>1</ns7:Code>
+                                <ns7:GUID>fd94e05c-c506-4ba0-ac70-b366e06f1ccd</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>598</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>33</ns7:Code>
+                    <ns7:GUID>83310079-76c0-42b2-9a79-a326594165bd</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>15</ns7:Code>
+                                <ns7:GUID>9c213ea3-ffa6-442c-8e6c-3de74cbd45a7</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 л</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>13</ns7:Code>
+                                <ns7:GUID>3a4cc783-e7b7-45ce-b9e7-e5f8a8461653</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>112</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>54</ns7:Code>
+                    <ns7:GUID>39bd2b76-28b2-4f29-ba1d-64ee691142bb</ns7:GUID>
+                    <ns7:Modified>2019-09-13T22:24:13.875+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>20</ns7:Code>
+                                <ns7:GUID>744ff796-0958-44d1-b030-02be9a32d91c</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 тонну</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>14</ns7:Code>
+                                <ns7:GUID>462aceaa-1ae3-4b7c-a334-a73c243c1f05</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>166</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>29</ns7:Code>
+                    <ns7:GUID>f84c55f4-015c-4737-b3a2-d9be94fd0717</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>11</ns7:Code>
+                                <ns7:GUID>74d919d0-c57f-4920-891d-d57dbbca5f97</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за 1 тыс. куб. м (1 куб.м)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>9</ns7:Code>
+                                <ns7:GUID>1024da99-3ed4-47c2-9369-9a974a3720a4</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>114</ns7:Code>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>113</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>25</ns7:Code>
+                    <ns7:GUID>aa2b6174-b7a5-48d5-bdaf-134e0d53fb25</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>8</ns7:Code>
+                                <ns7:GUID>da85cfd9-e449-4af3-acee-02ddf97e249a</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Двухкомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                        <ns7:Value>Компонент на тепловую энергию</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за единицу тепловой энергии (мощности)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>43ac0127-e290-4479-b1a9-5cbd669734d1</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>233</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>13</ns7:Code>
+                    <ns7:GUID>e1fcbeb4-893e-446d-a881-40a0f0487654</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>d5f4d821-0e06-4c07-b701-5f07ab9440a0</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Двухкомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                        <ns7:Value>Компонент на тепловую энергию</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за единицу тепловой энергии (мощности)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>43ac0127-e290-4479-b1a9-5cbd669734d1</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>233</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>14</ns7:Code>
+                    <ns7:GUID>cfdce2d7-0b3e-4399-9b35-6dab10a0fe79</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>d5f4d821-0e06-4c07-b701-5f07ab9440a0</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Двухкомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                        <ns7:Value>Компонент на тепловую энергию</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за единицу тепловой энергии (мощности)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>43ac0127-e290-4479-b1a9-5cbd669734d1</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>233</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>19</ns7:Code>
+                    <ns7:GUID>7ee751d3-2022-47a0-8ad5-38dbba98efbb</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>6</ns7:Code>
+                                <ns7:GUID>8951c365-98a2-4c09-a98a-6d9768375cf8</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за единицу тепловой энергии (мощности)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>43ac0127-e290-4479-b1a9-5cbd669734d1</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>233</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>20</ns7:Code>
+                    <ns7:GUID>68c07ce7-ab98-42c4-8b22-c8c63de02901</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>6</ns7:Code>
+                                <ns7:GUID>8951c365-98a2-4c09-a98a-6d9768375cf8</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за единицу тепловой энергии (мощности)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>43ac0127-e290-4479-b1a9-5cbd669734d1</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>233</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>24</ns7:Code>
+                    <ns7:GUID>39725f06-6ca4-41ad-90fb-8d865598e25a</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>8</ns7:Code>
+                                <ns7:GUID>da85cfd9-e449-4af3-acee-02ddf97e249a</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Двухкомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                        <ns7:Value>Компонент на тепловую энергию</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за единицу тепловой энергии (мощности)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>43ac0127-e290-4479-b1a9-5cbd669734d1</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>233</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>27</ns7:Code>
+                    <ns7:GUID>4b307ba7-4713-4353-b294-36fcc5e9e02d</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>9</ns7:Code>
+                                <ns7:GUID>973e9626-45d9-43a0-82c7-903db2678cc6</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Одноставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за содержание тепловой мощности</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>239</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>6</ns7:Code>
+                                <ns7:GUID>61c3d106-2e6d-4984-a304-3cf9cd317c31</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>238</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>26</ns7:Code>
+                    <ns7:GUID>d67789c7-a9d4-474e-a528-8592df8db92d</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>8</ns7:Code>
+                                <ns7:GUID>da85cfd9-e449-4af3-acee-02ddf97e249a</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Двухкомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                        <ns7:Value>Компонент на тепловую энергию</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за содержание тепловой мощности </ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>238</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>21</ns7:Code>
+                    <ns7:GUID>54430ceb-8451-4841-87a1-c6ed9f207959</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>6</ns7:Code>
+                                <ns7:GUID>8951c365-98a2-4c09-a98a-6d9768375cf8</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Однокомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата за содержание тепловой мощности тыс. руб./Гкал/ч в месяц</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementOkeiRefFieldType">
+                        <ns7:Name>Единица измерения ставки тарифа (ОКЕИ)</ns7:Name>
+                        <ns7:Code>238</ns7:Code>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>15</ns7:Code>
+                    <ns7:GUID>00e97da7-fee2-4858-9223-f9b5ad417946</ns7:GUID>
+                    <ns7:Modified>2016-02-09T20:31:07.659+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Вид тарифа</ns7:Name>
+                        <ns7:NsiRef>
+                            <ns7:NsiItemRegistryNumber>268</ns7:NsiItemRegistryNumber>
+                            <ns7:Ref>
+                                <ns7:Code>4</ns7:Code>
+                                <ns7:GUID>d5f4d821-0e06-4c07-b701-5f07ab9440a0</ns7:GUID>
+                            </ns7:Ref>
+                        </ns7:NsiRef>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество компонент тарифа</ns7:Name>
+                        <ns7:Value>Двухкомпонентный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование компоненты</ns7:Name>
+                        <ns7:Value>Компонент на тепловую энергию</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Количество ставок тарифа</ns7:Name>
+                        <ns7:Value>Двухставочный</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Наименование ставки</ns7:Name>
+                        <ns7:Value>Плата на содержание централизованной системы теплоснабжения (горячего водоснабжения)</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>Тарифицируемый ресурс</ns7:Name>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>

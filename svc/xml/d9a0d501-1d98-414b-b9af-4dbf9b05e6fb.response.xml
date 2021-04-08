@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8'?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns10="http://dom.gosuslugi.ru/schema/integration/organizations-base/" xmlns:ns11="http://dom.gosuslugi.ru/schema/integration/payments-base/" xmlns:ns12="http://dom.gosuslugi.ru/schema/integration/bills-base/" xmlns:ns13="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://dom.gosuslugi.ru/schema/integration/base/" xmlns:ns5="http://dom.gosuslugi.ru/schema/integration/account-base/" xmlns:ns6="http://dom.gosuslugi.ru/schema/integration/individual-registry-base/" xmlns:ns7="http://dom.gosuslugi.ru/schema/integration/nsi-base/" xmlns:ns8="http://dom.gosuslugi.ru/schema/integration/metering-device-base/" xmlns:ns9="http://dom.gosuslugi.ru/schema/integration/organizations-registry-base/">
+    <env:Header>
+        <ns4:ResultHeader>
+            <ns4:Date>2021-03-24T18:07:27.611+03:00</ns4:Date>
+            <ns4:MessageGUID>d9a0d501-1d98-414b-b9af-4dbf9b05e6fb</ns4:MessageGUID>
+        </ns4:ResultHeader>
+    </env:Header>
+    <env:Body>
+        <ns13:getStateResult Id="signed-data-container" ns4:version="10.0.1.2"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-0f511d4a-3fde-4f9d-a3f1-1637b5bed577"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/><ds:Reference URI="#signed-data-container"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>qhwdLtFrJqwyCOqrtRdUBImxBlfimINvB3mho64aTuI=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-0f511d4a-3fde-4f9d-a3f1-1637b5bed577-signedprops"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/><ds:DigestValue>7iRPAFao1VCuPFIP92gD1WFXTzAfoO3MlnDehpQDjxY=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Yws/0qCtF4Drd9awNF+qr5N+5Z4KqukvMu8SGmvLs3GvKEpMOTVI//Saxj0elilJe0KjMnQmCS1x
+V3gL5hJiYw==</ds:SignatureValue><ds:KeyInfo Id="xmldsig-06b015df-f4c3-4755-a305-90669084c88b"><ds:X509Data><ds:X509Certificate>MIIKzDCCCnegAwIBAgIQQFAWoKeAyW/ipnzPX+L/PTAMBggqhQMHAQEDAgUAMIIBJTELMAkGA1UE
+BhMCUlUxGzAZBgNVBAgMEjc3INCzLtCc0L7RgdC60LLQsDEVMBMGA1UEBwwM0JzQvtGB0LrQstCw
+MSgwJgYDVQQJDB/QktCw0YDRiNCw0LLRgdC60L7QtSDRiC4sINC0LjM3MScwJQYDVQQKDB7QkNCe
+ICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCIxMDAuBgNVBAsMJ9Cj0LTQvtGB0YLQvtCy0LXRgNGP
+0Y7RidC40Lkg0YbQtdC90YLRgDEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MB4XDTIwMTIyMzA4MjYzN1oXDTIyMDYyMzA4MjYzN1owggFrMQswCQYDVQQGEwJSVTEbMBkGA1UE
+CAwSNzcg0LMu0JzQvtGB0LrQstCwMRUwEwYDVQQHDAzQnNC+0YHQutCy0LAxJTAjBgNVBAkMHNCS
+0LDRgNGI0LDQstGB0LrQvtC1INGILiwgMzcxJzAlBgNVBAoMHtCQ0J4gItCf0L7Rh9GC0LAg0KDQ
+vtGB0YHQuNC4IjFSMFAGA1UECwxJ0JTQtdC/0LDRgNGC0LDQvNC10L3RgiDRgNCw0LfQstC40YLQ
+uNGPINCx0LjQt9C90LXRgS3Qv9GA0LjQu9C+0LbQtdC90LjQuTENMAsGA1UECwwEU2lnbjEWMBQG
+A1UECwwN0JPQmNChINCW0JrQpTEnMCUGA1UEAwwe0JDQniAi0J/QvtGH0YLQsCDQoNC+0YHRgdC4
+0LgiMRgwFgYFKoUDZAESDTExOTc3NDYwMDAwMDAxGjAYBggqhQMDgQMBARIMMDA3NzI0NDkwMDAw
+MGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQFqTD+tYVG3cJHQHEF8uT00B
+doGsFdC/8ZqHo9TBUJTA7C75zQAguYIufhwPeN94yCXB1XR+jPGQvisc5AeMRKCjggcuMIIHKjCB
+6gYDVR0RBIHiMIHfoCcGA1UECqAgDB7QkNCeICLQn9C+0YfRgtCwINCg0L7RgdGB0LjQuCKgZwYD
+VQQNoGAMXtCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQsdC40LfQvdC1
+0YEt0L/RgNC40LvQvtC20LXQvdC40LksIFNpZ24sINCT0JjQoSDQltCa0KWCFXNpZ24uZG9tLmdv
+c3VzbHVnaS5ydaAaBggqhQMDgQMBAaAOEwwwMDc3MjQ0OTAwMDCgGAYFKoUDZAGgDxMNMTE5Nzc0
+NjAwMDAwMDAOBgNVHQ8BAf8EBAMCA/gwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwQwHQYDVR0gBBYwFDAIBgYqhQNkcQEwCAYGKoUDZHECMDsGBSqFA2RvBDIMMNCh
+0JrQl9CYICLQktCw0LvQuNC00LDRgtCwIENTUCIg0LLQtdGA0YHQuNGPIDUuMDAsBgkrBgEEAdAE
+BAMEHzAdBgkrBgEEAdAEBQMEEDg4UFpTQUhJSU5ROTRRRDQwKwYDVR0QBCQwIoAPMjAyMDEyMjMw
+ODI2MzdagQ8yMDIyMDMyMzA4MjYyN1owHQYDVR0OBBYEFHDxsKyP1t75i/W5LUThBLdQ9+7dMIH3
+BggrBgEFBQcBAQSB6jCB5zBuBggrBgEFBQcwAoZibGRhcDovL3ZjYS5jYW90dXMucnUvY249Y2Et
+Q0MwQTgzM0YyODExNjFERDEyNUE4QUU5RjA2QzA2NTQzRDdENkQ5NSxvPWNhb3R1cyxsPWNlbnRy
+ZSxzdD1wb3N0LGM9cnUwdQYIKwYBBQUHMAKGaWh0dHA6Ly9mYy5ydXNzaWFucG9zdC5ydS9Eb3du
+TG9hZC9Gb3JfU2l0ZS9Vc2x1Z2kvTm9ybURvYy9jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlG
+MDZDMDY1NDNEN0Q2RDk1LmNydDCB5gYDVR0fBIHeMIHbMGigZqBkhmJsZGFwOi8vdmNhLmNhb3R1
+cy5ydS9jbj1jYS1DQzBBODMzRjI4MTE2MUREMTI1QThBRTlGMDZDMDY1NDNEN0Q2RDk1LG89Y2Fv
+dHVzLGw9Y2VudHJlLHN0PXBvc3QsYz1ydTBvoG2ga4ZpaHR0cDovL2ZjLnJ1c3NpYW5wb3N0LnJ1
+L0Rvd25Mb2FkL0Zvcl9TaXRlL1VzbHVnaS9Ob3JtRG9jL2NhLUNDMEE4MzNGMjgxMTYxREQxMjVB
+OEFFOUYwNkMwNjU0M0Q3RDZEOTUuY3JsMIHPBgUqhQNkcASBxTCBwgww0KHQmtCX0JggItCS0LDQ
+u9C40LTQsNGC0LAgQ1NQIiDQstC10YDRgdC40Y8gNS4wDC/QkNCf0JogItCS0LDQu9C40LTQsNGC
+0LAg0KPQpiIg0LLQtdGA0YHQuNGPIDMuMQwu4oSWMTQ5LzMvMi8yLTg3NCDQvtGCIDE0INCw0L/R
+gNC10LvRjyAyMDE3INCzLgwt0KHQpC8xMjgtMzU5NSDQvtGCIDI4INC00LXQutCw0LHRgNGPIDIw
+MTgg0LMuMIIBYAYDVR0jBIIBVzCCAVOAFMwKgz8oEWHdElqK6fBsBlQ9fW2VoYIBLKSCASgwggEk
+MR4wHAYJKoZIhvcNAQkBFg9kaXRAbWluc3Z5YXoucnUxCzAJBgNVBAYTAlJVMRgwFgYDVQQIDA83
+NyDQnNC+0YHQutCy0LAxGTAXBgNVBAcMENCzLiDQnNC+0YHQutCy0LAxLjAsBgNVBAkMJdGD0LvQ
+uNGG0LAg0KLQstC10YDRgdC60LDRjywg0LTQvtC8IDcxLDAqBgNVBAoMI9Cc0LjQvdC60L7QvNGB
+0LLRj9C30Ywg0KDQvtGB0YHQuNC4MRgwFgYFKoUDZAESDTEwNDc3MDIwMjY3MDExGjAYBggqhQMD
+gQMBARIMMDA3NzEwNDc0Mzc1MSwwKgYDVQQDDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7R
+gdGB0LjQuIILAOtbqCsAAAAAAtwwggENBgNVHRIEggEEMIIBAKAnBgNVBAqgIAwe0JDQniAi0J/Q
+vtGH0YLQsCDQoNC+0YHRgdC40LgigSFjZXJ0aWZpY2F0aW9uLmF1dGhvcml0eUBjYW90dXMucnWg
+QQYDVQQaoDoMODEzMTAwMCwg0LMu0JzQvtGB0LrQstCwLCDQktCw0YDRiNCw0LLRgdC60L7QtSDR
+iC4sINC0LjM3oCwGA1UEDaAlDCPQo9CmINCQ0J4gItCf0L7Rh9GC0LAg0KDQvtGB0YHQuNC4IqBB
+BgNVBBOgOgw4MTMxMDAwLCDQsy7QnNC+0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI
+Liwg0LQuMzcwDAYIKoUDBwEBAwIFAANBABWO0w9sdwp3GbnFO++7/93Lt6wW8ilyWJ1RBShZkOZh
+Z73ckb0+o88GVgHO5c4gzLICrgb1+NHMivaZ4d2WIA0=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object>
+<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-0f511d4a-3fde-4f9d-a3f1-1637b5bed577">
+    <xades:SignedProperties Id="xmldsig-0f511d4a-3fde-4f9d-a3f1-1637b5bed577-signedprops">
+      <xades:SignedSignatureProperties>
+        <xades:SigningTime>2021-03-24T18:07:27.615+03:00</xades:SigningTime>
+        <xades:SigningCertificate>
+          <xades:Cert>
+            <xades:CertDigest>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>vheA32CbwReuVeuN3uySZSfHeyiJxDmQ3nnFb0jAlvU=</ds:DigestValue>
+            </xades:CertDigest>
+            <xades:IssuerSerial>
+              <ds:X509IssuerName>1.2.643.3.131.1.1=007724490000,1.2.643.100.1=1197746000000,cn=АО \"Почта России\",ou=Удостоверяющий центр,o=АО \"Почта России\",street=Варшавское ш.\, д.37,l=Москва,st=77 г.Москва,c=RU</ds:X509IssuerName>
+              <ds:X509SerialNumber>85486434420274375099828259691503484733</ds:X509SerialNumber>
+            </xades:IssuerSerial>
+          </xades:Cert>
+        </xades:SigningCertificate>
+      </xades:SignedSignatureProperties>
+    </xades:SignedProperties>
+  </xades:QualifyingProperties>
+</ds:Object></ds:Signature>
+            <ns4:RequestState>3</ns4:RequestState>
+            <ns4:MessageGUID>a599f694-8cb2-11eb-9605-005056b64bd9</ns4:MessageGUID>
+            <ns13:NsiItem>
+                <ns7:NsiItemRegistryNumber>103</ns7:NsiItemRegistryNumber>
+                <ns7:Created>2021-03-24T18:07:27.611+03:00</ns7:Created>
+                <ns7:NsiElement>
+                    <ns7:Code>2235</ns7:Code>
+                    <ns7:GUID>33084d49-202d-4293-85a1-3eb98f35709c</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.17.24</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>250</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2234</ns7:Code>
+                    <ns7:GUID>40364d4c-ca91-4627-8c4c-75d6e181f7ac</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.17.24</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>200</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2232</ns7:Code>
+                    <ns7:GUID>77b7d586-7db1-4e0a-a0d0-cfefb178dad2</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.6.2.2</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>125</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2231</ns7:Code>
+                    <ns7:GUID>efec058c-985b-48f9-8664-d7eef72c38c0</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.5.2.1.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>100</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2230</ns7:Code>
+                    <ns7:GUID>ad16a0ab-ed3c-427d-b833-904ead6e301a</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.5.2.1.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>80</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2229</ns7:Code>
+                    <ns7:GUID>bafc5f7c-6065-48d9-8dbc-b08ac8ffbbac</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.5.2.1.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>65</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2228</ns7:Code>
+                    <ns7:GUID>16177c2f-6963-4e6b-b621-509bd3f4ab40</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.5.2.1.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>50</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2227</ns7:Code>
+                    <ns7:GUID>e26114f8-da5d-44d5-ab78-ef5bcb0488d9</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.5.2.1.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>40</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2226</ns7:Code>
+                    <ns7:GUID>03ed5cc2-f352-47f6-b841-ed208c1610fe</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.5.2.1.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>32</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2225</ns7:Code>
+                    <ns7:GUID>58c70265-1415-4e8a-af4d-cf7c63ece496</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.5.2.1.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>25</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2224</ns7:Code>
+                    <ns7:GUID>390a7b78-4399-41e7-b50b-ee2b747e9aa4</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.5.2.1.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>20</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2223</ns7:Code>
+                    <ns7:GUID>b3e50ac7-0033-4b35-be82-b134c74752ef</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.5.2.1.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>15</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2222</ns7:Code>
+                    <ns7:GUID>fe73146e-50cf-4949-9956-db241274e16e</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.5.2.4</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>10</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+                <ns7:NsiElement>
+                    <ns7:Code>2233</ns7:Code>
+                    <ns7:GUID>59e2b5b3-0f50-4caf-ad1b-c462cc511eac</ns7:GUID>
+                    <ns7:Modified>1900-01-01T00:00:00.000+03:00</ns7:Modified>
+                    <ns7:IsActual>true</ns7:IsActual>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementNsiRefFieldType">
+                        <ns7:Name>НПА/НТД</ns7:Name>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата начала действия</ns7:Name>
+                        <ns7:Value>1900-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementDateFieldType">
+                        <ns7:Name>Дата окончания действия</ns7:Name>
+                        <ns7:Value>5000-01-01+03:00</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Примечание</ns7:Name>
+                        <ns7:Value>п.6.2.1</ns7:Value>
+                    </ns7:NsiElementField>
+                    <ns7:NsiElementField xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:NsiElementStringFieldType">
+                        <ns7:Name>Диаметр труб и запорной арматуры</ns7:Name>
+                        <ns7:Value>150</ns7:Value>
+                    </ns7:NsiElementField>
+                </ns7:NsiElement>
+            </ns13:NsiItem>
+        </ns13:getStateResult>
+    </env:Body>
+</env:Envelope>
